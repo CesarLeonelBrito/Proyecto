@@ -1240,7 +1240,7 @@ public class Main extends javax.swing.JFrame {
         modelo.removeAllElements();
         administrarMaestros ap = new administrarMaestros("./maestros.txt");
         ap.cargarArchivo();
-        System.out.println(ap.getListaMaestros());
+       
         for (int i = 0; i < ap.getListaMaestros().size(); i++) {
             modelo.addElement(ap.getListaMaestros().get(i));
         }

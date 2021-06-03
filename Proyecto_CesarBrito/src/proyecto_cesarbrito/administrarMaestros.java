@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class administrarMaestros {
-
+    
     private ArrayList<Maestro> listaMaestros = new ArrayList();
     private File archivo = null;
 
@@ -71,12 +71,12 @@ public class administrarMaestros {
                 sc = new Scanner(archivo);
                 sc.useDelimiter(";");
                 while (sc.hasNext()) {
-                    listaMaestros.add(new Maestro(sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.nextInt(), sc.nextInt()));
+                    listaMaestros.add(new Maestro(sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.nextInt(), sc.nextDouble()));
                 }
             } catch (Exception ex) {
             }
             sc.close();
         }
     }
-
+    
 }
