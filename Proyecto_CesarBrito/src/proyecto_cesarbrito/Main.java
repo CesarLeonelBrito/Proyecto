@@ -1,15 +1,15 @@
 package proyecto_cesarbrito;
 
-import java.io.IOException;
-import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
 
 public class Main extends javax.swing.JFrame {
 
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     @SuppressWarnings("unchecked")
@@ -17,35 +17,18 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         jf_registro = new javax.swing.JFrame();
-        jToolBar1 = new javax.swing.JToolBar();
-        jLabel5 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JToolBar.Separator();
+        jLabel87 = new javax.swing.JLabel();
         registro_agregar = new javax.swing.JButton();
-        jSeparator4 = new javax.swing.JToolBar.Separator();
         registro_modificar = new javax.swing.JButton();
-        jToolBar2 = new javax.swing.JToolBar();
-        jLabel6 = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JToolBar.Separator();
+        asignar_maestro = new javax.swing.JButton();
         maestro_agregar = new javax.swing.JButton();
-        jSeparator5 = new javax.swing.JToolBar.Separator();
         maestro_modificar = new javax.swing.JButton();
-        jSeparator9 = new javax.swing.JToolBar.Separator();
-        asignar_variable = new javax.swing.JButton();
-        jToolBar3 = new javax.swing.JToolBar();
-        jLabel7 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JToolBar.Separator();
-        alumnos_agregar = new javax.swing.JButton();
-        jSeparator6 = new javax.swing.JToolBar.Separator();
-        alumnos_modificar = new javax.swing.JButton();
-        jSeparator10 = new javax.swing.JToolBar.Separator();
         asignar_alumno = new javax.swing.JButton();
-        jToolBar4 = new javax.swing.JToolBar();
-        Clases = new javax.swing.JLabel();
-        jSeparator7 = new javax.swing.JToolBar.Separator();
+        alumnos_agregar = new javax.swing.JButton();
+        alumnos_modificar = new javax.swing.JButton();
         clases_agregar = new javax.swing.JButton();
-        jSeparator8 = new javax.swing.JToolBar.Separator();
         clases_modificar = new javax.swing.JButton();
-        jLabel50 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         cerrar_sesion_registro = new javax.swing.JMenuItem();
@@ -58,14 +41,15 @@ public class Main extends javax.swing.JFrame {
         tf_registro_pass = new javax.swing.JTextField();
         jb_crear_registro = new javax.swing.JButton();
         jLabel40 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
         jd_modificar_registro = new javax.swing.JDialog();
         jLabel24 = new javax.swing.JLabel();
         tf_registro_user_m = new javax.swing.JTextField();
         tf_registro_pass_m = new javax.swing.JTextField();
         jb_modificar_registro = new javax.swing.JButton();
         jLabel25 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
         jd_crear_maestro = new javax.swing.JDialog();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
@@ -83,6 +67,7 @@ public class Main extends javax.swing.JFrame {
         tf_maestro_id = new javax.swing.JFormattedTextField();
         jb_crear_maestro = new javax.swing.JButton();
         jLabel43 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
         jd_modificar_maestro = new javax.swing.JDialog();
         tf_maestro_nombre_m = new javax.swing.JTextField();
         tf_maestro_profesion_m = new javax.swing.JTextField();
@@ -100,6 +85,7 @@ public class Main extends javax.swing.JFrame {
         tf_maestro_user_m = new javax.swing.JTextField();
         tf_maestro_pass_m = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
         jd_crear_alumno = new javax.swing.JDialog();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -116,7 +102,7 @@ public class Main extends javax.swing.JFrame {
         tf_alumno_clases = new javax.swing.JFormattedTextField();
         tf_alumno_cuenta = new javax.swing.JFormattedTextField();
         jb_crear_alumno = new javax.swing.JButton();
-        jLabel45 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
         jd_modificar_alumno = new javax.swing.JDialog();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -134,18 +120,22 @@ public class Main extends javax.swing.JFrame {
         tf_alumno_cuenta_m = new javax.swing.JFormattedTextField();
         jb_modificar_alumno = new javax.swing.JButton();
         jLabel46 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
         jd_listar_registros = new javax.swing.JDialog();
         jScrollPane5 = new javax.swing.JScrollPane();
         jl_registros = new javax.swing.JList<>();
         jLabel47 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
         jd_listar_alumnos = new javax.swing.JDialog();
         jScrollPane4 = new javax.swing.JScrollPane();
         jl_alumnos = new javax.swing.JList<>();
         jLabel48 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
         jd_listar_maestros = new javax.swing.JDialog();
         jScrollPane3 = new javax.swing.JScrollPane();
         jl_maestros = new javax.swing.JList<>();
         jLabel49 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
         popup_registro = new javax.swing.JPopupMenu();
         eliminar_registro = new javax.swing.JMenuItem();
         modificar_registro = new javax.swing.JMenuItem();
@@ -171,6 +161,7 @@ public class Main extends javax.swing.JFrame {
         tf_clase_semestre = new javax.swing.JSpinner();
         tf_clase_periodo = new javax.swing.JSpinner();
         tf_clase_year = new com.toedter.calendar.JYearChooser();
+        jLabel72 = new javax.swing.JLabel();
         jd_modificar_clase = new javax.swing.JDialog();
         tf_clase_nombre_m = new javax.swing.JTextField();
         jb_modificar_clases = new javax.swing.JButton();
@@ -187,9 +178,11 @@ public class Main extends javax.swing.JFrame {
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
         tf_clase_year_m = new com.toedter.calendar.JYearChooser();
+        jLabel73 = new javax.swing.JLabel();
         jd_listar_clase = new javax.swing.JDialog();
         jScrollPane1 = new javax.swing.JScrollPane();
         jl_clases = new javax.swing.JList<>();
+        jLabel74 = new javax.swing.JLabel();
         popup_clase = new javax.swing.JPopupMenu();
         eliminar_clase = new javax.swing.JMenuItem();
         modificar_clase = new javax.swing.JMenuItem();
@@ -201,40 +194,56 @@ public class Main extends javax.swing.JFrame {
         jb_asignar_maestro = new javax.swing.JButton();
         jLabel65 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
         jd_asignar_alumno = new javax.swing.JDialog();
         jScrollPane7 = new javax.swing.JScrollPane();
         jl_verAlumnos = new javax.swing.JList<>();
         jScrollPane8 = new javax.swing.JScrollPane();
         jl_verClasesA = new javax.swing.JList<>();
         jb_asignar_alumnos = new javax.swing.JButton();
+        jLabel76 = new javax.swing.JLabel();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jf_alumno = new javax.swing.JFrame();
+        jLabel86 = new javax.swing.JLabel();
+        jLabel79 = new javax.swing.JLabel();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu5 = new javax.swing.JMenu();
+        cerrar_sesion_alum = new javax.swing.JMenuItem();
+        cerrar_sistema_alum = new javax.swing.JMenuItem();
+        jMenu6 = new javax.swing.JMenu();
+        jf_maestro = new javax.swing.JFrame();
+        jLabel85 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        cerrar_sesion_maestro = new javax.swing.JMenuItem();
+        cerrar_sistema_maestro = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jPanel2 = new javax.swing.JPanel();
+        jb_login = new javax.swing.JButton();
+        tf_user_login = new javax.swing.JTextField();
+        tf_pass_login = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        tf_user_login = new javax.swing.JTextField();
-        jb_login = new javax.swing.JButton();
-        tf_pass_login = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
 
         jf_registro.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         jf_registro.setTitle("Registro");
+        jf_registro.setMinimumSize(new java.awt.Dimension(1920, 1080));
+        jf_registro.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jf_registro.setResizable(false);
+        jf_registro.setSize(new java.awt.Dimension(1920, 1080));
         jf_registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jToolBar1.setBackground(new java.awt.Color(0, 102, 102));
-        jToolBar1.setFloatable(false);
-        jToolBar1.setRollover(true);
+        jLabel87.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
+        jf_registro.getContentPane().add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 860, 310, 110));
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/admin_icono.png"))); // NOI18N
-        jLabel5.setText("Registro");
-        jToolBar1.add(jLabel5);
-        jToolBar1.add(jSeparator1);
-
-        registro_agregar.setBackground(new java.awt.Color(255, 255, 255));
+        registro_agregar.setBackground(new java.awt.Color(204, 204, 204));
+        registro_agregar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         registro_agregar.setForeground(new java.awt.Color(0, 0, 0));
-        registro_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/agregar-archivo.png"))); // NOI18N
-        registro_agregar.setText("Agregar");
+        registro_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/admin.png"))); // NOI18N
+        registro_agregar.setText("Agregar Registro");
         registro_agregar.setFocusable(false);
         registro_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         registro_agregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -243,13 +252,13 @@ public class Main extends javax.swing.JFrame {
                 registro_agregarActionPerformed(evt);
             }
         });
-        jToolBar1.add(registro_agregar);
-        jToolBar1.add(jSeparator4);
+        jf_registro.getContentPane().add(registro_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        registro_modificar.setBackground(new java.awt.Color(255, 255, 255));
+        registro_modificar.setBackground(new java.awt.Color(204, 204, 204));
+        registro_modificar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         registro_modificar.setForeground(new java.awt.Color(0, 0, 0));
-        registro_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/boton-editar_1.png"))); // NOI18N
-        registro_modificar.setText("Modificar");
+        registro_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
+        registro_modificar.setText("Listar Alumnos");
         registro_modificar.setFocusable(false);
         registro_modificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         registro_modificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -258,25 +267,28 @@ public class Main extends javax.swing.JFrame {
                 registro_modificarActionPerformed(evt);
             }
         });
-        jToolBar1.add(registro_modificar);
+        jf_registro.getContentPane().add(registro_modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, -1, -1));
 
-        jf_registro.getContentPane().add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 86, 352, 71));
+        asignar_maestro.setBackground(new java.awt.Color(204, 204, 204));
+        asignar_maestro.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        asignar_maestro.setForeground(new java.awt.Color(0, 0, 0));
+        asignar_maestro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/asignar_maestro.png"))); // NOI18N
+        asignar_maestro.setText("Asignar Maestro");
+        asignar_maestro.setFocusable(false);
+        asignar_maestro.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        asignar_maestro.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        asignar_maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asignar_maestroActionPerformed(evt);
+            }
+        });
+        jf_registro.getContentPane().add(asignar_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(1620, 10, -1, -1));
 
-        jToolBar2.setBackground(new java.awt.Color(0, 102, 102));
-        jToolBar2.setFloatable(false);
-        jToolBar2.setRollover(true);
-
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/maestro_icono.png"))); // NOI18N
-        jLabel6.setText("Maestros");
-        jToolBar2.add(jLabel6);
-        jToolBar2.add(jSeparator2);
-
-        maestro_agregar.setBackground(new java.awt.Color(255, 255, 255));
+        maestro_agregar.setBackground(new java.awt.Color(204, 204, 204));
+        maestro_agregar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         maestro_agregar.setForeground(new java.awt.Color(0, 0, 0));
-        maestro_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/agregar-archivo.png"))); // NOI18N
-        maestro_agregar.setText("Agregar");
+        maestro_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/maestro.png"))); // NOI18N
+        maestro_agregar.setText("Agregar Maestro");
         maestro_agregar.setFocusable(false);
         maestro_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maestro_agregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -285,13 +297,13 @@ public class Main extends javax.swing.JFrame {
                 maestro_agregarActionPerformed(evt);
             }
         });
-        jToolBar2.add(maestro_agregar);
-        jToolBar2.add(jSeparator5);
+        jf_registro.getContentPane().add(maestro_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, -1, -1));
 
-        maestro_modificar.setBackground(new java.awt.Color(255, 255, 255));
+        maestro_modificar.setBackground(new java.awt.Color(204, 204, 204));
+        maestro_modificar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         maestro_modificar.setForeground(new java.awt.Color(0, 0, 0));
-        maestro_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/boton-editar_1.png"))); // NOI18N
-        maestro_modificar.setText("Modificar");
+        maestro_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
+        maestro_modificar.setText("Listar Maestros");
         maestro_modificar.setFocusable(false);
         maestro_modificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         maestro_modificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -300,70 +312,13 @@ public class Main extends javax.swing.JFrame {
                 maestro_modificarActionPerformed(evt);
             }
         });
-        jToolBar2.add(maestro_modificar);
-        jToolBar2.add(jSeparator9);
+        jf_registro.getContentPane().add(maestro_modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, -1, -1));
 
-        asignar_variable.setBackground(new java.awt.Color(255, 255, 255));
-        asignar_variable.setForeground(new java.awt.Color(0, 0, 0));
-        asignar_variable.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/asignar_1.png"))); // NOI18N
-        asignar_variable.setText("Asignar");
-        asignar_variable.setFocusable(false);
-        asignar_variable.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        asignar_variable.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        asignar_variable.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                asignar_variableActionPerformed(evt);
-            }
-        });
-        jToolBar2.add(asignar_variable);
-
-        jf_registro.getContentPane().add(jToolBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 175, 352, 71));
-
-        jToolBar3.setBackground(new java.awt.Color(0, 102, 102));
-        jToolBar3.setFloatable(false);
-        jToolBar3.setRollover(true);
-
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/estudiante_icono.png"))); // NOI18N
-        jLabel7.setText("Alumnos");
-        jToolBar3.add(jLabel7);
-        jToolBar3.add(jSeparator3);
-
-        alumnos_agregar.setBackground(new java.awt.Color(255, 255, 255));
-        alumnos_agregar.setForeground(new java.awt.Color(0, 0, 0));
-        alumnos_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/agregar-archivo.png"))); // NOI18N
-        alumnos_agregar.setText("Agregar");
-        alumnos_agregar.setFocusable(false);
-        alumnos_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        alumnos_agregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        alumnos_agregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alumnos_agregarActionPerformed(evt);
-            }
-        });
-        jToolBar3.add(alumnos_agregar);
-        jToolBar3.add(jSeparator6);
-
-        alumnos_modificar.setBackground(new java.awt.Color(255, 255, 255));
-        alumnos_modificar.setForeground(new java.awt.Color(0, 0, 0));
-        alumnos_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/boton-editar_1.png"))); // NOI18N
-        alumnos_modificar.setText("Modificar");
-        alumnos_modificar.setFocusable(false);
-        alumnos_modificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        alumnos_modificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        alumnos_modificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                alumnos_modificarActionPerformed(evt);
-            }
-        });
-        jToolBar3.add(alumnos_modificar);
-        jToolBar3.add(jSeparator10);
-
-        asignar_alumno.setBackground(new java.awt.Color(255, 255, 255));
+        asignar_alumno.setBackground(new java.awt.Color(204, 204, 204));
+        asignar_alumno.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         asignar_alumno.setForeground(new java.awt.Color(0, 0, 0));
-        asignar_alumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/asignar_1.png"))); // NOI18N
-        asignar_alumno.setText("Asignar");
+        asignar_alumno.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/matricular_alumno.png"))); // NOI18N
+        asignar_alumno.setText("Matricular Alumno");
         asignar_alumno.setFocusable(false);
         asignar_alumno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         asignar_alumno.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -372,25 +327,43 @@ public class Main extends javax.swing.JFrame {
                 asignar_alumnoActionPerformed(evt);
             }
         });
-        jToolBar3.add(asignar_alumno);
+        jf_registro.getContentPane().add(asignar_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(1620, 330, -1, -1));
 
-        jf_registro.getContentPane().add(jToolBar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 264, 352, 71));
+        alumnos_agregar.setBackground(new java.awt.Color(204, 204, 204));
+        alumnos_agregar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        alumnos_agregar.setForeground(new java.awt.Color(0, 0, 0));
+        alumnos_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/graduado.png"))); // NOI18N
+        alumnos_agregar.setText("Agregar Alumno");
+        alumnos_agregar.setFocusable(false);
+        alumnos_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        alumnos_agregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        alumnos_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alumnos_agregarActionPerformed(evt);
+            }
+        });
+        jf_registro.getContentPane().add(alumnos_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, -1, -1));
 
-        jToolBar4.setBackground(new java.awt.Color(0, 102, 102));
-        jToolBar4.setFloatable(false);
-        jToolBar4.setRollover(true);
+        alumnos_modificar.setBackground(new java.awt.Color(204, 204, 204));
+        alumnos_modificar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        alumnos_modificar.setForeground(new java.awt.Color(0, 0, 0));
+        alumnos_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
+        alumnos_modificar.setText("Listar Alumnos");
+        alumnos_modificar.setFocusable(false);
+        alumnos_modificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        alumnos_modificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        alumnos_modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alumnos_modificarActionPerformed(evt);
+            }
+        });
+        jf_registro.getContentPane().add(alumnos_modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 320, -1, -1));
 
-        Clases.setBackground(new java.awt.Color(255, 255, 255));
-        Clases.setForeground(new java.awt.Color(0, 0, 0));
-        Clases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/educacion.png"))); // NOI18N
-        Clases.setText("Clases");
-        jToolBar4.add(Clases);
-        jToolBar4.add(jSeparator7);
-
-        clases_agregar.setBackground(new java.awt.Color(255, 255, 255));
+        clases_agregar.setBackground(new java.awt.Color(204, 204, 204));
+        clases_agregar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         clases_agregar.setForeground(new java.awt.Color(0, 0, 0));
-        clases_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/agregar-archivo.png"))); // NOI18N
-        clases_agregar.setText("Agregar");
+        clases_agregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/clase.png"))); // NOI18N
+        clases_agregar.setText("Agregar Clase");
         clases_agregar.setFocusable(false);
         clases_agregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         clases_agregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -399,13 +372,13 @@ public class Main extends javax.swing.JFrame {
                 clases_agregarActionPerformed(evt);
             }
         });
-        jToolBar4.add(clases_agregar);
-        jToolBar4.add(jSeparator8);
+        jf_registro.getContentPane().add(clases_agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 10, -1, -1));
 
-        clases_modificar.setBackground(new java.awt.Color(255, 255, 255));
+        clases_modificar.setBackground(new java.awt.Color(204, 204, 204));
+        clases_modificar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         clases_modificar.setForeground(new java.awt.Color(0, 0, 0));
-        clases_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/boton-editar_1.png"))); // NOI18N
-        clases_modificar.setText("Modificar");
+        clases_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
+        clases_modificar.setText("Listar Clases");
         clases_modificar.setFocusable(false);
         clases_modificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         clases_modificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -414,14 +387,12 @@ public class Main extends javax.swing.JFrame {
                 clases_modificarActionPerformed(evt);
             }
         });
-        jToolBar4.add(clases_modificar);
+        jf_registro.getContentPane().add(clases_modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 320, -1, -1));
 
-        jf_registro.getContentPane().add(jToolBar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 353, 352, 71));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/frame_wallpapers.jpg"))); // NOI18N
+        jf_registro.getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, -1, -1));
 
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/wallpaper_registro.jpg"))); // NOI18N
-        jf_registro.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 1050, 720));
-
-        jMenu1.setText("File");
+        jMenu1.setText("Sesión");
 
         cerrar_sesion_registro.setText("Cerrar sesión");
         cerrar_sesion_registro.addActionListener(new java.awt.event.ActionListener() {
@@ -446,6 +417,7 @@ public class Main extends javax.swing.JFrame {
 
         jf_registro.setJMenuBar(jMenuBar1);
 
+        jd_crear_registro.setTitle("Crear Registro");
         jd_crear_registro.setIconImage(null);
         jd_crear_registro.setSize(new java.awt.Dimension(706, 538));
         jd_crear_registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -475,8 +447,11 @@ public class Main extends javax.swing.JFrame {
         });
         jd_crear_registro.getContentPane().add(jb_crear_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 347, -1, -1));
         jd_crear_registro.getContentPane().add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, -1, -1));
-        jd_crear_registro.getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_crear_registro.getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_modificar_registro.setTitle("Modificar Registro");
         jd_modificar_registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
@@ -501,8 +476,12 @@ public class Main extends javax.swing.JFrame {
         jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setText("Usuario:");
         jd_modificar_registro.getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 96, -1, -1));
-        jd_modificar_registro.getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+        jd_modificar_registro.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, -1, -1));
 
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_modificar_registro.getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_crear_maestro.setTitle("Crear Maestro");
         jd_crear_maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel26.setForeground(new java.awt.Color(0, 0, 0));
@@ -566,6 +545,10 @@ public class Main extends javax.swing.JFrame {
         jd_crear_maestro.getContentPane().add(jb_crear_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 393, -1, -1));
         jd_crear_maestro.getContentPane().add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_crear_maestro.getContentPane().add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_modificar_maestro.setTitle("Modificar Maestro");
         jd_modificar_maestro.setSize(new java.awt.Dimension(710, 540));
         jd_modificar_maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -630,6 +613,10 @@ public class Main extends javax.swing.JFrame {
         jd_modificar_maestro.getContentPane().add(tf_maestro_pass_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 102, 341, -1));
         jd_modificar_maestro.getContentPane().add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_modificar_maestro.getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_crear_alumno.setTitle("Crear Alumno");
         jd_crear_alumno.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
@@ -698,8 +685,11 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jd_crear_alumno.getContentPane().add(jb_crear_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 393, -1, -1));
-        jd_crear_alumno.getContentPane().add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
+        jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_crear_alumno.getContentPane().add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_modificar_alumno.setTitle("Modificar Alumno");
         jd_modificar_alumno.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
@@ -763,6 +753,10 @@ public class Main extends javax.swing.JFrame {
         jd_modificar_alumno.getContentPane().add(jb_modificar_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 393, -1, -1));
         jd_modificar_alumno.getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
+        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_modificar_alumno.getContentPane().add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_listar_registros.setTitle("Listar Registro");
         jd_listar_registros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_registros.setModel(new DefaultListModel());
@@ -776,6 +770,10 @@ public class Main extends javax.swing.JFrame {
         jd_listar_registros.getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 419, 485));
         jd_listar_registros.getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
 
+        jLabel69.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_listar_registros.getContentPane().add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
+
+        jd_listar_alumnos.setTitle("Listar Alumnos");
         jd_listar_alumnos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_alumnos.setModel(new DefaultListModel());
@@ -789,6 +787,10 @@ public class Main extends javax.swing.JFrame {
         jd_listar_alumnos.getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 419, 485));
         jd_listar_alumnos.getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
 
+        jLabel71.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_listar_alumnos.getContentPane().add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
+
+        jd_listar_maestros.setTitle("Listar Maestros");
         jd_listar_maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_maestros.setModel(new DefaultListModel());
@@ -801,6 +803,9 @@ public class Main extends javax.swing.JFrame {
 
         jd_listar_maestros.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 419, 485));
         jd_listar_maestros.getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
+
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_listar_maestros.getContentPane().add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
 
         eliminar_registro.setText("Eliminar");
         eliminar_registro.addActionListener(new java.awt.event.ActionListener() {
@@ -850,6 +855,9 @@ public class Main extends javax.swing.JFrame {
         });
         popup_maestro.add(modificar_maestro);
 
+        jd_crear_clase.setTitle("Crear Clase");
+        jd_crear_clase.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jb_crear_clases.setBackground(new java.awt.Color(255, 255, 255));
         jb_crear_clases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/confirmar.png"))); // NOI18N
         jb_crear_clases.addActionListener(new java.awt.event.ActionListener() {
@@ -857,107 +865,61 @@ public class Main extends javax.swing.JFrame {
                 jb_crear_clasesActionPerformed(evt);
             }
         });
+        jd_crear_clase.getContentPane().add(jb_crear_clases, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 392, -1, -1));
 
         jLabel51.setForeground(new java.awt.Color(0, 0, 0));
         jLabel51.setText("Nombre:");
+        jd_crear_clase.getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 47, -1, -1));
 
         jLabel52.setForeground(new java.awt.Color(0, 0, 0));
         jLabel52.setText("ID:");
+        jd_crear_clase.getContentPane().add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 89, -1, -1));
 
         jLabel53.setForeground(new java.awt.Color(0, 0, 0));
         jLabel53.setText("Hora:");
+        jd_crear_clase.getContentPane().add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 132, -1, -1));
 
         jLabel54.setForeground(new java.awt.Color(0, 0, 0));
         jLabel54.setText("Unidades Valorativas:");
+        jd_crear_clase.getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 176, -1, -1));
 
         jLabel55.setForeground(new java.awt.Color(0, 0, 0));
         jLabel55.setText("Semestre:");
+        jd_crear_clase.getContentPane().add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 210, -1, -1));
 
         jLabel56.setForeground(new java.awt.Color(0, 0, 0));
         jLabel56.setText("Periodo:");
+        jd_crear_clase.getContentPane().add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 254, -1, -1));
 
         jLabel57.setForeground(new java.awt.Color(0, 0, 0));
         jLabel57.setText("Año:");
+        jd_crear_clase.getContentPane().add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 293, -1, -1));
 
         tf_clase_nombre.setBackground(new java.awt.Color(255, 255, 255));
         tf_clase_nombre.setForeground(new java.awt.Color(0, 0, 0));
+        jd_crear_clase.getContentPane().add(tf_clase_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 43, 332, -1));
 
         tf_clase_id.setBackground(new java.awt.Color(255, 255, 255));
         tf_clase_id.setForeground(new java.awt.Color(0, 0, 0));
         tf_clase_id.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("############"))));
+        jd_crear_clase.getContentPane().add(tf_clase_id, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 85, 332, 24));
+        jd_crear_clase.getContentPane().add(tf_clase_hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 127, 116, -1));
+        jd_crear_clase.getContentPane().add(tf_clase_unidades, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 171, 116, -1));
+        jd_crear_clase.getContentPane().add(tf_clase_semestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 205, 116, -1));
+        jd_crear_clase.getContentPane().add(tf_clase_periodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 249, 116, -1));
 
         tf_clase_year.setBackground(new java.awt.Color(204, 204, 204));
+        jd_crear_clase.getContentPane().add(tf_clase_year, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 285, 116, -1));
 
-        javax.swing.GroupLayout jd_crear_claseLayout = new javax.swing.GroupLayout(jd_crear_clase.getContentPane());
-        jd_crear_clase.getContentPane().setLayout(jd_crear_claseLayout);
-        jd_crear_claseLayout.setHorizontalGroup(
-            jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_crear_claseLayout.createSequentialGroup()
-                .addContainerGap(325, Short.MAX_VALUE)
-                .addComponent(jb_crear_clases)
-                .addGap(291, 291, 291))
-            .addGroup(jd_crear_claseLayout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel57)
-                    .addComponent(jLabel56)
-                    .addComponent(jLabel55)
-                    .addComponent(jLabel54)
-                    .addComponent(jLabel53)
-                    .addComponent(jLabel51)
-                    .addComponent(jLabel52))
-                .addGap(18, 18, 18)
-                .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tf_clase_nombre, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                        .addComponent(tf_clase_id))
-                    .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(tf_clase_year, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                        .addComponent(tf_clase_periodo, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tf_clase_semestre, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tf_clase_unidades, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tf_clase_hora, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_crear_claseLayout.setVerticalGroup(
-            jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_crear_claseLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jd_crear_claseLayout.createSequentialGroup()
-                        .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel51)
-                            .addComponent(tf_clase_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel52)
-                            .addComponent(tf_clase_id, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel53)
-                            .addComponent(tf_clase_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel54)
-                            .addComponent(tf_clase_unidades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8)
-                        .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel55)
-                            .addComponent(tf_clase_semestre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_crear_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel56)
-                            .addComponent(tf_clase_periodo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel57))
-                    .addComponent(tf_clase_year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addComponent(jb_crear_clases)
-                .addGap(68, 68, 68))
-        );
+        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_crear_clase.getContentPane().add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_modificar_clase.setTitle("Modificar Clase");
+        jd_modificar_clase.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tf_clase_nombre_m.setBackground(new java.awt.Color(255, 255, 255));
         tf_clase_nombre_m.setForeground(new java.awt.Color(0, 0, 0));
+        jd_modificar_clase.getContentPane().add(tf_clase_nombre_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 43, 332, -1));
 
         jb_modificar_clases.setBackground(new java.awt.Color(255, 255, 255));
         jb_modificar_clases.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/confirmar.png"))); // NOI18N
@@ -966,101 +928,52 @@ public class Main extends javax.swing.JFrame {
                 jb_modificar_clasesActionPerformed(evt);
             }
         });
+        jd_modificar_clase.getContentPane().add(jb_modificar_clases, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 392, -1, -1));
 
         tf_clase_id_m.setBackground(new java.awt.Color(255, 255, 255));
         tf_clase_id_m.setForeground(new java.awt.Color(0, 0, 0));
         tf_clase_id_m.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("############"))));
+        jd_modificar_clase.getContentPane().add(tf_clase_id_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 85, 332, 24));
 
         jLabel58.setForeground(new java.awt.Color(0, 0, 0));
         jLabel58.setText("Nombre:");
+        jd_modificar_clase.getContentPane().add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 47, -1, -1));
 
         jLabel59.setForeground(new java.awt.Color(0, 0, 0));
         jLabel59.setText("ID:");
+        jd_modificar_clase.getContentPane().add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 89, -1, -1));
+        jd_modificar_clase.getContentPane().add(tf_clase_hora_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 127, 116, -1));
 
         jLabel60.setForeground(new java.awt.Color(0, 0, 0));
         jLabel60.setText("Hora:");
+        jd_modificar_clase.getContentPane().add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(178, 132, -1, -1));
+        jd_modificar_clase.getContentPane().add(tf_clase_unidades_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 171, 116, -1));
 
         jLabel61.setForeground(new java.awt.Color(0, 0, 0));
         jLabel61.setText("Unidades Valorativas:");
+        jd_modificar_clase.getContentPane().add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 176, -1, -1));
+        jd_modificar_clase.getContentPane().add(tf_clase_semestre_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 205, 116, -1));
 
         jLabel62.setForeground(new java.awt.Color(0, 0, 0));
         jLabel62.setText("Semestre:");
+        jd_modificar_clase.getContentPane().add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 210, -1, -1));
+        jd_modificar_clase.getContentPane().add(tf_clase_periodo_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 249, 116, -1));
 
         jLabel63.setForeground(new java.awt.Color(0, 0, 0));
         jLabel63.setText("Periodo:");
+        jd_modificar_clase.getContentPane().add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 254, -1, -1));
 
         jLabel64.setForeground(new java.awt.Color(0, 0, 0));
         jLabel64.setText("Año:");
+        jd_modificar_clase.getContentPane().add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 293, -1, -1));
 
         tf_clase_year_m.setBackground(new java.awt.Color(204, 204, 204));
+        jd_modificar_clase.getContentPane().add(tf_clase_year_m, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 285, 116, -1));
 
-        javax.swing.GroupLayout jd_modificar_claseLayout = new javax.swing.GroupLayout(jd_modificar_clase.getContentPane());
-        jd_modificar_clase.getContentPane().setLayout(jd_modificar_claseLayout);
-        jd_modificar_claseLayout.setHorizontalGroup(
-            jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modificar_claseLayout.createSequentialGroup()
-                .addContainerGap(325, Short.MAX_VALUE)
-                .addComponent(jb_modificar_clases)
-                .addGap(291, 291, 291))
-            .addGroup(jd_modificar_claseLayout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel64)
-                    .addComponent(jLabel63)
-                    .addComponent(jLabel62)
-                    .addComponent(jLabel61)
-                    .addComponent(jLabel60)
-                    .addComponent(jLabel58)
-                    .addComponent(jLabel59))
-                .addGap(18, 18, 18)
-                .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tf_clase_nombre_m, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
-                        .addComponent(tf_clase_id_m))
-                    .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(tf_clase_year_m, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
-                        .addComponent(tf_clase_periodo_m, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tf_clase_semestre_m, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tf_clase_unidades_m, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(tf_clase_hora_m, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_modificar_claseLayout.setVerticalGroup(
-            jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modificar_claseLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jd_modificar_claseLayout.createSequentialGroup()
-                        .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel58)
-                            .addComponent(tf_clase_nombre_m, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel59)
-                            .addComponent(tf_clase_id_m, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel60)
-                            .addComponent(tf_clase_hora_m, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel61)
-                            .addComponent(tf_clase_unidades_m, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8)
-                        .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel62)
-                            .addComponent(tf_clase_semestre_m, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_modificar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel63)
-                            .addComponent(tf_clase_periodo_m, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel64))
-                    .addComponent(tf_clase_year_m, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
-                .addComponent(jb_modificar_clases)
-                .addGap(68, 68, 68))
-        );
+        jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_modificar_clase.getContentPane().add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
+
+        jd_listar_clase.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_clases.setModel(new DefaultListModel());
         jl_clases.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1070,22 +983,10 @@ public class Main extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jl_clases);
 
-        javax.swing.GroupLayout jd_listar_claseLayout = new javax.swing.GroupLayout(jd_listar_clase.getContentPane());
-        jd_listar_clase.getContentPane().setLayout(jd_listar_claseLayout);
-        jd_listar_claseLayout.setHorizontalGroup(
-            jd_listar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_listar_claseLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 386, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
-        );
-        jd_listar_claseLayout.setVerticalGroup(
-            jd_listar_claseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_listar_claseLayout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(89, Short.MAX_VALUE))
-        );
+        jd_listar_clase.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(65, 58, 386, 493));
+
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_listar_clase.getContentPane().add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 640));
 
         eliminar_clase.setText("Eliminar");
         eliminar_clase.addActionListener(new java.awt.event.ActionListener() {
@@ -1103,154 +1004,189 @@ public class Main extends javax.swing.JFrame {
         });
         popup_clase.add(modificar_clase);
 
+        jd_asignar_maestro.setTitle("Asignar Maestro");
+        jd_asignar_maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jl_verMaestros.setModel(new DefaultListModel());
         jScrollPane2.setViewportView(jl_verMaestros);
+
+        jd_asignar_maestro.getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 82, 302, 495));
 
         jl_verClases.setModel(new DefaultListModel());
         jScrollPane6.setViewportView(jl_verClases);
 
-        jb_asignar_maestro.setText("------------------>");
+        jd_asignar_maestro.getContentPane().add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(566, 82, 302, 495));
+
+        jb_asignar_maestro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha.png"))); // NOI18N
         jb_asignar_maestro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_asignar_maestroActionPerformed(evt);
             }
         });
+        jd_asignar_maestro.getContentPane().add(jb_asignar_maestro, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 325, 137, 59));
 
+        jLabel65.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(0, 0, 0));
         jLabel65.setText("Seleccione el maestro que desea asignar:");
+        jd_asignar_maestro.getContentPane().add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 360, -1));
 
-        jLabel66.setText("Seleccione la clase que lo desea asignar");
+        jLabel66.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel66.setText("Seleccione la clase que lo desea asignar:");
+        jd_asignar_maestro.getContentPane().add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 360, -1));
 
-        javax.swing.GroupLayout jd_asignar_maestroLayout = new javax.swing.GroupLayout(jd_asignar_maestro.getContentPane());
-        jd_asignar_maestro.getContentPane().setLayout(jd_asignar_maestroLayout);
-        jd_asignar_maestroLayout.setHorizontalGroup(
-            jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_asignar_maestroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel65, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jb_asignar_maestro, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel66, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        jd_asignar_maestroLayout.setVerticalGroup(
-            jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_asignar_maestroLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jb_asignar_maestro, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_asignar_maestroLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel65)
-                    .addComponent(jLabel66))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE)
-                    .addComponent(jScrollPane6))
-                .addContainerGap())
-        );
+        jLabel75.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_asignar_maestro.getContentPane().add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 630));
+
+        jd_asignar_alumno.setTitle("Asignar Alumno");
+        jd_asignar_alumno.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_verAlumnos.setModel(new DefaultListModel());
         jScrollPane7.setViewportView(jl_verAlumnos);
 
+        jd_asignar_alumno.getContentPane().add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 110, 334, 479));
+
         jl_verClasesA.setModel(new DefaultListModel());
         jScrollPane8.setViewportView(jl_verClasesA);
 
-        jb_asignar_alumnos.setText("------------------>");
+        jd_asignar_alumno.getContentPane().add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 110, 330, 479));
+
+        jb_asignar_alumnos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha.png"))); // NOI18N
         jb_asignar_alumnos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_asignar_alumnosActionPerformed(evt);
             }
         });
+        jd_asignar_alumno.getContentPane().add(jb_asignar_alumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 265, 125, 59));
 
-        javax.swing.GroupLayout jd_asignar_alumnoLayout = new javax.swing.GroupLayout(jd_asignar_alumno.getContentPane());
-        jd_asignar_alumno.getContentPane().setLayout(jd_asignar_alumnoLayout);
-        jd_asignar_alumnoLayout.setHorizontalGroup(
-            jd_asignar_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_asignar_alumnoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_asignar_alumnos, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jd_asignar_alumnoLayout.setVerticalGroup(
-            jd_asignar_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_asignar_alumnoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_asignar_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
-                    .addComponent(jScrollPane7))
-                .addContainerGap())
-            .addGroup(jd_asignar_alumnoLayout.createSequentialGroup()
-                .addGap(265, 265, 265)
-                .addComponent(jb_asignar_alumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel76.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabel76.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel76.setText("Seleccione el estudiante que desea matricular:");
+        jd_asignar_alumno.getContentPane().add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        jLabel77.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabel77.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel77.setText("Seleccione la clase que lo desea matricular:");
+        jd_asignar_alumno.getContentPane().add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, -1, -1));
+
+        jLabel78.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
+        jd_asignar_alumno.getContentPane().add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 630));
+
+        jf_alumno.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        jf_alumno.setTitle("Alumno");
+        jf_alumno.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
+        jf_alumno.getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 860, 310, 110));
+
+        jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/frame_wallpapers.jpg"))); // NOI18N
+        jf_alumno.getContentPane().add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jMenu5.setText("Sesión");
+
+        cerrar_sesion_alum.setText("Cerrar sesión");
+        cerrar_sesion_alum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrar_sesion_alumActionPerformed(evt);
+            }
+        });
+        jMenu5.add(cerrar_sesion_alum);
+
+        cerrar_sistema_alum.setText("Cerrar el sistema");
+        cerrar_sistema_alum.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrar_sistema_alumActionPerformed(evt);
+            }
+        });
+        jMenu5.add(cerrar_sistema_alum);
+
+        jMenuBar3.add(jMenu5);
+
+        jMenu6.setText("Edit");
+        jMenuBar3.add(jMenu6);
+
+        jf_alumno.setJMenuBar(jMenuBar3);
+
+        jf_maestro.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        jf_maestro.setTitle("Maestro");
+        jf_maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
+        jf_maestro.getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 860, 310, 110));
+
+        jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/frame_wallpapers.jpg"))); // NOI18N
+        jf_maestro.getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jMenu3.setText("Sesión");
+
+        cerrar_sesion_maestro.setText("Cerrar sesión");
+        cerrar_sesion_maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrar_sesion_maestroActionPerformed(evt);
+            }
+        });
+        jMenu3.add(cerrar_sesion_maestro);
+
+        cerrar_sistema_maestro.setText("Cerrar el sistema");
+        cerrar_sistema_maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cerrar_sistema_maestroActionPerformed(evt);
+            }
+        });
+        jMenu3.add(cerrar_sistema_maestro);
+
+        jMenuBar2.add(jMenu3);
+
+        jMenu4.setText("Edit");
+        jMenuBar2.add(jMenu4);
+
+        jf_maestro.setJMenuBar(jMenuBar2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LogIn");
-        setMinimumSize(new java.awt.Dimension(636, 711));
-        setPreferredSize(new java.awt.Dimension(551, 619));
+        setMinimumSize(new java.awt.Dimension(1920, 1080));
         setResizable(false);
-        setSize(new java.awt.Dimension(551, 619));
-        getContentPane().setLayout(null);
+        setSize(new java.awt.Dimension(1920, 1080));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/user_icon.png"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(240, 80, 128, 128);
-
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Contraseña:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(260, 350, 110, 30);
-
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Usuario:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(270, 230, 80, 30);
-
-        tf_user_login.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(tf_user_login);
-        tf_user_login.setBounds(110, 280, 410, 40);
+        jPanel2.setBackground(new java.awt.Color(137, 159, 165));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jb_login.setBackground(new java.awt.Color(255, 255, 255));
-        jb_login.setForeground(new java.awt.Color(255, 255, 255));
+        jb_login.setForeground(new java.awt.Color(0, 0, 0));
         jb_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/login_button.png"))); // NOI18N
+        jb_login.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jb_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_loginActionPerformed(evt);
             }
         });
-        getContentPane().add(jb_login);
-        jb_login.setBounds(280, 490, 62, 50);
+        jPanel2.add(jb_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 258, 480, 50));
+
+        tf_user_login.setBackground(new java.awt.Color(255, 255, 255));
+        tf_user_login.setFont(new java.awt.Font("DialogInput", 0, 18)); // NOI18N
+        tf_user_login.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(tf_user_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 480, 40));
 
         tf_pass_login.setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(tf_pass_login);
-        tf_pass_login.setBounds(110, 420, 410, 40);
+        tf_pass_login.setFont(new java.awt.Font("DialogInput", 0, 14)); // NOI18N
+        tf_pass_login.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel2.add(tf_pass_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 480, 40));
 
-        jLabel4.setIcon(new javax.swing.JLabel() {
-            public javax.swing.Icon getIcon() {
-                try {
-                    return new javax.swing.ImageIcon(
-                        new java.net.URL("https://images.unsplash.com/photo-1540946646613-e038c58270fb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80")
-                    );
-                } catch (java.net.MalformedURLException e) {
-                }
-                return null;
-            }
-        }.getIcon());
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(0, 0, 630, 690);
+        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("CONTRASEÑA:");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 160, -1));
+
+        jLabel2.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("USUARIO:");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 120, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 110, 500, 330));
+
+        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/registro_background.png"))); // NOI18N
+        getContentPane().add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1268,6 +1204,7 @@ public class Main extends javax.swing.JFrame {
                 if (ap.getListaRegistros().get(i).getUsername().equals(user) && ap.getListaRegistros().get(i).getPassword().equals(pass)) {
                     jf_registro.pack();
                     jf_registro.setLocationRelativeTo(this);
+                    jf_registro.setExtendedState(MAXIMIZED_BOTH);
                     jf_registro.setVisible(true);
                     this.hide();
                     found = true;
@@ -1275,19 +1212,33 @@ public class Main extends javax.swing.JFrame {
                     tf_pass_login.setText("");
                 }
             }
-            administrarMaestros ap1 = new administrarMaestros("./maestros.txt");
+            administrarMaestros ap1 = new administrarMaestros("./maestros.cbm");
             ap1.cargarArchivo();
             for (int i = 0; i < ap1.getListaMaestros().size(); i++) {
-                if (true) {
-
+                if (ap1.getListaMaestros().get(i).getUsername().equals(user) && ap1.getListaMaestros().get(i).getPassword().equals(pass)) {
+                    jf_maestro.pack();
+                    jf_maestro.setLocationRelativeTo(this);
+                    jf_maestro.setExtendedState(MAXIMIZED_BOTH);
+                    jf_maestro.setVisible(true);
+                    this.hide();
+                    found = true;
+                    tf_user_login.setText("");
+                    tf_pass_login.setText("");
                     found = true;
                 }
             }
-            administrarAlumnos ap2 = new administrarAlumnos("./alumnos.txt");
+            administrarAlumnos ap2 = new administrarAlumnos("./alumnos.cbm");
             ap2.cargarArchivo();
             for (int i = 0; i < ap2.getListaAlumnos().size(); i++) {
-                if (true) {
-
+                if (ap2.getListaAlumnos().get(i).getUsername().equals(user) && ap2.getListaAlumnos().get(i).getPassword().equals(pass)) {
+                    jf_alumno.pack();
+                    jf_alumno.setLocationRelativeTo(this);
+                    jf_alumno.setExtendedState(MAXIMIZED_BOTH);
+                    jf_alumno.setVisible(true);
+                    this.hide();
+                    found = true;
+                    tf_user_login.setText("");
+                    tf_pass_login.setText("");
                     found = true;
                 }
             }
@@ -1815,7 +1766,7 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_modificar_claseActionPerformed
 
-    private void asignar_variableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asignar_variableActionPerformed
+    private void asignar_maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asignar_maestroActionPerformed
         // TODO add your handling code here:
         DefaultListModel modelo = (DefaultListModel) jl_verMaestros.getModel();
         modelo.removeAllElements();
@@ -1839,7 +1790,7 @@ public class Main extends javax.swing.JFrame {
         jd_asignar_maestro.pack();
         jd_asignar_maestro.setLocationRelativeTo(this);
         jd_asignar_maestro.setVisible(true);
-    }//GEN-LAST:event_asignar_variableActionPerformed
+    }//GEN-LAST:event_asignar_maestroActionPerformed
 
     private void asignar_alumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asignar_alumnoActionPerformed
         // TODO add your handling code here:
@@ -1932,6 +1883,34 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jb_asignar_alumnosActionPerformed
 
+    private void cerrar_sesion_alumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_sesion_alumActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this.getFrames()[0], "Seguro que desea Salirse?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            jf_alumno.dispose();
+            this.setVisible(true);
+        }
+    }//GEN-LAST:event_cerrar_sesion_alumActionPerformed
+
+    private void cerrar_sistema_alumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_sistema_alumActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_cerrar_sistema_alumActionPerformed
+
+    private void cerrar_sesion_maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_sesion_maestroActionPerformed
+        // TODO add your handling code here:
+        int response = JOptionPane.showConfirmDialog(this.getFrames()[0], "Seguro que desea Salirse?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (response == JOptionPane.OK_OPTION) {
+            jf_maestro.dispose();
+            this.setVisible(true);
+        }
+    }//GEN-LAST:event_cerrar_sesion_maestroActionPerformed
+
+    private void cerrar_sistema_maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_sistema_maestroActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_cerrar_sistema_maestroActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1968,12 +1947,15 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Clases;
     private javax.swing.JButton alumnos_agregar;
     private javax.swing.JButton alumnos_modificar;
     private javax.swing.JButton asignar_alumno;
-    private javax.swing.JButton asignar_variable;
+    private javax.swing.JButton asignar_maestro;
+    private javax.swing.JMenuItem cerrar_sesion_alum;
+    private javax.swing.JMenuItem cerrar_sesion_maestro;
     private javax.swing.JMenuItem cerrar_sesion_registro;
+    private javax.swing.JMenuItem cerrar_sistema_alum;
+    private javax.swing.JMenuItem cerrar_sistema_maestro;
     private javax.swing.JMenuItem cerrar_sistema_registro;
     private javax.swing.JButton clases_agregar;
     private javax.swing.JButton clases_modificar;
@@ -2025,7 +2007,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -2036,7 +2017,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
@@ -2044,12 +2024,36 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel87;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -2058,20 +2062,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JToolBar.Separator jSeparator1;
-    private javax.swing.JToolBar.Separator jSeparator10;
-    private javax.swing.JToolBar.Separator jSeparator2;
-    private javax.swing.JToolBar.Separator jSeparator3;
-    private javax.swing.JToolBar.Separator jSeparator4;
-    private javax.swing.JToolBar.Separator jSeparator5;
-    private javax.swing.JToolBar.Separator jSeparator6;
-    private javax.swing.JToolBar.Separator jSeparator7;
-    private javax.swing.JToolBar.Separator jSeparator8;
-    private javax.swing.JToolBar.Separator jSeparator9;
-    private javax.swing.JToolBar jToolBar1;
-    private javax.swing.JToolBar jToolBar2;
-    private javax.swing.JToolBar jToolBar3;
-    private javax.swing.JToolBar jToolBar4;
     private javax.swing.JButton jb_asignar_alumnos;
     private javax.swing.JButton jb_asignar_maestro;
     private javax.swing.JButton jb_crear_alumno;
@@ -2097,6 +2087,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JDialog jd_modificar_clase;
     private javax.swing.JDialog jd_modificar_maestro;
     private javax.swing.JDialog jd_modificar_registro;
+    private javax.swing.JFrame jf_alumno;
+    private javax.swing.JFrame jf_maestro;
     private javax.swing.JFrame jf_registro;
     private javax.swing.JList<String> jl_alumnos;
     private javax.swing.JList<String> jl_clases;
