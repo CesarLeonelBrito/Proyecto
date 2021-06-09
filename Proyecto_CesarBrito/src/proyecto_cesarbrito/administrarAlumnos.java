@@ -1,9 +1,14 @@
 package proyecto_cesarbrito;
 
 import java.io.BufferedWriter;
+import java.io.EOFException;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -41,41 +46,44 @@ public class administrarAlumnos {
         this.listaAlumnos.add(p);
     }
 
-    public void escribirArchivo() throws IOException {
-        FileWriter fw = null;
-        BufferedWriter bw = null;
+    public void cargarArchivo() {
         try {
-            fw = new FileWriter(archivo, false);
-            bw = new BufferedWriter(fw);
+            listaAlumnos = new ArrayList();
+            Alumno temp;
+            if (archivo.exists()) {
+                FileInputStream entrada = new FileInputStream(archivo);
+                ObjectInputStream objeto = new ObjectInputStream(entrada);
+                try {
+                    while ((temp = (Alumno) objeto.readObject()) != null) {
+                        listaAlumnos.add(temp);
+                    }
+                } catch (EOFException e) {
+                }
+                objeto.close();
+                entrada.close();
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void escribirArchivo() {
+        FileOutputStream fw = null;
+        ObjectOutputStream bw = null;
+        try {
+            fw = new FileOutputStream(archivo);
+            bw = new ObjectOutputStream(fw);
             for (Alumno t : listaAlumnos) {
-                bw.write(t.getUsername() + ";");
-                bw.write(t.getPassword() + ";");
-                bw.write(t.getNombre() + ";");
-                bw.write(t.getCarrera() + ";");
-                bw.write(t.getRol() + ";");
-                bw.write(t.getCuenta() + ";");
-                bw.write(t.getClasesCursadas() + ";");
+                bw.writeObject(t);
             }
             bw.flush();
         } catch (Exception ex) {
-        }
-        bw.close();
-        fw.close();
-    }
-
-    public void cargarArchivo() {
-        Scanner sc = null;
-        listaAlumnos = new ArrayList();
-        if (archivo.exists()) {
+        } finally {
             try {
-                sc = new Scanner(archivo);
-                sc.useDelimiter(";");
-                while (sc.hasNext()) {
-                    listaAlumnos.add(new Alumno(sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.nextInt(), sc.nextInt()));
-                }
+                bw.close();
+                fw.close();
             } catch (Exception ex) {
             }
-            sc.close();
         }
     }
 

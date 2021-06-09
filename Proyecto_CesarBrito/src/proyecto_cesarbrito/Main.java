@@ -193,6 +193,20 @@ public class Main extends javax.swing.JFrame {
         popup_clase = new javax.swing.JPopupMenu();
         eliminar_clase = new javax.swing.JMenuItem();
         modificar_clase = new javax.swing.JMenuItem();
+        jd_asignar_maestro = new javax.swing.JDialog();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jl_verMaestros = new javax.swing.JList<>();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jl_verClases = new javax.swing.JList<>();
+        jb_asignar_maestro = new javax.swing.JButton();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jd_asignar_alumno = new javax.swing.JDialog();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jl_verAlumnos = new javax.swing.JList<>();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jl_verClasesA = new javax.swing.JList<>();
+        jb_asignar_alumnos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -207,6 +221,7 @@ public class Main extends javax.swing.JFrame {
         jf_registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jToolBar1.setBackground(new java.awt.Color(0, 102, 102));
+        jToolBar1.setFloatable(false);
         jToolBar1.setRollover(true);
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
@@ -248,6 +263,7 @@ public class Main extends javax.swing.JFrame {
         jf_registro.getContentPane().add(jToolBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 86, 352, 71));
 
         jToolBar2.setBackground(new java.awt.Color(0, 102, 102));
+        jToolBar2.setFloatable(false);
         jToolBar2.setRollover(true);
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -294,11 +310,17 @@ public class Main extends javax.swing.JFrame {
         asignar_variable.setFocusable(false);
         asignar_variable.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         asignar_variable.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        asignar_variable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asignar_variableActionPerformed(evt);
+            }
+        });
         jToolBar2.add(asignar_variable);
 
         jf_registro.getContentPane().add(jToolBar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 175, 352, 71));
 
         jToolBar3.setBackground(new java.awt.Color(0, 102, 102));
+        jToolBar3.setFloatable(false);
         jToolBar3.setRollover(true);
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
@@ -345,11 +367,17 @@ public class Main extends javax.swing.JFrame {
         asignar_alumno.setFocusable(false);
         asignar_alumno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         asignar_alumno.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        asignar_alumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                asignar_alumnoActionPerformed(evt);
+            }
+        });
         jToolBar3.add(asignar_alumno);
 
         jf_registro.getContentPane().add(jToolBar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 264, 352, 71));
 
         jToolBar4.setBackground(new java.awt.Color(0, 102, 102));
+        jToolBar4.setFloatable(false);
         jToolBar4.setRollover(true);
 
         Clases.setBackground(new java.awt.Color(255, 255, 255));
@@ -1075,6 +1103,98 @@ public class Main extends javax.swing.JFrame {
         });
         popup_clase.add(modificar_clase);
 
+        jl_verMaestros.setModel(new DefaultListModel());
+        jScrollPane2.setViewportView(jl_verMaestros);
+
+        jl_verClases.setModel(new DefaultListModel());
+        jScrollPane6.setViewportView(jl_verClases);
+
+        jb_asignar_maestro.setText("------------------>");
+        jb_asignar_maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_asignar_maestroActionPerformed(evt);
+            }
+        });
+
+        jLabel65.setText("Seleccione el maestro que desea asignar:");
+
+        jLabel66.setText("Seleccione la clase que lo desea asignar");
+
+        javax.swing.GroupLayout jd_asignar_maestroLayout = new javax.swing.GroupLayout(jd_asignar_maestro.getContentPane());
+        jd_asignar_maestro.getContentPane().setLayout(jd_asignar_maestroLayout);
+        jd_asignar_maestroLayout.setHorizontalGroup(
+            jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_asignar_maestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jLabel65, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jb_asignar_maestro, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel66, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jd_asignar_maestroLayout.setVerticalGroup(
+            jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_asignar_maestroLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jb_asignar_maestro, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_asignar_maestroLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel65)
+                    .addComponent(jLabel66))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(jd_asignar_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 554, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6))
+                .addContainerGap())
+        );
+
+        jl_verAlumnos.setModel(new DefaultListModel());
+        jScrollPane7.setViewportView(jl_verAlumnos);
+
+        jl_verClasesA.setModel(new DefaultListModel());
+        jScrollPane8.setViewportView(jl_verClasesA);
+
+        jb_asignar_alumnos.setText("------------------>");
+        jb_asignar_alumnos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_asignar_alumnosActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_asignar_alumnoLayout = new javax.swing.GroupLayout(jd_asignar_alumno.getContentPane());
+        jd_asignar_alumno.getContentPane().setLayout(jd_asignar_alumnoLayout);
+        jd_asignar_alumnoLayout.setHorizontalGroup(
+            jd_asignar_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_asignar_alumnoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jb_asignar_alumnos, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jd_asignar_alumnoLayout.setVerticalGroup(
+            jd_asignar_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_asignar_alumnoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_asignar_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 620, Short.MAX_VALUE)
+                    .addComponent(jScrollPane7))
+                .addContainerGap())
+            .addGroup(jd_asignar_alumnoLayout.createSequentialGroup()
+                .addGap(265, 265, 265)
+                .addComponent(jb_asignar_alumnos, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LogIn");
         setMinimumSize(new java.awt.Dimension(636, 711));
@@ -1238,9 +1358,9 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultListModel modelo = (DefaultListModel) jl_maestros.getModel();
         modelo.removeAllElements();
-        administrarMaestros ap = new administrarMaestros("./maestros.txt");
+        administrarMaestros ap = new administrarMaestros("./maestros.cbm");
         ap.cargarArchivo();
-       
+
         for (int i = 0; i < ap.getListaMaestros().size(); i++) {
             modelo.addElement(ap.getListaMaestros().get(i));
         }
@@ -1255,7 +1375,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultListModel modelo = (DefaultListModel) jl_alumnos.getModel();
         modelo.removeAllElements();
-        administrarAlumnos ap = new administrarAlumnos("./alumnos.txt");
+        administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
         ap.cargarArchivo();
         for (int i = 0; i < ap.getListaAlumnos().size(); i++) {
             modelo.addElement(ap.getListaAlumnos().get(i));
@@ -1297,9 +1417,9 @@ public class Main extends javax.swing.JFrame {
             int id = Integer.parseInt(tf_maestro_id.getText());
             double sueldo = Double.parseDouble(tf_maestro_sueldo.getText());
             Maestro p = new Maestro(nombre, username, password, profesion, rol, id, sueldo);
-            administrarMaestros ap = new administrarMaestros("./maestros.txt");
+            administrarMaestros ap = new administrarMaestros("./maestros.cbm");
             ap.cargarArchivo();
-            ap.getListaMaestros().add(p);
+            ap.setMaestro(p);
             ap.escribirArchivo();
             tf_maestro_user.setText("");
             tf_maestro_pass.setText("");
@@ -1325,9 +1445,9 @@ public class Main extends javax.swing.JFrame {
             int cuenta = Integer.parseInt(tf_alumno_cuenta.getText());
             int clasesCursadas = Integer.parseInt(tf_alumno_clases.getText());
             Alumno p = new Alumno(username, password, nombre, carrers, rol, cuenta, clasesCursadas);
-            administrarAlumnos ap = new administrarAlumnos("./alumnos.txt");
+            administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
             ap.cargarArchivo();
-            ap.getListaAlumnos().add(p);
+            ap.setAlumno(p);
             ap.escribirArchivo();
             tf_alumno_user.setText("");
             tf_alumno_pass.setText("");
@@ -1421,7 +1541,7 @@ public class Main extends javax.swing.JFrame {
             DefaultListModel modelo = (DefaultListModel) jl_alumnos.getModel();
             modelo.remove(po);
             jl_alumnos.setModel(modelo);
-            administrarAlumnos ap = new administrarAlumnos("./alumnos.txt");
+            administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
             ap.cargarArchivo();
             ap.getListaAlumnos().remove(po);
             ap.escribirArchivo();
@@ -1434,7 +1554,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             int po = jl_alumnos.getSelectedIndex();
-            administrarAlumnos ap = new administrarAlumnos("./alumnos.txt");
+            administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
             ap.cargarArchivo();
             Alumno x = ap.getListaAlumnos().get(po);
             tf_alumno_user_m.setText(x.getUsername());
@@ -1457,7 +1577,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             int po = jl_alumnos.getSelectedIndex();
-            administrarAlumnos ap = new administrarAlumnos("./alumnos.txt");
+            administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
             ap.cargarArchivo();
             String username = tf_alumno_user_m.getText();
             String password = tf_alumno_pass_m.getText();
@@ -1499,7 +1619,7 @@ public class Main extends javax.swing.JFrame {
             DefaultListModel modelo = (DefaultListModel) jl_maestros.getModel();
             modelo.remove(po);
             jl_maestros.setModel(modelo);
-            administrarMaestros ap = new administrarMaestros("./maestros.txt");
+            administrarMaestros ap = new administrarMaestros("./maestros.cbm");
             ap.cargarArchivo();
             ap.getListaMaestros().remove(po);
             ap.escribirArchivo();
@@ -1512,7 +1632,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             int po = jl_maestros.getSelectedIndex();
-            administrarMaestros ap = new administrarMaestros("./maestros.txt");
+            administrarMaestros ap = new administrarMaestros("./maestros.cbm");
             ap.cargarArchivo();
             Maestro x = ap.getListaMaestros().get(po);
             tf_maestro_user_m.setText(x.getUsername());
@@ -1535,7 +1655,7 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             int po = jl_maestros.getSelectedIndex();
-            administrarMaestros ap = new administrarMaestros("./maestros.txt");
+            administrarMaestros ap = new administrarMaestros("./maestros.cbm");
             ap.cargarArchivo();
             String username = tf_maestro_user_m.getText();
             String password = tf_maestro_pass_m.getText();
@@ -1571,6 +1691,15 @@ public class Main extends javax.swing.JFrame {
 
     private void clases_modificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clases_modificarActionPerformed
         // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_clases.getModel();
+        modelo.removeAllElements();
+        administrarClases ap = new administrarClases("./clases.cbm");
+        ap.cargarArchivo();
+        for (int i = 0; i < ap.getListaClases().size(); i++) {
+            modelo.addElement(ap.getListaClases().get(i));
+        }
+        jl_clases.setModel(modelo);
+
         jd_listar_clase.setModal(true);
         jd_listar_clase.pack();
         jd_listar_clase.setLocationRelativeTo(this);
@@ -1588,7 +1717,11 @@ public class Main extends javax.swing.JFrame {
             int periodo = (int) tf_clase_periodo.getValue();
             int year = tf_clase_year.getYear();
             Maestro maestro = null;
-            //
+            Clase p = new Clase(nombre, id, hora, unidades, semestre, periodo, year, maestro);
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            ap.setClase(p);
+            ap.escribirArchivo();
             tf_clase_nombre.setText("");
             tf_clase_id.setText("");
             tf_clase_hora.setValue(0);
@@ -1606,6 +1739,8 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             int po = jl_clases.getSelectedIndex();
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
             String nombre = tf_clase_nombre_m.getText();
             int id = Integer.parseInt(tf_clase_id_m.getText());
             int hora = (int) tf_clase_hora_m.getValue();
@@ -1613,10 +1748,17 @@ public class Main extends javax.swing.JFrame {
             int semestre = (int) tf_clase_semestre_m.getValue();
             int periodo = (int) tf_clase_periodo_m.getValue();
             int year = tf_clase_year_m.getYear();
-            Maestro maestro = null;
+            ap.getListaClases().get(po).setHora(hora);
+            ap.getListaClases().get(po).setId(id);
+            ap.getListaClases().get(po).setNombre(nombre);
+            ap.getListaClases().get(po).setPeriodo(periodo);
+            ap.getListaClases().get(po).setSemestre(semestre);
+            ap.getListaClases().get(po).setUnidades(unidades);
+            ap.getListaClases().get(po).setYear(year);
+            ap.escribirArchivo();
             //
             DefaultListModel modelo = (DefaultListModel) jl_clases.getModel();
-            modelo.set(po, clases.get(po));
+            modelo.set(po, ap.getListaClases().get(po));
             jl_clases.setModel(modelo);
             jd_modificar_clase.hide();
         } catch (Exception e) {
@@ -1640,7 +1782,10 @@ public class Main extends javax.swing.JFrame {
             DefaultListModel modelo = (DefaultListModel) jl_clases.getModel();
             modelo.remove(po);
             jl_clases.setModel(modelo);
-            clases.remove(po);
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            ap.getListaClases().remove(po);
+            ap.escribirArchivo();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "OCURRIO UN ERROR");
         }
@@ -1650,14 +1795,17 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             int po = jl_clases.getSelectedIndex();
-            Clase x = clases.get(po);
-            tf_clase_nombre_m.setText("");
-            tf_clase_id_m.setText("");
-            tf_clase_hora_m.setValue(0);
-            tf_clase_unidades_m.setValue(0);
-            tf_clase_semestre_m.setValue(0);
-            tf_clase_periodo_m.setValue(0);
-            tf_clase_year_m.setYear(2021);
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            Clase x = ap.getListaClases().get(po);
+            tf_clase_nombre_m.setText(x.getNombre());
+            tf_clase_id_m.setText(String.valueOf(x.getId()));
+            tf_clase_hora_m.setValue(x.getHora());
+            tf_clase_unidades_m.setValue(x.getUnidades());
+            tf_clase_semestre_m.setValue(x.getSemestre());
+            tf_clase_periodo_m.setValue(x.getPeriodo());
+            tf_clase_year_m.setYear(x.getYear());
+
             jd_modificar_clase.setModal(true);
             jd_modificar_clase.pack();
             jd_modificar_clase.setLocationRelativeTo(this);
@@ -1666,6 +1814,123 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "OCURRIO UN ERROR");
         }
     }//GEN-LAST:event_modificar_claseActionPerformed
+
+    private void asignar_variableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asignar_variableActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_verMaestros.getModel();
+        modelo.removeAllElements();
+        administrarMaestros ap = new administrarMaestros("./maestros.cbm");
+        ap.cargarArchivo();
+        for (int i = 0; i < ap.getListaMaestros().size(); i++) {
+            modelo.addElement(ap.getListaMaestros().get(i));
+        }
+        jl_verMaestros.setModel(modelo);
+
+        DefaultListModel modelo1 = (DefaultListModel) jl_verClases.getModel();
+        modelo1.removeAllElements();
+        administrarClases ap1 = new administrarClases("./clases.cbm");
+        ap1.cargarArchivo();
+        for (int i = 0; i < ap1.getListaClases().size(); i++) {
+            modelo1.addElement(ap1.getListaClases().get(i));
+        }
+        jl_verClases.setModel(modelo1);
+
+        jd_asignar_maestro.setModal(true);
+        jd_asignar_maestro.pack();
+        jd_asignar_maestro.setLocationRelativeTo(this);
+        jd_asignar_maestro.setVisible(true);
+    }//GEN-LAST:event_asignar_variableActionPerformed
+
+    private void asignar_alumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_asignar_alumnoActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_verAlumnos.getModel();
+        modelo.removeAllElements();
+        administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
+        ap.cargarArchivo();
+        for (int i = 0; i < ap.getListaAlumnos().size(); i++) {
+            modelo.addElement(ap.getListaAlumnos().get(i));
+        }
+        jl_verAlumnos.setModel(modelo);
+
+        DefaultListModel modelo1 = (DefaultListModel) jl_verClasesA.getModel();
+        modelo1.removeAllElements();
+        administrarClases ap1 = new administrarClases("./clases.cbm");
+        ap1.cargarArchivo();
+        for (int i = 0; i < ap1.getListaClases().size(); i++) {
+            modelo1.addElement(ap1.getListaClases().get(i));
+        }
+        jl_verClasesA.setModel(modelo1);
+
+        jd_asignar_alumno.setModal(true);
+        jd_asignar_alumno.pack();
+        jd_asignar_alumno.setLocationRelativeTo(this);
+        jd_asignar_alumno.setVisible(true);
+    }//GEN-LAST:event_asignar_alumnoActionPerformed
+
+    private void jb_asignar_maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_asignar_maestroActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (jl_verMaestros.getSelectedIndex() >= 0 && jl_verClases.getSelectedIndex() >= 0) {
+                administrarMaestros ap = new administrarMaestros("./maestros.cbm");
+                ap.cargarArchivo();
+                administrarClases ap1 = new administrarClases("./clases.cbm");
+                ap1.cargarArchivo();
+                int po = jl_verMaestros.getSelectedIndex();
+                int po2 = jl_verClases.getSelectedIndex();
+
+                Maestro x = ap.getListaMaestros().get(po);
+                ap1.getListaClases().get(po2).setMaestro(x);
+                JOptionPane.showMessageDialog(this, "SE HA ASIGNADO EXITOSAMENTE");
+
+                ap1.escribirArchivo();
+                DefaultListModel modelo = (DefaultListModel) jl_verClases.getModel();
+                modelo.set(po2, ap1.getListaClases().get(po2));
+                jl_verClases.setModel(modelo);
+                //System.out.println(ap1.getListaClases());
+            } else {
+                JOptionPane.showMessageDialog(this, "DEBE SELECCIONAR DE AMBOS LADOS");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "OCURRIO UN ERROR");
+        }
+    }//GEN-LAST:event_jb_asignar_maestroActionPerformed
+
+    private void jb_asignar_alumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_asignar_alumnosActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (jl_verAlumnos.getSelectedIndex() >= 0 && jl_verClasesA.getSelectedIndex() >= 0) {
+                administrarAlumnos ap = new administrarAlumnos("./alumnos.cbm");
+                ap.cargarArchivo();
+                administrarClases ap1 = new administrarClases("./clases.cbm");
+                ap1.cargarArchivo();
+                int po = jl_verAlumnos.getSelectedIndex();
+                int po2 = jl_verClasesA.getSelectedIndex();
+                boolean found = false;
+                for (int i = 0; i < ap1.getListaClases().get(po2).getAlumnos().size(); i++) {
+                    if (ap1.getListaClases().get(po2).getAlumnos().get(i).getNombre().equals(ap.getListaAlumnos().get(po).getNombre())
+                            && ap1.getListaClases().get(po2).getAlumnos().get(i).getUsername().equals(ap.getListaAlumnos().get(po).getUsername())
+                            && ap1.getListaClases().get(po2).getAlumnos().get(i).getPassword().equals(ap.getListaAlumnos().get(po).getPassword())) {
+                        found = true;
+                    }
+                }
+                if (found == true) {
+                    JOptionPane.showMessageDialog(this, "YA ESTA ASIGNADO A ESTA CLASE");
+                } else {
+                    ap1.getListaClases().get(po2).getAlumnos().add(ap.getListaAlumnos().get(po));
+                    JOptionPane.showMessageDialog(this, "SE HA ASIGNADO EXITOSAMENTE");
+                }
+                ap1.escribirArchivo();
+                DefaultListModel modelo = (DefaultListModel) jl_verClasesA.getModel();
+                modelo.set(po2, ap1.getListaClases().get(po2));
+                jl_verClasesA.setModel(modelo);
+                //System.out.println(ap1.getListaClases());
+            } else {
+                JOptionPane.showMessageDialog(this, "DEBE SELECCIONAR DE AMBOS LADOS");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "OCURRIO UN ERROR");
+        }
+    }//GEN-LAST:event_jb_asignar_alumnosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1777,6 +2042,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1784,9 +2051,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator10;
     private javax.swing.JToolBar.Separator jSeparator2;
@@ -1801,6 +2072,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JToolBar jToolBar3;
     private javax.swing.JToolBar jToolBar4;
+    private javax.swing.JButton jb_asignar_alumnos;
+    private javax.swing.JButton jb_asignar_maestro;
     private javax.swing.JButton jb_crear_alumno;
     private javax.swing.JButton jb_crear_clases;
     private javax.swing.JButton jb_crear_maestro;
@@ -1810,6 +2083,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jb_modificar_clases;
     private javax.swing.JButton jb_modificar_maestro;
     private javax.swing.JButton jb_modificar_registro;
+    private javax.swing.JDialog jd_asignar_alumno;
+    private javax.swing.JDialog jd_asignar_maestro;
     private javax.swing.JDialog jd_crear_alumno;
     private javax.swing.JDialog jd_crear_clase;
     private javax.swing.JDialog jd_crear_maestro;
@@ -1827,6 +2102,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_clases;
     private javax.swing.JList<String> jl_maestros;
     private javax.swing.JList<String> jl_registros;
+    private javax.swing.JList<String> jl_verAlumnos;
+    private javax.swing.JList<String> jl_verClases;
+    private javax.swing.JList<String> jl_verClasesA;
+    private javax.swing.JList<String> jl_verMaestros;
     private javax.swing.JButton maestro_agregar;
     private javax.swing.JButton maestro_modificar;
     private javax.swing.JMenuItem modificar_alumno;
@@ -1888,5 +2167,5 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_registro_user_m;
     private javax.swing.JTextField tf_user_login;
     // End of variables declaration//GEN-END:variables
-    ArrayList<Clase> clases = new ArrayList();
+
 }

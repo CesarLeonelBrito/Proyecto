@@ -1,6 +1,8 @@
 package proyecto_cesarbrito;
 
-public class Maestro {
+import java.io.Serializable;
+
+public class Maestro implements Serializable {
 
     String nombre;
     String username;
@@ -10,8 +12,7 @@ public class Maestro {
     int id;
     double sueldo;
 
-    public Maestro() {
-    }
+    private static final long SerialVersionUID = 777L;
 
     public Maestro(String nombre, String username, String password, String profesion, String rol, int id, double sueldo) {
         this.nombre = nombre;

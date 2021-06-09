@@ -1,8 +1,9 @@
 package proyecto_cesarbrito;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Clase {
+public class Clase implements Serializable {
 
     private String nombre;
     private int id;
@@ -14,8 +15,7 @@ public class Clase {
     private Maestro maestro;
     private ArrayList<Alumno> alumnos = new ArrayList();
 
-    public Clase() {
-    }
+    private static final long SerialVersionUID = 666L;
 
     public Clase(String nombre, int id, int hora, int unidades, int semestre, int periodo, int year, Maestro maestro) {
         this.nombre = nombre;
@@ -102,7 +102,7 @@ public class Clase {
 
     @Override
     public String toString() {
-        return nombre;
+        return nombre + " - " + maestro + " - " + alumnos;
     }
 
 }

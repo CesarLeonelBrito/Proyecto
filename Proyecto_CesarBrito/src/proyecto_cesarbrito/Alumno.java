@@ -1,6 +1,8 @@
 package proyecto_cesarbrito;
 
-public class Alumno {
+import java.io.Serializable;
+
+public class Alumno implements Serializable {
 
     String username;
     String password;
@@ -10,8 +12,7 @@ public class Alumno {
     int cuenta;
     int clasesCursadas;
 
-    public Alumno() {
-    }
+    private static final long SerialVersionUID = 555L;
 
     public Alumno(String username, String password, String nombre, String carrera, String rol, int cuenta, int clasesCursadas) {
         this.username = username;
