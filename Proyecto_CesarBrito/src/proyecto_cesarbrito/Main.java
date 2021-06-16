@@ -258,7 +258,7 @@ public class Main extends javax.swing.JFrame {
         registro_modificar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         registro_modificar.setForeground(new java.awt.Color(0, 0, 0));
         registro_modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/editar.png"))); // NOI18N
-        registro_modificar.setText("Listar Alumnos");
+        registro_modificar.setText("Listar Registro");
         registro_modificar.setFocusable(false);
         registro_modificar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         registro_modificar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
