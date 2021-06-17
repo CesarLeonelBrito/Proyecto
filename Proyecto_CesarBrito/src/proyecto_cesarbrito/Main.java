@@ -217,6 +217,7 @@ public class Main extends javax.swing.JFrame {
         jb_alumnos_tareas = new javax.swing.JButton();
         jb_alumnos_examenes = new javax.swing.JButton();
         jb_alumnos_notas = new javax.swing.JButton();
+        jb_alumnos_foros = new javax.swing.JButton();
         jLabel88 = new javax.swing.JLabel();
         jLabel79 = new javax.swing.JLabel();
         jLabel89 = new javax.swing.JLabel();
@@ -242,6 +243,11 @@ public class Main extends javax.swing.JFrame {
         jb_maestros_notas1 = new javax.swing.JButton();
         jLabel90 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jMenuBar4 = new javax.swing.JMenuBar();
         jMenu7 = new javax.swing.JMenu();
         cerrar_sesion_maestro = new javax.swing.JMenuItem();
@@ -1128,19 +1134,25 @@ public class Main extends javax.swing.JFrame {
                 jb_alumnos_tareasActionPerformed(evt);
             }
         });
-        jf_alumno.getContentPane().add(jb_alumnos_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+        jf_alumno.getContentPane().add(jb_alumnos_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
         jb_alumnos_examenes.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jb_alumnos_examenes.setForeground(new java.awt.Color(0, 0, 0));
         jb_alumnos_examenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/examenes.png"))); // NOI18N
         jb_alumnos_examenes.setText("Examenes");
-        jf_alumno.getContentPane().add(jb_alumnos_examenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 130, -1, -1));
+        jf_alumno.getContentPane().add(jb_alumnos_examenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, -1, -1));
 
         jb_alumnos_notas.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jb_alumnos_notas.setForeground(new java.awt.Color(0, 0, 0));
         jb_alumnos_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/grado.png"))); // NOI18N
         jb_alumnos_notas.setText("Notas");
-        jf_alumno.getContentPane().add(jb_alumnos_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 130, -1, -1));
+        jf_alumno.getContentPane().add(jb_alumnos_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1510, 120, -1, -1));
+
+        jb_alumnos_foros.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_alumnos_foros.setForeground(new java.awt.Color(0, 0, 0));
+        jb_alumnos_foros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/foro.png"))); // NOI18N
+        jb_alumnos_foros.setText("Foros");
+        jf_alumno.getContentPane().add(jb_alumnos_foros, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 120, -1, -1));
 
         jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
         jf_alumno.getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 820, 310, 110));
@@ -1238,7 +1250,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_verTareas_alumnos.setBounds(new java.awt.Rectangle(1053, 703, 703, 703));
         jd_verTareas_alumnos.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verTareas_alumnos.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_alumnos.setSize(new java.awt.Dimension(1053, 703));
 
         jl_verMisTareas.setModel(new DefaultListModel());
@@ -1306,6 +1317,21 @@ public class Main extends javax.swing.JFrame {
 
         jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/frame_wallpapers.jpg"))); // NOI18N
         jf_maestros.getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jButton1.setText("jButton1");
+        jf_maestros.getContentPane().add(jMenuBar4);
+
+        jButton2.setText("jButton2");
+        jf_maestros.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 500, -1, -1));
+
+        jButton3.setText("jButton3");
+        jf_maestros.getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, -1, -1));
+
+        jButton4.setText("jButton4");
+        jf_maestros.getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 560, -1, -1));
+
+        jButton5.setText("jButton5");
+        jf_maestros.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 570, -1, -1));
 
         jMenu7.setText("Sesión");
 
@@ -2469,6 +2495,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem eliminar_maestro;
     private javax.swing.JMenuItem eliminar_registro;
     private javax.swing.JButton examinar_equipo;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2578,6 +2609,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JButton jb_alumnos_examenes;
+    private javax.swing.JButton jb_alumnos_foros;
     private javax.swing.JButton jb_alumnos_notas;
     private javax.swing.JButton jb_alumnos_tareas;
     private javax.swing.JButton jb_asginat_tarea;

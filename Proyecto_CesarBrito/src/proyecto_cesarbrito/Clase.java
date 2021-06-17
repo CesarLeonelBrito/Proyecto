@@ -15,6 +15,7 @@ public class Clase implements Serializable {
     private Maestro maestro;
     private ArrayList<Alumno> alumnos = new ArrayList();
     private ArrayList<Tarea> tareas = new ArrayList();
+    private ArrayList<Foro> foros = new ArrayList();
 
     private static final long SerialVersionUID = 666L;
 
@@ -107,6 +108,14 @@ public class Clase implements Serializable {
 
     public void setTareas(ArrayList<Tarea> tareas) {
         this.tareas = tareas;
+    }
+
+    public ArrayList<Foro> getForos() {
+        return foros;
+    }
+
+    public void setForos(ArrayList<Foro> foros) {
+        this.foros = foros;
     }
 
     @Override
