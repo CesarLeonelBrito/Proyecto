@@ -1,8 +1,17 @@
 package proyecto_cesarbrito;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.DefaultListModel;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Main extends javax.swing.JFrame {
 
@@ -205,21 +214,55 @@ public class Main extends javax.swing.JFrame {
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         jf_alumno = new javax.swing.JFrame();
-        jLabel86 = new javax.swing.JLabel();
+        jb_alumnos_tareas = new javax.swing.JButton();
+        jb_alumnos_examenes = new javax.swing.JButton();
+        jb_alumnos_notas = new javax.swing.JButton();
+        jLabel88 = new javax.swing.JLabel();
         jLabel79 = new javax.swing.JLabel();
+        jLabel89 = new javax.swing.JLabel();
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
         cerrar_sesion_alum = new javax.swing.JMenuItem();
         cerrar_sistema_alum = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
-        jf_maestro = new javax.swing.JFrame();
-        jLabel85 = new javax.swing.JLabel();
+        jd_entregar_tarea = new javax.swing.JDialog();
+        tarea_alum_titulo = new javax.swing.JTextField();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        tarea_alum_desc = new javax.swing.JTextArea();
+        examinar_equipo = new javax.swing.JButton();
+        jb_entregar_tarea = new javax.swing.JButton();
+        label_tarea = new javax.swing.JLabel();
+        jd_verTareas_alumnos = new javax.swing.JDialog();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jl_verMisTareas = new javax.swing.JList<>();
+        jb_entregarMiTarea = new javax.swing.JButton();
+        jf_maestros = new javax.swing.JFrame();
+        jb_maestros_tareas1 = new javax.swing.JButton();
+        jb_maestros_examenes1 = new javax.swing.JButton();
+        jb_maestros_notas1 = new javax.swing.JButton();
+        jLabel90 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
-        jMenuBar2 = new javax.swing.JMenuBar();
-        jMenu3 = new javax.swing.JMenu();
+        jMenuBar4 = new javax.swing.JMenuBar();
+        jMenu7 = new javax.swing.JMenu();
         cerrar_sesion_maestro = new javax.swing.JMenuItem();
-        cerrar_sistema_maestro = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
+        cerrar_sistema_maesrto = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jd_asignar_tarea = new javax.swing.JDialog();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        tarea_date = new com.toedter.calendar.JDateChooser();
+        jLabel7 = new javax.swing.JLabel();
+        tarea_hora = new javax.swing.JTextField();
+        jLabel82 = new javax.swing.JLabel();
+        tarea_titulo = new javax.swing.JTextField();
+        Descripcion = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tarea_descripcion = new javax.swing.JTextArea();
+        jb_asignar_tarea = new javax.swing.JButton();
+        jd_verClases_maestros = new javax.swing.JDialog();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jl_asignar_clases = new javax.swing.JList<>();
+        jb_asginat_tarea = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jb_login = new javax.swing.JButton();
         tf_user_login = new javax.swing.JTextField();
@@ -231,7 +274,6 @@ public class Main extends javax.swing.JFrame {
         jf_registro.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         jf_registro.setTitle("Registro");
         jf_registro.setMinimumSize(new java.awt.Dimension(1920, 1080));
-        jf_registro.setPreferredSize(new java.awt.Dimension(1920, 1080));
         jf_registro.setResizable(false);
         jf_registro.setSize(new java.awt.Dimension(1920, 1080));
         jf_registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1074,13 +1116,40 @@ public class Main extends javax.swing.JFrame {
 
         jf_alumno.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         jf_alumno.setTitle("Alumno");
+        jf_alumno.setSize(new java.awt.Dimension(1920, 1080));
         jf_alumno.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel86.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
-        jf_alumno.getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 860, 310, 110));
+        jb_alumnos_tareas.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_alumnos_tareas.setForeground(new java.awt.Color(0, 0, 0));
+        jb_alumnos_tareas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/tareas.png"))); // NOI18N
+        jb_alumnos_tareas.setText("Tareas");
+        jb_alumnos_tareas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_alumnos_tareasActionPerformed(evt);
+            }
+        });
+        jf_alumno.getContentPane().add(jb_alumnos_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 130, -1, -1));
+
+        jb_alumnos_examenes.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_alumnos_examenes.setForeground(new java.awt.Color(0, 0, 0));
+        jb_alumnos_examenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/examenes.png"))); // NOI18N
+        jb_alumnos_examenes.setText("Examenes");
+        jf_alumno.getContentPane().add(jb_alumnos_examenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 130, -1, -1));
+
+        jb_alumnos_notas.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_alumnos_notas.setForeground(new java.awt.Color(0, 0, 0));
+        jb_alumnos_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/grado.png"))); // NOI18N
+        jb_alumnos_notas.setText("Notas");
+        jf_alumno.getContentPane().add(jb_alumnos_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1380, 130, -1, -1));
+
+        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
+        jf_alumno.getContentPane().add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 820, 310, 110));
 
         jLabel79.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/frame_wallpapers.jpg"))); // NOI18N
         jf_alumno.getContentPane().add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel89.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
+        jf_alumno.getContentPane().add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 860, 310, 110));
 
         jMenu5.setText("Sesión");
 
@@ -1107,17 +1176,138 @@ public class Main extends javax.swing.JFrame {
 
         jf_alumno.setJMenuBar(jMenuBar3);
 
-        jf_maestro.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
-        jf_maestro.setTitle("Maestro");
-        jf_maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jd_entregar_tarea.setTitle("Entregar Tarea");
+        jd_entregar_tarea.setMinimumSize(new java.awt.Dimension(1166, 792));
+        jd_entregar_tarea.setSize(new java.awt.Dimension(1166, 792));
 
-        jLabel85.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
-        jf_maestro.getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 860, 310, 110));
+        tarea_alum_titulo.setEditable(false);
+
+        tarea_alum_desc.setEditable(false);
+        tarea_alum_desc.setColumns(20);
+        tarea_alum_desc.setRows(5);
+        jScrollPane10.setViewportView(tarea_alum_desc);
+
+        examinar_equipo.setText("Examinar mi Equipo");
+        examinar_equipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                examinar_equipoActionPerformed(evt);
+            }
+        });
+
+        jb_entregar_tarea.setText("Entregar");
+        jb_entregar_tarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_entregar_tareaActionPerformed(evt);
+            }
+        });
+
+        label_tarea.setText("Tarea");
+
+        javax.swing.GroupLayout jd_entregar_tareaLayout = new javax.swing.GroupLayout(jd_entregar_tarea.getContentPane());
+        jd_entregar_tarea.getContentPane().setLayout(jd_entregar_tareaLayout);
+        jd_entregar_tareaLayout.setHorizontalGroup(
+            jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_entregar_tareaLayout.createSequentialGroup()
+                .addContainerGap(232, Short.MAX_VALUE)
+                .addGroup(jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jb_entregar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 721, Short.MAX_VALUE)
+                        .addComponent(tarea_alum_titulo))
+                    .addGroup(jd_entregar_tareaLayout.createSequentialGroup()
+                        .addComponent(examinar_equipo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(label_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(83, 83, 83))
+        );
+        jd_entregar_tareaLayout.setVerticalGroup(
+            jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_entregar_tareaLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(tarea_alum_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67)
+                .addGroup(jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(examinar_equipo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_tarea))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addComponent(jb_entregar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
+        );
+
+        jd_verTareas_alumnos.setBounds(new java.awt.Rectangle(1053, 703, 703, 703));
+        jd_verTareas_alumnos.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verTareas_alumnos.setPreferredSize(new java.awt.Dimension(1053, 703));
+        jd_verTareas_alumnos.setSize(new java.awt.Dimension(1053, 703));
+
+        jl_verMisTareas.setModel(new DefaultListModel());
+        jScrollPane11.setViewportView(jl_verMisTareas);
+
+        jb_entregarMiTarea.setText("Entregar Tarea");
+        jb_entregarMiTarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_entregarMiTareaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_verTareas_alumnosLayout = new javax.swing.GroupLayout(jd_verTareas_alumnos.getContentPane());
+        jd_verTareas_alumnos.getContentPane().setLayout(jd_verTareas_alumnosLayout);
+        jd_verTareas_alumnosLayout.setHorizontalGroup(
+            jd_verTareas_alumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verTareas_alumnosLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(jd_verTareas_alumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
+                    .addComponent(jb_entregarMiTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_verTareas_alumnosLayout.setVerticalGroup(
+            jd_verTareas_alumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verTareas_alumnosLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jb_entregarMiTarea)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jf_maestros.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        jf_maestros.setTitle("Maestros");
+        jf_maestros.setMinimumSize(new java.awt.Dimension(1920, 1080));
+        jf_maestros.setSize(new java.awt.Dimension(1920, 1080));
+        jf_maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jb_maestros_tareas1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_maestros_tareas1.setForeground(new java.awt.Color(0, 0, 0));
+        jb_maestros_tareas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/tareas.png"))); // NOI18N
+        jb_maestros_tareas1.setText("Tareas");
+        jb_maestros_tareas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_maestros_tareas1ActionPerformed(evt);
+            }
+        });
+        jf_maestros.getContentPane().add(jb_maestros_tareas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
+
+        jb_maestros_examenes1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_maestros_examenes1.setForeground(new java.awt.Color(0, 0, 0));
+        jb_maestros_examenes1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/examenes.png"))); // NOI18N
+        jb_maestros_examenes1.setText("Examenes");
+        jf_maestros.getContentPane().add(jb_maestros_examenes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 130, -1, -1));
+
+        jb_maestros_notas1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jb_maestros_notas1.setForeground(new java.awt.Color(0, 0, 0));
+        jb_maestros_notas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/grado.png"))); // NOI18N
+        jb_maestros_notas1.setText("Notas");
+        jf_maestros.getContentPane().add(jb_maestros_notas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 130, -1, -1));
+
+        jLabel90.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/unitec_logo.png"))); // NOI18N
+        jf_maestros.getContentPane().add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(1590, 820, 310, 110));
 
         jLabel81.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/frame_wallpapers.jpg"))); // NOI18N
-        jf_maestro.getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jf_maestros.getContentPane().add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jMenu3.setText("Sesión");
+        jMenu7.setText("Sesión");
 
         cerrar_sesion_maestro.setText("Cerrar sesión");
         cerrar_sesion_maestro.addActionListener(new java.awt.event.ActionListener() {
@@ -1125,22 +1315,139 @@ public class Main extends javax.swing.JFrame {
                 cerrar_sesion_maestroActionPerformed(evt);
             }
         });
-        jMenu3.add(cerrar_sesion_maestro);
+        jMenu7.add(cerrar_sesion_maestro);
 
-        cerrar_sistema_maestro.setText("Cerrar el sistema");
-        cerrar_sistema_maestro.addActionListener(new java.awt.event.ActionListener() {
+        cerrar_sistema_maesrto.setText("Cerrar el sistema");
+        cerrar_sistema_maesrto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cerrar_sistema_maestroActionPerformed(evt);
+                cerrar_sistema_maesrtoActionPerformed(evt);
             }
         });
-        jMenu3.add(cerrar_sistema_maestro);
+        jMenu7.add(cerrar_sistema_maesrto);
 
-        jMenuBar2.add(jMenu3);
+        jMenuBar4.add(jMenu7);
 
-        jMenu4.setText("Edit");
-        jMenuBar2.add(jMenu4);
+        jMenu8.setText("Edit");
+        jMenuBar4.add(jMenu8);
 
-        jf_maestro.setJMenuBar(jMenuBar2);
+        jf_maestros.setJMenuBar(jMenuBar4);
+
+        jd_asignar_tarea.setMinimumSize(new java.awt.Dimension(1166, 792));
+        jd_asignar_tarea.setSize(new java.awt.Dimension(1166, 792));
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel5.setText("Asignar Nueva Tarea");
+
+        jLabel6.setText("Fecha Final:");
+
+        jLabel7.setText("Hora FInal:");
+
+        jLabel82.setText("Titulo de Tarea:");
+
+        Descripcion.setText("Descripcion:");
+
+        tarea_descripcion.setColumns(20);
+        tarea_descripcion.setRows(5);
+        jScrollPane9.setViewportView(tarea_descripcion);
+
+        jb_asignar_tarea.setText("Asignar");
+        jb_asignar_tarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_asignar_tareaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_asignar_tareaLayout = new javax.swing.GroupLayout(jd_asignar_tarea.getContentPane());
+        jd_asignar_tarea.getContentPane().setLayout(jd_asignar_tareaLayout);
+        jd_asignar_tareaLayout.setHorizontalGroup(
+            jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                        .addGap(388, 388, 388)
+                        .addComponent(jLabel5))
+                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                        .addGap(232, 232, 232)
+                        .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel82)
+                            .addComponent(Descripcion))
+                        .addGap(18, 18, 18)
+                        .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tarea_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tarea_hora)
+                            .addComponent(tarea_titulo)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_asignar_tareaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jb_asignar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_asignar_tareaLayout.setVerticalGroup(
+            jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel5)
+                .addGap(60, 60, 60)
+                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel6))
+                    .addComponent(tarea_date, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(42, 42, 42)
+                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(tarea_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44)
+                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel82)
+                    .addComponent(tarea_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(Descripcion))
+                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(39, 39, 39)
+                .addComponent(jb_asignar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jd_verClases_maestros.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verClases_maestros.setSize(new java.awt.Dimension(1053, 703));
+
+        jl_asignar_clases.setModel(new DefaultListModel());
+        jScrollPane12.setViewportView(jl_asignar_clases);
+
+        jb_asginat_tarea.setText("Asignar Tarea");
+        jb_asginat_tarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_asginat_tareaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_verClases_maestrosLayout = new javax.swing.GroupLayout(jd_verClases_maestros.getContentPane());
+        jd_verClases_maestros.getContentPane().setLayout(jd_verClases_maestrosLayout);
+        jd_verClases_maestrosLayout.setHorizontalGroup(
+            jd_verClases_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verClases_maestrosLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(jd_verClases_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
+                    .addComponent(jb_asginat_tarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_verClases_maestrosLayout.setVerticalGroup(
+            jd_verClases_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verClases_maestrosLayout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jb_asginat_tarea)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LogIn");
@@ -1216,10 +1523,12 @@ public class Main extends javax.swing.JFrame {
             ap1.cargarArchivo();
             for (int i = 0; i < ap1.getListaMaestros().size(); i++) {
                 if (ap1.getListaMaestros().get(i).getUsername().equals(user) && ap1.getListaMaestros().get(i).getPassword().equals(pass)) {
-                    jf_maestro.pack();
-                    jf_maestro.setLocationRelativeTo(this);
-                    jf_maestro.setExtendedState(MAXIMIZED_BOTH);
-                    jf_maestro.setVisible(true);
+                    maestroAsig = ap1.getListaMaestros().get(i);
+                    indexMaestro = i;
+                    jf_maestros.pack();
+                    jf_maestros.setLocationRelativeTo(this);
+                    jf_maestros.setExtendedState(MAXIMIZED_BOTH);
+                    jf_maestros.setVisible(true);
                     this.hide();
                     found = true;
                     tf_user_login.setText("");
@@ -1231,6 +1540,8 @@ public class Main extends javax.swing.JFrame {
             ap2.cargarArchivo();
             for (int i = 0; i < ap2.getListaAlumnos().size(); i++) {
                 if (ap2.getListaAlumnos().get(i).getUsername().equals(user) && ap2.getListaAlumnos().get(i).getPassword().equals(pass)) {
+                    estudianteAsig = ap2.getListaAlumnos().get(i);
+                    indexEstudiante = i;
                     jf_alumno.pack();
                     jf_alumno.setLocationRelativeTo(this);
                     jf_alumno.setExtendedState(MAXIMIZED_BOTH);
@@ -1901,15 +2212,208 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         int response = JOptionPane.showConfirmDialog(this.getFrames()[0], "Seguro que desea Salirse?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (response == JOptionPane.OK_OPTION) {
-            jf_maestro.dispose();
+            jf_maestros.dispose();
             this.setVisible(true);
         }
     }//GEN-LAST:event_cerrar_sesion_maestroActionPerformed
 
-    private void cerrar_sistema_maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_sistema_maestroActionPerformed
+    private void cerrar_sistema_maesrtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrar_sistema_maesrtoActionPerformed
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_cerrar_sistema_maestroActionPerformed
+    }//GEN-LAST:event_cerrar_sistema_maesrtoActionPerformed
+
+    private void jb_alumnos_tareasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_alumnos_tareasActionPerformed
+        // TODO add your handling code here:
+        administrarClases ap = new administrarClases("./clases.cbm");
+        ap.cargarArchivo();
+        boolean found = false;
+        DefaultListModel modelo = (DefaultListModel) jl_verMisTareas.getModel();
+        modelo.removeAllElements();
+        for (int i = 0; i < ap.getListaClases().size(); i++) {
+            boolean esta = false;
+            for (int j = 0; j < ap.getListaClases().get(i).getAlumnos().size(); j++) {
+                if (ap.getListaClases().get(i).getAlumnos().get(j).getUsername().equals(estudianteAsig.getUsername())) {
+                    esta = true;
+                }
+            }
+            if (esta) {
+                esta = false;
+                for (int j = 0; j < ap.getListaClases().get(i).getTareas().size(); j++) {
+                    for (int k = 0; k < ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().size(); k++) {
+                        if (ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(k).getEstudiante().getUsername().equals(estudianteAsig.getUsername())) {
+                            found = true;
+                        }
+                    }
+                    Date fecha = new Date();
+                    if (found == false && fecha.before(ap.getListaClases().get(i).getTareas().get(j).getFechaFinal())) {
+                        modelo.addElement(ap.getListaClases().get(i).getTareas().get(j));
+                    }
+                    found = false;
+                }
+            }
+        }
+        jl_verMisTareas.setModel(modelo);
+
+        jd_verTareas_alumnos.setModal(true);
+        jd_verTareas_alumnos.pack();
+        jd_verTareas_alumnos.setLocationRelativeTo(this);
+        jd_verTareas_alumnos.setVisible(true);
+    }//GEN-LAST:event_jb_alumnos_tareasActionPerformed
+
+    private void jb_maestros_tareas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_maestros_tareas1ActionPerformed
+        // TODO add your handling code here:
+        administrarClases ap = new administrarClases("./clases.cbm");
+        ap.cargarArchivo();
+        DefaultListModel modelo = (DefaultListModel) jl_asignar_clases.getModel();
+        modelo.removeAllElements();
+        for (int i = 0; i < ap.getListaClases().size(); i++) {
+            if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                modelo.addElement(ap.getListaClases().get(i));
+            }
+        }
+        jl_asignar_clases.setModel(modelo);
+        jd_verClases_maestros.setModal(true);
+        jd_verClases_maestros.pack();
+        jd_verClases_maestros.setLocationRelativeTo(this);
+        jd_verClases_maestros.setVisible(true);
+    }//GEN-LAST:event_jb_maestros_tareas1ActionPerformed
+
+    private void jb_asginat_tareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_asginat_tareaActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            if (jl_asignar_clases.getSelectedIndex() >= 0) {
+                int po = jl_asignar_clases.getSelectedIndex();
+                DefaultListModel modelo = (DefaultListModel) jl_asignar_clases.getModel();
+                Clase x = (Clase) modelo.getElementAt(po);
+                String nombre = x.getNombre();
+                for (int i = 0; i < ap.getListaClases().size(); i++) {
+                    if (ap.getListaClases().get(i).equals(nombre)) {
+                        poClase = i;
+                    }
+                }
+                jl_asignar_clases.setModel(modelo);
+                jd_asignar_tarea.setModal(true);
+                jd_asignar_tarea.pack();
+                jd_asignar_tarea.setLocationRelativeTo(this);
+                jd_asignar_tarea.setVisible(true);
+            }
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jb_asginat_tareaActionPerformed
+
+    private void jb_asignar_tareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_asignar_tareaActionPerformed
+        // TODO add your handling code here:
+        try {
+            Date fecha = tarea_date.getDate();
+            fecha.setHours(Integer.parseInt(tarea_hora.getText()));
+            String titulo = tarea_titulo.getText();
+            String desc = tarea_descripcion.getText();
+            Tarea x = new Tarea(fecha, titulo, desc);
+            tarea_date.setDate(new Date());
+            tarea_hora.setText("");
+            tarea_titulo.setText("");
+            tarea_descripcion.setText("");
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            ap.getListaClases().get(poClase).getTareas().add(x);
+            ap.escribirArchivo();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "OCURRIO UN ERROR");
+        }
+    }//GEN-LAST:event_jb_asignar_tareaActionPerformed
+
+    private void examinar_equipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_examinar_equipoActionPerformed
+        // TODO add your handling code here:
+        try {
+            JFileChooser fc = new JFileChooser();
+            File archivo = null;
+            FileFilter filtro = new FileNameExtensionFilter("Tarea", "pdf", "jpeg", "png", "docx");
+            fc.setFileFilter(filtro);
+            int op = fc.showOpenDialog(null);
+            if (op == JFileChooser.APPROVE_OPTION) {
+                archivo = fc.getSelectedFile();
+            }
+            label_tarea.setText(archivo.getAbsolutePath());
+            archivoSeleccionado = archivo;
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_examinar_equipoActionPerformed
+
+    private void jb_entregar_tareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_entregar_tareaActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            TareaAlumno x = new TareaAlumno(estudianteAsig, 0, archivoSeleccionado);
+            ap.getListaClases().get(poClaseE).getTareas().get(poTareaE).getTareasAlumnos().add(x);
+            ap.escribirArchivo();
+            boolean found = false;
+            DefaultListModel modelo = (DefaultListModel) jl_verMisTareas.getModel();
+            modelo.removeAllElements();
+            for (int i = 0; i < ap.getListaClases().size(); i++) {
+                boolean esta = false;
+                for (int j = 0; j < ap.getListaClases().get(i).getAlumnos().size(); j++) {
+                    if (ap.getListaClases().get(i).getAlumnos().get(j).getUsername().equals(estudianteAsig.getUsername())) {
+                        esta = true;
+                    }
+                }
+                if (esta) {
+                    esta = false;
+                    for (int j = 0; j < ap.getListaClases().get(i).getTareas().size(); j++) {
+                        for (int k = 0; k < ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().size(); k++) {
+                            if (ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(k).getEstudiante().getUsername().equals(estudianteAsig.getUsername())) {
+                                found = true;
+                            }
+                        }
+                        Date fecha = new Date();
+                        if (found == false && fecha.before(ap.getListaClases().get(i).getTareas().get(j).getFechaFinal())) {
+                            modelo.addElement(ap.getListaClases().get(i).getTareas().get(j));
+                        }
+                        found = false;
+                    }
+                }
+            }
+            jl_verMisTareas.setModel(modelo);
+            jd_entregar_tarea.hide();
+            JOptionPane.showMessageDialog(this, "SE MANDO EXITOSAMENTE");
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jb_entregar_tareaActionPerformed
+
+    private void jb_entregarMiTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_entregarMiTareaActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            if (jl_verMisTareas.getSelectedIndex() >= 0) {
+                int po = jl_verMisTareas.getSelectedIndex();
+                DefaultListModel modelo = (DefaultListModel) jl_verMisTareas.getModel();
+                Tarea x = (Tarea) modelo.getElementAt(po);
+                String nombre = x.getTitulo();
+                for (int i = 0; i < ap.getListaClases().size(); i++) {
+                    for (int j = 0; j < ap.getListaClases().get(i).getTareas().size(); j++) {
+                        if (ap.getListaClases().get(i).getTareas().get(j).getTitulo().equals(nombre)) {
+                            poClaseE = i;
+                            poTareaE = j;
+                        }
+                    }
+                }
+                tarea_alum_titulo.setText(ap.getListaClases().get(poClaseE).getTareas().get(poTareaE).getTitulo());
+                tarea_alum_desc.setText(ap.getListaClases().get(poClaseE).getTareas().get(poTareaE).getDescripcion());
+                jd_entregar_tarea.setModal(true);
+                jd_entregar_tarea.pack();
+                jd_entregar_tarea.setLocationRelativeTo(this);
+                jd_entregar_tarea.setVisible(true);
+            }
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jb_entregarMiTareaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1947,6 +2451,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Descripcion;
     private javax.swing.JButton alumnos_agregar;
     private javax.swing.JButton alumnos_modificar;
     private javax.swing.JButton asignar_alumno;
@@ -1955,7 +2460,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem cerrar_sesion_maestro;
     private javax.swing.JMenuItem cerrar_sesion_registro;
     private javax.swing.JMenuItem cerrar_sistema_alum;
-    private javax.swing.JMenuItem cerrar_sistema_maestro;
+    private javax.swing.JMenuItem cerrar_sistema_maesrto;
     private javax.swing.JMenuItem cerrar_sistema_registro;
     private javax.swing.JButton clases_agregar;
     private javax.swing.JButton clases_modificar;
@@ -1963,6 +2468,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem eliminar_clase;
     private javax.swing.JMenuItem eliminar_maestro;
     private javax.swing.JMenuItem eliminar_registro;
+    private javax.swing.JButton examinar_equipo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2007,6 +2513,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -2017,6 +2524,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
@@ -2027,6 +2535,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
     private javax.swing.JLabel jLabel72;
@@ -2040,21 +2549,26 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel87;
+    private javax.swing.JLabel jLabel88;
+    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel90;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
+    private javax.swing.JMenuBar jMenuBar4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2062,23 +2576,36 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JButton jb_alumnos_examenes;
+    private javax.swing.JButton jb_alumnos_notas;
+    private javax.swing.JButton jb_alumnos_tareas;
+    private javax.swing.JButton jb_asginat_tarea;
     private javax.swing.JButton jb_asignar_alumnos;
     private javax.swing.JButton jb_asignar_maestro;
+    private javax.swing.JButton jb_asignar_tarea;
     private javax.swing.JButton jb_crear_alumno;
     private javax.swing.JButton jb_crear_clases;
     private javax.swing.JButton jb_crear_maestro;
     private javax.swing.JButton jb_crear_registro;
+    private javax.swing.JButton jb_entregarMiTarea;
+    private javax.swing.JButton jb_entregar_tarea;
     private javax.swing.JButton jb_login;
+    private javax.swing.JButton jb_maestros_examenes1;
+    private javax.swing.JButton jb_maestros_notas1;
+    private javax.swing.JButton jb_maestros_tareas1;
     private javax.swing.JButton jb_modificar_alumno;
     private javax.swing.JButton jb_modificar_clases;
     private javax.swing.JButton jb_modificar_maestro;
     private javax.swing.JButton jb_modificar_registro;
     private javax.swing.JDialog jd_asignar_alumno;
     private javax.swing.JDialog jd_asignar_maestro;
+    private javax.swing.JDialog jd_asignar_tarea;
     private javax.swing.JDialog jd_crear_alumno;
     private javax.swing.JDialog jd_crear_clase;
     private javax.swing.JDialog jd_crear_maestro;
     private javax.swing.JDialog jd_crear_registro;
+    private javax.swing.JDialog jd_entregar_tarea;
     private javax.swing.JDialog jd_listar_alumnos;
     private javax.swing.JDialog jd_listar_clase;
     private javax.swing.JDialog jd_listar_maestros;
@@ -2087,10 +2614,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JDialog jd_modificar_clase;
     private javax.swing.JDialog jd_modificar_maestro;
     private javax.swing.JDialog jd_modificar_registro;
+    private javax.swing.JDialog jd_verClases_maestros;
+    private javax.swing.JDialog jd_verTareas_alumnos;
     private javax.swing.JFrame jf_alumno;
-    private javax.swing.JFrame jf_maestro;
+    private javax.swing.JFrame jf_maestros;
     private javax.swing.JFrame jf_registro;
     private javax.swing.JList<String> jl_alumnos;
+    private javax.swing.JList<String> jl_asignar_clases;
     private javax.swing.JList<String> jl_clases;
     private javax.swing.JList<String> jl_maestros;
     private javax.swing.JList<String> jl_registros;
@@ -2098,6 +2628,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_verClases;
     private javax.swing.JList<String> jl_verClasesA;
     private javax.swing.JList<String> jl_verMaestros;
+    private javax.swing.JList<String> jl_verMisTareas;
+    private javax.swing.JLabel label_tarea;
     private javax.swing.JButton maestro_agregar;
     private javax.swing.JButton maestro_modificar;
     private javax.swing.JMenuItem modificar_alumno;
@@ -2110,6 +2642,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPopupMenu popup_registro;
     private javax.swing.JButton registro_agregar;
     private javax.swing.JButton registro_modificar;
+    private javax.swing.JTextArea tarea_alum_desc;
+    private javax.swing.JTextField tarea_alum_titulo;
+    private com.toedter.calendar.JDateChooser tarea_date;
+    private javax.swing.JTextArea tarea_descripcion;
+    private javax.swing.JTextField tarea_hora;
+    private javax.swing.JTextField tarea_titulo;
     private javax.swing.JTextField tf_alumno_carrera;
     private javax.swing.JTextField tf_alumno_carrera_m;
     private javax.swing.JFormattedTextField tf_alumno_clases;
@@ -2159,5 +2697,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_registro_user_m;
     private javax.swing.JTextField tf_user_login;
     // End of variables declaration//GEN-END:variables
-
+    Alumno estudianteAsig;
+    int indexEstudiante;
+    Maestro maestroAsig;
+    int indexMaestro;
+    int poClase;
+    int poClaseE;
+    int poTareaE;
+    File archivoSeleccionado;
 }

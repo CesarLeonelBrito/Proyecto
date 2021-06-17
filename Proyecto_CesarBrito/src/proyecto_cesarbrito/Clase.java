@@ -14,6 +14,7 @@ public class Clase implements Serializable {
     private int year;
     private Maestro maestro;
     private ArrayList<Alumno> alumnos = new ArrayList();
+    private ArrayList<Tarea> tareas = new ArrayList();
 
     private static final long SerialVersionUID = 666L;
 
@@ -98,6 +99,14 @@ public class Clase implements Serializable {
 
     public void setAlumnos(ArrayList<Alumno> alumnos) {
         this.alumnos = alumnos;
+    }
+
+    public ArrayList<Tarea> getTareas() {
+        return tareas;
+    }
+
+    public void setTareas(ArrayList<Tarea> tareas) {
+        this.tareas = tareas;
     }
 
     @Override
