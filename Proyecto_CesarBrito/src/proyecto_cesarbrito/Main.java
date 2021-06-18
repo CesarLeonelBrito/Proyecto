@@ -12,6 +12,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 
 public class Main extends javax.swing.JFrame {
 
@@ -322,6 +323,12 @@ public class Main extends javax.swing.JFrame {
         jLabel92 = new javax.swing.JLabel();
         ftf_nota = new javax.swing.JFormattedTextField();
         jButton2 = new javax.swing.JButton();
+        notas_maestro = new javax.swing.JDialog();
+        jScrollPane25 = new javax.swing.JScrollPane();
+        jt_maestros = new javax.swing.JTable();
+        notas_estudiante = new javax.swing.JDialog();
+        jScrollPane26 = new javax.swing.JScrollPane();
+        jt_alumnos = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jb_login = new javax.swing.JButton();
         tf_user_login = new javax.swing.JTextField();
@@ -1199,6 +1206,11 @@ public class Main extends javax.swing.JFrame {
         jb_alumnos_notas.setForeground(new java.awt.Color(0, 0, 0));
         jb_alumnos_notas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/grado.png"))); // NOI18N
         jb_alumnos_notas.setText("Notas");
+        jb_alumnos_notas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_alumnos_notasActionPerformed(evt);
+            }
+        });
         jf_alumno.getContentPane().add(jb_alumnos_notas, new org.netbeans.lib.awtextra.AbsoluteConstraints(1510, 120, -1, -1));
 
         jb_alumnos_foros.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -1466,6 +1478,11 @@ public class Main extends javax.swing.JFrame {
         jb_maestros_notas1.setForeground(new java.awt.Color(0, 0, 0));
         jb_maestros_notas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/grado.png"))); // NOI18N
         jb_maestros_notas1.setText("Notas");
+        jb_maestros_notas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_maestros_notas1ActionPerformed(evt);
+            }
+        });
         jf_maestros.getContentPane().add(jb_maestros_notas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1510, 120, -1, -1));
 
         jb_alumnos_foros1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -1985,6 +2002,66 @@ public class Main extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        notas_maestro.setMinimumSize(new java.awt.Dimension(1143, 714));
+        notas_maestro.setSize(new java.awt.Dimension(1143, 714));
+
+        jt_maestros.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Clase", "Numero de Cuenta", "Nombre", "Asignacion", "Tipo", "Nota"
+            }
+        ));
+        jScrollPane25.setViewportView(jt_maestros);
+
+        javax.swing.GroupLayout notas_maestroLayout = new javax.swing.GroupLayout(notas_maestro.getContentPane());
+        notas_maestro.getContentPane().setLayout(notas_maestroLayout);
+        notas_maestroLayout.setHorizontalGroup(
+            notas_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notas_maestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 1131, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        notas_maestroLayout.setVerticalGroup(
+            notas_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notas_maestroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        notas_estudiante.setMinimumSize(new java.awt.Dimension(1143, 714));
+        notas_estudiante.setSize(new java.awt.Dimension(1143, 714));
+
+        jt_alumnos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Clase", "Numero de Cuenta", "Nombre", "Asignacion", "Tipo", "Nota"
+            }
+        ));
+        jScrollPane26.setViewportView(jt_alumnos);
+
+        javax.swing.GroupLayout notas_estudianteLayout = new javax.swing.GroupLayout(notas_estudiante.getContentPane());
+        notas_estudiante.getContentPane().setLayout(notas_estudianteLayout);
+        notas_estudianteLayout.setHorizontalGroup(
+            notas_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notas_estudianteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane26, javax.swing.GroupLayout.DEFAULT_SIZE, 1131, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        notas_estudianteLayout.setVerticalGroup(
+            notas_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(notas_estudianteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane26, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2827,7 +2904,7 @@ public class Main extends javax.swing.JFrame {
                 Clase x = (Clase) modelo.getElementAt(po);
                 String nombre = x.getNombre();
                 for (int i = 0; i < ap.getListaClases().size(); i++) {
-                    if (ap.getListaClases().get(i).equals(nombre)) {
+                    if (ap.getListaClases().get(i).getNombre().equals(nombre)) {
                         poClase = i;
                     }
                 }
@@ -3186,11 +3263,11 @@ public class Main extends javax.swing.JFrame {
                 Clase x = (Clase) modelo.getElementAt(po);
                 String nombre = x.getNombre();
                 for (int i = 0; i < ap.getListaClases().size(); i++) {
-                    if (ap.getListaClases().get(i).equals(nombre)) {
+                    if (ap.getListaClases().get(i).getNombre().equals(nombre)) {
                         poClaseT2 = i;
                     }
                 }
-
+                System.out.println(ap.getListaClases().get(poClaseT2).getTareas());
                 DefaultListModel modelo1 = (DefaultListModel) jl_tareas_revisar.getModel();
                 modelo1.removeAllElements();
                 for (int i = 0; i < ap.getListaClases().get(poClaseT2).getTareas().size(); i++) {
@@ -3273,6 +3350,83 @@ public class Main extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jb_maestros_notas1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_maestros_notas1ActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            DefaultTableModel modelo = (DefaultTableModel) jt_maestros.getModel();
+            modelo.setRowCount(0);
+            for (int i = 0; i < ap.getListaClases().size(); i++) {
+                String clase = ap.getListaClases().get(i).getNombre();
+                if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                    for (int j = 0; j < ap.getListaClases().get(i).getTareas().size(); j++) {
+                        for (int k = 0; k < ap.getListaClases().get(i).getAlumnos().size(); k++) {
+                            Alumno x = ap.getListaClases().get(i).getAlumnos().get(k);
+                            boolean found = false;
+                            for (int l = 0; l < ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().size(); l++) {
+                                if (ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(l).getEstudiante().getUsername().equals(x.getUsername())) {
+                                    Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getTareas().get(j), "Tarea",
+                                        ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(l).getNota()};
+                                    modelo.addRow(nuevo);
+                                    found = true;
+                                }
+                            }
+                            if (found == false) {
+                                Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getTareas().get(j), "Tarea", "No Entregada"};
+                                modelo.addRow(nuevo);
+                            }
+                        }
+                    }
+                }
+            }
+            jt_maestros.setModel(modelo);
+            notas_maestro.setModal(true);
+            notas_maestro.pack();
+            notas_maestro.setLocationRelativeTo(this);
+            notas_maestro.setVisible(true);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jb_maestros_notas1ActionPerformed
+
+    private void jb_alumnos_notasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_alumnos_notasActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            DefaultTableModel modelo = (DefaultTableModel) jt_alumnos.getModel();
+            modelo.setRowCount(0);
+            for (int i = 0; i < ap.getListaClases().size(); i++) {
+                String clase = ap.getListaClases().get(i).getNombre();
+                for (int j = 0; j < ap.getListaClases().get(i).getAlumnos().size(); j++) {
+                    if (ap.getListaClases().get(i).getAlumnos().get(j).getUsername().equals(estudianteAsig.getUsername())) {
+                        for (int k = 0; k < ap.getListaClases().get(i).getTareas().size(); k++) {
+                            boolean found = false;
+                            for (int l = 0; l < ap.getListaClases().get(i).getTareas().get(k).getTareasAlumnos().size(); l++) {
+                                if (ap.getListaClases().get(i).getTareas().get(k).getTareasAlumnos().get(l).getEstudiante().getUsername().equals(estudianteAsig.getUsername())) {
+                                    Object[] nuevo = {clase, estudianteAsig.getCuenta(), estudianteAsig.getNombre(), ap.getListaClases().get(i).getTareas().get(k), "Tarea",
+                                        ap.getListaClases().get(i).getTareas().get(k).getTareasAlumnos().get(l).getNota()};
+                                    modelo.addRow(nuevo);
+                                    found = true;
+                                }
+                            }
+                            if (found == false) {
+                                Object[] nuevo = {clase, estudianteAsig.getCuenta(), estudianteAsig.getNombre(), ap.getListaClases().get(i).getTareas().get(k), "Tarea", "No entregada"};
+                                modelo.addRow(nuevo);
+                            }
+                        }
+                    }
+                }
+            }
+            jt_alumnos.setModel(modelo);
+            notas_estudiante.setModal(true);
+            notas_estudiante.pack();
+            notas_estudiante.setLocationRelativeTo(this);
+            notas_estudiante.setVisible(true);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jb_alumnos_notasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3451,6 +3605,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane22;
     private javax.swing.JScrollPane jScrollPane23;
     private javax.swing.JScrollPane jScrollPane24;
+    private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -3537,6 +3693,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_verMaestros;
     private javax.swing.JList<String> jl_verMisForos;
     private javax.swing.JList<String> jl_verMisTareas;
+    private javax.swing.JTable jt_alumnos;
+    private javax.swing.JTable jt_maestros;
     private javax.swing.JLabel label_tarea;
     private javax.swing.JButton maestro_agregar;
     private javax.swing.JButton maestro_modificar;
@@ -3544,6 +3702,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem modificar_clase;
     private javax.swing.JMenuItem modificar_maestro;
     private javax.swing.JMenuItem modificar_registro;
+    private javax.swing.JDialog notas_estudiante;
+    private javax.swing.JDialog notas_maestro;
     private javax.swing.JPopupMenu popup_alumno;
     private javax.swing.JPopupMenu popup_clase;
     private javax.swing.JPopupMenu popup_maestro;
@@ -3633,6 +3793,5 @@ public class Main extends javax.swing.JFrame {
     int poForoF;
     int poClaseFM;
     int poForoFM;
-    //para cuadro de notas
     // para examenes
 }
