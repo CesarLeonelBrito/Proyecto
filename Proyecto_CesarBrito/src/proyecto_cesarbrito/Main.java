@@ -354,6 +354,12 @@ public class Main extends javax.swing.JFrame {
         jScrollPane26 = new javax.swing.JScrollPane();
         jt_alumnos = new javax.swing.JTable();
         jLabel107 = new javax.swing.JLabel();
+        examenes_maestro_clases = new javax.swing.JDialog();
+        jLabel118 = new javax.swing.JLabel();
+        jScrollPane27 = new javax.swing.JScrollPane();
+        jl_examenes_clases = new javax.swing.JList<>();
+        jButton3 = new javax.swing.JButton();
+        examenes_maestro_examenes = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
         jb_login = new javax.swing.JButton();
         tf_user_login = new javax.swing.JTextField();
@@ -1325,7 +1331,6 @@ public class Main extends javax.swing.JFrame {
         jd_verTareas_alumnos.setTitle("Ver Tareas");
         jd_verTareas_alumnos.setBounds(new java.awt.Rectangle(1053, 703, 703, 703));
         jd_verTareas_alumnos.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verTareas_alumnos.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_alumnos.setSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_alumnos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1443,6 +1448,11 @@ public class Main extends javax.swing.JFrame {
         jb_maestros_examenes1.setForeground(new java.awt.Color(0, 0, 0));
         jb_maestros_examenes1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/examenes.png"))); // NOI18N
         jb_maestros_examenes1.setText("Examenes");
+        jb_maestros_examenes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_maestros_examenes1ActionPerformed(evt);
+            }
+        });
         jf_maestros.getContentPane().add(jb_maestros_examenes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 470, -1, -1));
 
         jb_maestros_notas1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -1511,7 +1521,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_asignar_tarea.setTitle("Asignar Tarea");
         jd_asignar_tarea.setMinimumSize(new java.awt.Dimension(1166, 792));
-        jd_asignar_tarea.setPreferredSize(new java.awt.Dimension(1166, 792));
         jd_asignar_tarea.setSize(new java.awt.Dimension(1166, 792));
         jd_asignar_tarea.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1686,7 +1695,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_verForosDeClase.setTitle("Foros de la clase");
         jd_verForosDeClase.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verForosDeClase.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verForosDeClase.setSize(new java.awt.Dimension(1053, 703));
         jd_verForosDeClase.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1713,7 +1721,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_verClases_revisarTareas.setTitle("Listar Clases");
         jd_verClases_revisarTareas.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verClases_revisarTareas.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verClases_revisarTareas.setSize(new java.awt.Dimension(1053, 703));
         jd_verClases_revisarTareas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1740,7 +1747,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_verTareas_revisarTareas.setTitle("Listar Tareas");
         jd_verTareas_revisarTareas.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verTareas_revisarTareas.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_revisarTareas.setSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_revisarTareas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1767,7 +1773,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_verTareasdeAlumnos_revisarTareas.setTitle("Intentos de los Alumnos");
         jd_verTareasdeAlumnos_revisarTareas.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verTareasdeAlumnos_revisarTareas.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareasdeAlumnos_revisarTareas.setSize(new java.awt.Dimension(1053, 703));
         jd_verTareasdeAlumnos_revisarTareas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1901,6 +1906,46 @@ public class Main extends javax.swing.JFrame {
 
         jLabel107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
         notas_estudiante.getContentPane().add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 720));
+
+        examenes_maestro_clases.setMinimumSize(new java.awt.Dimension(978, 686));
+        examenes_maestro_clases.setSize(new java.awt.Dimension(978, 686));
+
+        jLabel118.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel118.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel118.setText("Mis Clases");
+
+        jl_examenes_clases.setModel(new DefaultListModel());
+        jScrollPane27.setViewportView(jl_examenes_clases);
+
+        jButton3.setText("Abrir Clase");
+
+        javax.swing.GroupLayout examenes_maestro_clasesLayout = new javax.swing.GroupLayout(examenes_maestro_clases.getContentPane());
+        examenes_maestro_clases.getContentPane().setLayout(examenes_maestro_clasesLayout);
+        examenes_maestro_clasesLayout.setHorizontalGroup(
+            examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
+                .addGroup(examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
+                        .addGap(361, 361, 361)
+                        .addComponent(jLabel118))
+                    .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addGroup(examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        examenes_maestro_clasesLayout.setVerticalGroup(
+            examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel118)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LogIn");
@@ -3275,6 +3320,26 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jb_alumnos_notasActionPerformed
 
+    private void jb_maestros_examenes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_maestros_examenes1ActionPerformed
+        // TODO add your handling code here:
+        administrarClases ap = new administrarClases("./clases.cbm");
+        ap.cargarArchivo();
+        DefaultListModel modelo = (DefaultListModel) jl_examenes_clases.getModel();
+        modelo.removeAllElements();
+        for (int i = 0; i < ap.getListaClases().size(); i++) {
+            if (ap.getListaClases().get(i).getMaestro() != null) {
+                if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                    modelo.addElement(ap.getListaClases().get(i));
+                }
+            }
+        }
+        jl_examenes_clases.setModel(modelo);
+        examenes_maestro_clases.setModal(true);
+        examenes_maestro_clases.pack();
+        examenes_maestro_clases.setLocationRelativeTo(this);
+        examenes_maestro_clases.setVisible(true);
+    }//GEN-LAST:event_jb_maestros_examenes1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -3328,10 +3393,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem eliminar_clase;
     private javax.swing.JMenuItem eliminar_maestro;
     private javax.swing.JMenuItem eliminar_registro;
+    private javax.swing.JDialog examenes_maestro_clases;
+    private javax.swing.JDialog examenes_maestro_examenes;
     private javax.swing.JButton examinar_equipo;
     private javax.swing.JFormattedTextField ftf_nota;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3354,6 +3422,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel115;
     private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel117;
+    private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -3479,6 +3548,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane24;
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
+    private javax.swing.JScrollPane jScrollPane27;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -3554,6 +3624,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_asignarforos_clases;
     private javax.swing.JList<String> jl_clases;
     private javax.swing.JList<String> jl_clases_revisar;
+    private javax.swing.JList<String> jl_examenes_clases;
     private javax.swing.JList<String> jl_foros;
     private javax.swing.JList<String> jl_intentosA_revisar;
     private javax.swing.JList<String> jl_maestros;

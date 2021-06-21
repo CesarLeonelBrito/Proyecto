@@ -1,14 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proyecto_cesarbrito;
 
-/**
- *
- * @author cesar
- */
-public class Pregunta {
-    
+import java.io.Serializable;
+
+public class Pregunta implements Serializable {
+
+    private String pregunta;
+
+    private static final long SerialVersionUID = 981L;
+
+    public Pregunta() {
+    }
+
+    public Pregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    public String getPregunta() {
+        return pregunta;
+    }
+
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    @Override
+    public String toString() {
+        return pregunta;
+    }
+
 }
