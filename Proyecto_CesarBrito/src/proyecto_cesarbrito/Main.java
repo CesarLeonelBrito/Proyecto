@@ -234,10 +234,13 @@ public class Main extends javax.swing.JFrame {
         examinar_equipo = new javax.swing.JButton();
         jb_entregar_tarea = new javax.swing.JButton();
         label_tarea = new javax.swing.JLabel();
+        jLabel93 = new javax.swing.JLabel();
         jd_verTareas_alumnos = new javax.swing.JDialog();
         jScrollPane11 = new javax.swing.JScrollPane();
         jl_verMisTareas = new javax.swing.JList<>();
         jb_entregarMiTarea = new javax.swing.JButton();
+        jLabel94 = new javax.swing.JLabel();
+        jLabel95 = new javax.swing.JLabel();
         jd_alumno_foro = new javax.swing.JDialog();
         tf_alumno_foroTitulo = new javax.swing.JTextField();
         jScrollPane13 = new javax.swing.JScrollPane();
@@ -248,10 +251,13 @@ public class Main extends javax.swing.JFrame {
         jScrollPane15 = new javax.swing.JScrollPane();
         ta_alumnos_miAporte = new javax.swing.JTextArea();
         jb_alumno_ingresarAporte = new javax.swing.JButton();
+        jLabel96 = new javax.swing.JLabel();
         jd_verMisForos = new javax.swing.JDialog();
         jScrollPane16 = new javax.swing.JScrollPane();
         jl_verMisForos = new javax.swing.JList<>();
         jb_abrirForo = new javax.swing.JButton();
+        jLabel98 = new javax.swing.JLabel();
+        jLabel97 = new javax.swing.JLabel();
         jf_maestros = new javax.swing.JFrame();
         jb_maestros_tareas1 = new javax.swing.JButton();
         jb_maestros_examenes1 = new javax.swing.JButton();
@@ -277,15 +283,20 @@ public class Main extends javax.swing.JFrame {
         jScrollPane9 = new javax.swing.JScrollPane();
         tarea_descripcion = new javax.swing.JTextArea();
         jb_asignar_tarea = new javax.swing.JButton();
+        jLabel99 = new javax.swing.JLabel();
         jd_verClases_maestros = new javax.swing.JDialog();
         jScrollPane12 = new javax.swing.JScrollPane();
         jl_asignar_clases = new javax.swing.JList<>();
         jb_asginat_tarea = new javax.swing.JButton();
+        jLabel108 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
         jd_verClasesForos_maestros = new javax.swing.JDialog();
         jScrollPane17 = new javax.swing.JScrollPane();
         jl_asignarforos_clases = new javax.swing.JList<>();
         jb_asginar_foro = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel102 = new javax.swing.JLabel();
+        jLabel103 = new javax.swing.JLabel();
         jd_crearForo = new javax.swing.JDialog();
         jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
@@ -293,6 +304,8 @@ public class Main extends javax.swing.JFrame {
         jScrollPane18 = new javax.swing.JScrollPane();
         tf_crearForo_desc = new javax.swing.JTextArea();
         jb_crear_foro = new javax.swing.JButton();
+        jLabel100 = new javax.swing.JLabel();
+        jLabel101 = new javax.swing.JLabel();
         jd_verForos_Maestro = new javax.swing.JDialog();
         jScrollPane20 = new javax.swing.JScrollPane();
         ta_alumno_foroDesc1 = new javax.swing.JTextArea();
@@ -300,22 +313,31 @@ public class Main extends javax.swing.JFrame {
         ta_alumnos_aportes1 = new javax.swing.JTextArea();
         jLabel86 = new javax.swing.JLabel();
         tf_alumno_foroTitulo1 = new javax.swing.JTextField();
+        jLabel104 = new javax.swing.JLabel();
         jd_verForosDeClase = new javax.swing.JDialog();
         jScrollPane19 = new javax.swing.JScrollPane();
         jl_foros = new javax.swing.JList<>();
         jb_abiriForo = new javax.swing.JButton();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
         jd_verClases_revisarTareas = new javax.swing.JDialog();
         jScrollPane22 = new javax.swing.JScrollPane();
         jl_clases_revisar = new javax.swing.JList<>();
         jb_abrir_clases = new javax.swing.JButton();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
         jd_verTareas_revisarTareas = new javax.swing.JDialog();
         jScrollPane23 = new javax.swing.JScrollPane();
         jl_tareas_revisar = new javax.swing.JList<>();
         jb_abrir_tareas = new javax.swing.JButton();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
         jd_verTareasdeAlumnos_revisarTareas = new javax.swing.JDialog();
         jScrollPane24 = new javax.swing.JScrollPane();
         jl_intentosA_revisar = new javax.swing.JList<>();
         jb_abrir_tareasdeAlumnos = new javax.swing.JButton();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
         jd_abrir_tarea = new javax.swing.JDialog();
         jLabel91 = new javax.swing.JLabel();
         tf_alum_revision = new javax.swing.JTextField();
@@ -323,12 +345,15 @@ public class Main extends javax.swing.JFrame {
         jLabel92 = new javax.swing.JLabel();
         ftf_nota = new javax.swing.JFormattedTextField();
         jButton2 = new javax.swing.JButton();
+        jLabel105 = new javax.swing.JLabel();
         notas_maestro = new javax.swing.JDialog();
         jScrollPane25 = new javax.swing.JScrollPane();
         jt_maestros = new javax.swing.JTable();
+        jLabel106 = new javax.swing.JLabel();
         notas_estudiante = new javax.swing.JDialog();
         jScrollPane26 = new javax.swing.JScrollPane();
         jt_alumnos = new javax.swing.JTable();
+        jLabel107 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jb_login = new javax.swing.JButton();
         tf_user_login = new javax.swing.JTextField();
@@ -1081,6 +1106,7 @@ public class Main extends javax.swing.JFrame {
         jLabel73.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/jd_background.jpg"))); // NOI18N
         jd_modificar_clase.getContentPane().add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 540));
 
+        jd_listar_clase.setTitle("Listar Clases");
         jd_listar_clase.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_clases.setModel(new DefaultListModel());
@@ -1261,13 +1287,17 @@ public class Main extends javax.swing.JFrame {
         jd_entregar_tarea.setTitle("Entregar Tarea");
         jd_entregar_tarea.setMinimumSize(new java.awt.Dimension(1166, 792));
         jd_entregar_tarea.setSize(new java.awt.Dimension(1166, 792));
+        jd_entregar_tarea.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tarea_alum_titulo.setEditable(false);
+        jd_entregar_tarea.getContentPane().add(tarea_alum_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 49, 721, 36));
 
         tarea_alum_desc.setEditable(false);
         tarea_alum_desc.setColumns(20);
         tarea_alum_desc.setRows(5);
         jScrollPane10.setViewportView(tarea_alum_desc);
+
+        jd_entregar_tarea.getContentPane().add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 140, 721, 314));
 
         examinar_equipo.setText("Examinar mi Equipo");
         examinar_equipo.addActionListener(new java.awt.event.ActionListener() {
@@ -1275,6 +1305,7 @@ public class Main extends javax.swing.JFrame {
                 examinar_equipoActionPerformed(evt);
             }
         });
+        jd_entregar_tarea.getContentPane().add(examinar_equipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 521, 223, 54));
 
         jb_entregar_tarea.setText("Entregar");
         jb_entregar_tarea.addActionListener(new java.awt.event.ActionListener() {
@@ -1282,48 +1313,26 @@ public class Main extends javax.swing.JFrame {
                 jb_entregar_tareaActionPerformed(evt);
             }
         });
+        jd_entregar_tarea.getContentPane().add(jb_entregar_tarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 659, 721, 56));
 
+        label_tarea.setForeground(new java.awt.Color(0, 0, 0));
         label_tarea.setText("Tarea");
+        jd_entregar_tarea.getContentPane().add(label_tarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 540, 568, -1));
 
-        javax.swing.GroupLayout jd_entregar_tareaLayout = new javax.swing.GroupLayout(jd_entregar_tarea.getContentPane());
-        jd_entregar_tarea.getContentPane().setLayout(jd_entregar_tareaLayout);
-        jd_entregar_tareaLayout.setHorizontalGroup(
-            jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_entregar_tareaLayout.createSequentialGroup()
-                .addContainerGap(232, Short.MAX_VALUE)
-                .addGroup(jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jb_entregar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.DEFAULT_SIZE, 721, Short.MAX_VALUE)
-                        .addComponent(tarea_alum_titulo))
-                    .addGroup(jd_entregar_tareaLayout.createSequentialGroup()
-                        .addComponent(examinar_equipo, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(60, 60, 60)
-                        .addComponent(label_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(83, 83, 83))
-        );
-        jd_entregar_tareaLayout.setVerticalGroup(
-            jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_entregar_tareaLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(tarea_alum_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addGroup(jd_entregar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(examinar_equipo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label_tarea))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addComponent(jb_entregar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99))
-        );
+        jLabel93.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_entregar_tarea.getContentPane().add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 820));
 
+        jd_verTareas_alumnos.setTitle("Ver Tareas");
         jd_verTareas_alumnos.setBounds(new java.awt.Rectangle(1053, 703, 703, 703));
         jd_verTareas_alumnos.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verTareas_alumnos.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_alumnos.setSize(new java.awt.Dimension(1053, 703));
+        jd_verTareas_alumnos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_verMisTareas.setModel(new DefaultListModel());
         jScrollPane11.setViewportView(jl_verMisTareas);
+
+        jd_verTareas_alumnos.getContentPane().add(jScrollPane11, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 74, 915, 504));
 
         jb_entregarMiTarea.setText("Entregar Tarea");
         jb_entregarMiTarea.addActionListener(new java.awt.event.ActionListener() {
@@ -1331,50 +1340,49 @@ public class Main extends javax.swing.JFrame {
                 jb_entregarMiTareaActionPerformed(evt);
             }
         });
+        jd_verTareas_alumnos.getContentPane().add(jb_entregarMiTarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 612, 915, -1));
 
-        javax.swing.GroupLayout jd_verTareas_alumnosLayout = new javax.swing.GroupLayout(jd_verTareas_alumnos.getContentPane());
-        jd_verTareas_alumnos.getContentPane().setLayout(jd_verTareas_alumnosLayout);
-        jd_verTareas_alumnosLayout.setHorizontalGroup(
-            jd_verTareas_alumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verTareas_alumnosLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verTareas_alumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_entregarMiTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_verTareas_alumnosLayout.setVerticalGroup(
-            jd_verTareas_alumnosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verTareas_alumnosLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_entregarMiTarea)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel94.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel94.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel94.setText("Mis Tareas");
+        jd_verTareas_alumnos.getContentPane().add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 6, -1, -1));
 
+        jLabel95.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verTareas_alumnos.getContentPane().add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 700));
+
+        jd_alumno_foro.setTitle("Foro");
         jd_alumno_foro.setMinimumSize(new java.awt.Dimension(1261, 806));
         jd_alumno_foro.setSize(new java.awt.Dimension(1261, 806));
+        jd_alumno_foro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tf_alumno_foroTitulo.setEditable(false);
         tf_alumno_foroTitulo.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jd_alumno_foro.getContentPane().add(tf_alumno_foroTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1235, 41));
 
         ta_alumno_foroDesc.setEditable(false);
         ta_alumno_foroDesc.setColumns(20);
         ta_alumno_foroDesc.setRows(5);
         jScrollPane13.setViewportView(ta_alumno_foroDesc);
 
+        jd_alumno_foro.getContentPane().add(jScrollPane13, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 65, 1235, -1));
+
         ta_alumnos_aportes.setEditable(false);
         ta_alumnos_aportes.setColumns(20);
         ta_alumnos_aportes.setRows(5);
         jScrollPane14.setViewportView(ta_alumnos_aportes);
 
+        jd_alumno_foro.getContentPane().add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 216, 1235, 357));
+
         jLabel83.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jLabel83.setForeground(new java.awt.Color(0, 0, 0));
         jLabel83.setText("Aportes");
+        jd_alumno_foro.getContentPane().add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 166, -1, -1));
 
         ta_alumnos_miAporte.setColumns(20);
         ta_alumnos_miAporte.setRows(5);
         jScrollPane15.setViewportView(ta_alumnos_miAporte);
+
+        jd_alumno_foro.getContentPane().add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 600, 1235, 104));
 
         jb_alumno_ingresarAporte.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jb_alumno_ingresarAporte.setText("Ingresar Aporte");
@@ -1383,45 +1391,20 @@ public class Main extends javax.swing.JFrame {
                 jb_alumno_ingresarAporteActionPerformed(evt);
             }
         });
+        jd_alumno_foro.getContentPane().add(jb_alumno_ingresarAporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 722, 1235, 54));
 
-        javax.swing.GroupLayout jd_alumno_foroLayout = new javax.swing.GroupLayout(jd_alumno_foro.getContentPane());
-        jd_alumno_foro.getContentPane().setLayout(jd_alumno_foroLayout);
-        jd_alumno_foroLayout.setHorizontalGroup(
-            jd_alumno_foroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_alumno_foroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_alumno_foroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jb_alumno_ingresarAporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane15)
-                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 1235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane13)
-                    .addComponent(tf_alumno_foroTitulo)
-                    .addComponent(jLabel83))
-                .addGap(20, 20, 20))
-        );
-        jd_alumno_foroLayout.setVerticalGroup(
-            jd_alumno_foroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_alumno_foroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tf_alumno_foroTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel83)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_alumno_ingresarAporte, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
+        jLabel96.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_alumno_foro.getContentPane().add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 810));
 
+        jd_verMisForos.setTitle("Mis Foros");
         jd_verMisForos.setMinimumSize(new java.awt.Dimension(1047, 691));
         jd_verMisForos.setSize(new java.awt.Dimension(1047, 691));
+        jd_verMisForos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_verMisForos.setModel(new DefaultListModel());
         jScrollPane16.setViewportView(jl_verMisForos);
+
+        jd_verMisForos.getContentPane().add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 69, 915, 504));
 
         jb_abrirForo.setText("Abrir Foro");
         jb_abrirForo.addActionListener(new java.awt.event.ActionListener() {
@@ -1429,27 +1412,15 @@ public class Main extends javax.swing.JFrame {
                 jb_abrirForoActionPerformed(evt);
             }
         });
+        jd_verMisForos.getContentPane().add(jb_abrirForo, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 607, 915, -1));
 
-        javax.swing.GroupLayout jd_verMisForosLayout = new javax.swing.GroupLayout(jd_verMisForos.getContentPane());
-        jd_verMisForos.getContentPane().setLayout(jd_verMisForosLayout);
-        jd_verMisForosLayout.setHorizontalGroup(
-            jd_verMisForosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verMisForosLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verMisForosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane16, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_abrirForo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(68, Short.MAX_VALUE))
-        );
-        jd_verMisForosLayout.setVerticalGroup(
-            jd_verMisForosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verMisForosLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_abrirForo)
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
+        jLabel98.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel98.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel98.setText("Mis Foros");
+        jd_verMisForos.getContentPane().add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, -1, -1));
+
+        jLabel97.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verMisForos.getContentPane().add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 690));
 
         jf_maestros.setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         jf_maestros.setTitle("Maestros");
@@ -1538,23 +1509,41 @@ public class Main extends javax.swing.JFrame {
 
         jf_maestros.setJMenuBar(jMenuBar4);
 
+        jd_asignar_tarea.setTitle("Asignar Tarea");
         jd_asignar_tarea.setMinimumSize(new java.awt.Dimension(1166, 792));
+        jd_asignar_tarea.setPreferredSize(new java.awt.Dimension(1166, 792));
         jd_asignar_tarea.setSize(new java.awt.Dimension(1166, 792));
+        jd_asignar_tarea.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Asignar Nueva Tarea");
+        jd_asignar_tarea.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(388, 51, -1, -1));
 
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Fecha Final:");
+        jd_asignar_tarea.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(253, 167, -1, -1));
+        jd_asignar_tarea.getContentPane().add(tarea_date, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 158, 538, 39));
 
-        jLabel7.setText("Hora FInal:");
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Hora Final:");
+        jd_asignar_tarea.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 251, -1, -1));
+        jd_asignar_tarea.getContentPane().add(tarea_hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 239, 538, 40));
 
+        jLabel82.setForeground(new java.awt.Color(0, 0, 0));
         jLabel82.setText("Titulo de Tarea:");
+        jd_asignar_tarea.getContentPane().add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 335, -1, -1));
+        jd_asignar_tarea.getContentPane().add(tarea_titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 323, 538, 40));
 
+        Descripcion.setForeground(new java.awt.Color(0, 0, 0));
         Descripcion.setText("Descripcion:");
+        jd_asignar_tarea.getContentPane().add(Descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 413, -1, -1));
 
         tarea_descripcion.setColumns(20);
         tarea_descripcion.setRows(5);
         jScrollPane9.setViewportView(tarea_descripcion);
+
+        jd_asignar_tarea.getContentPane().add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 401, 538, 228));
 
         jb_asignar_tarea.setText("Asignar");
         jb_asignar_tarea.addActionListener(new java.awt.event.ActionListener() {
@@ -1562,70 +1551,21 @@ public class Main extends javax.swing.JFrame {
                 jb_asignar_tareaActionPerformed(evt);
             }
         });
+        jd_asignar_tarea.getContentPane().add(jb_asignar_tarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 668, 627, 56));
 
-        javax.swing.GroupLayout jd_asignar_tareaLayout = new javax.swing.GroupLayout(jd_asignar_tarea.getContentPane());
-        jd_asignar_tarea.getContentPane().setLayout(jd_asignar_tareaLayout);
-        jd_asignar_tareaLayout.setHorizontalGroup(
-            jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                        .addGap(388, 388, 388)
-                        .addComponent(jLabel5))
-                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                        .addGap(232, 232, 232)
-                        .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel82)
-                            .addComponent(Descripcion))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tarea_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(tarea_hora)
-                            .addComponent(tarea_titulo)
-                            .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_asignar_tareaLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jb_asignar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_asignar_tareaLayout.setVerticalGroup(
-            jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(jLabel5)
-                .addGap(60, 60, 60)
-                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel6))
-                    .addComponent(tarea_date, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(tarea_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel82)
-                    .addComponent(tarea_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jd_asignar_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(Descripcion))
-                    .addGroup(jd_asignar_tareaLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39)
-                .addComponent(jb_asignar_tarea, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel99.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_asignar_tarea.getContentPane().add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1170, 790));
 
+        jd_verClases_maestros.setTitle("Listar Clases");
         jd_verClases_maestros.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verClases_maestros.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verClases_maestros.setSize(new java.awt.Dimension(1053, 703));
+        jd_verClases_maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_asignar_clases.setModel(new DefaultListModel());
         jScrollPane12.setViewportView(jl_asignar_clases);
+
+        jd_verClases_maestros.getContentPane().add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 69, 915, 504));
 
         jb_asginat_tarea.setText("Asignar Tarea");
         jb_asginat_tarea.addActionListener(new java.awt.event.ActionListener() {
@@ -1633,33 +1573,25 @@ public class Main extends javax.swing.JFrame {
                 jb_asginat_tareaActionPerformed(evt);
             }
         });
+        jd_verClases_maestros.getContentPane().add(jb_asginat_tarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 607, 915, -1));
 
-        javax.swing.GroupLayout jd_verClases_maestrosLayout = new javax.swing.GroupLayout(jd_verClases_maestros.getContentPane());
-        jd_verClases_maestros.getContentPane().setLayout(jd_verClases_maestrosLayout);
-        jd_verClases_maestrosLayout.setHorizontalGroup(
-            jd_verClases_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verClases_maestrosLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verClases_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_asginat_tarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_verClases_maestrosLayout.setVerticalGroup(
-            jd_verClases_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verClases_maestrosLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_asginat_tarea)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel108.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel108.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel108.setText("Mis Clases");
+        jd_verClases_maestros.getContentPane().add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, -1, -1));
 
+        jLabel109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verClases_maestros.getContentPane().add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+
+        jd_verClasesForos_maestros.setTitle("Listar Clases");
         jd_verClasesForos_maestros.setMinimumSize(new java.awt.Dimension(1053, 703));
         jd_verClasesForos_maestros.setSize(new java.awt.Dimension(1053, 703));
+        jd_verClasesForos_maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_asignarforos_clases.setModel(new DefaultListModel());
         jScrollPane17.setViewportView(jl_asignarforos_clases);
+
+        jd_verClasesForos_maestros.getContentPane().add(jScrollPane17, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 74, 915, 504));
 
         jb_asginar_foro.setText("Asignar Foro");
         jb_asginar_foro.addActionListener(new java.awt.event.ActionListener() {
@@ -1667,6 +1599,7 @@ public class Main extends javax.swing.JFrame {
                 jb_asginar_foroActionPerformed(evt);
             }
         });
+        jd_verClasesForos_maestros.getContentPane().add(jb_asginar_foro, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 653, 915, -1));
 
         jButton1.setText("Ver Foros");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -1674,42 +1607,35 @@ public class Main extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jd_verClasesForos_maestros.getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 596, 915, -1));
 
-        javax.swing.GroupLayout jd_verClasesForos_maestrosLayout = new javax.swing.GroupLayout(jd_verClasesForos_maestros.getContentPane());
-        jd_verClasesForos_maestros.getContentPane().setLayout(jd_verClasesForos_maestrosLayout);
-        jd_verClasesForos_maestrosLayout.setHorizontalGroup(
-            jd_verClasesForos_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verClasesForos_maestrosLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verClasesForos_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 915, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jd_verClasesForos_maestrosLayout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jb_asginar_foro, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(74, Short.MAX_VALUE))
-        );
-        jd_verClasesForos_maestrosLayout.setVerticalGroup(
-            jd_verClasesForos_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verClasesForos_maestrosLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(jd_verClasesForos_maestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_asginar_foro)
-                    .addComponent(jButton1))
-                .addContainerGap(64, Short.MAX_VALUE))
-        );
+        jLabel102.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel102.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel102.setText("Mis Clases");
+        jd_verClasesForos_maestros.getContentPane().add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
+
+        jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verClasesForos_maestros.getContentPane().add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+
+        jd_crearForo.setTitle("Crear Foro");
+        jd_crearForo.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel84.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel84.setForeground(new java.awt.Color(0, 0, 0));
         jLabel84.setText("Titulo:");
+        jd_crearForo.getContentPane().add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 164, -1, -1));
 
         jLabel85.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(0, 0, 0));
         jLabel85.setText("Descripcion:");
+        jd_crearForo.getContentPane().add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 257, -1, -1));
+        jd_crearForo.getContentPane().add(tf_crearForo_tit, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 156, 590, 45));
 
         tf_crearForo_desc.setColumns(20);
         tf_crearForo_desc.setRows(5);
         jScrollPane18.setViewportView(tf_crearForo_desc);
+
+        jd_crearForo.getContentPane().add(jScrollPane18, new org.netbeans.lib.awtextra.AbsoluteConstraints(135, 240, 590, 253));
 
         jb_crear_foro.setText("Crear Foro");
         jb_crear_foro.addActionListener(new java.awt.event.ActionListener() {
@@ -1717,95 +1643,57 @@ public class Main extends javax.swing.JFrame {
                 jb_crear_foroActionPerformed(evt);
             }
         });
+        jd_crearForo.getContentPane().add(jb_crear_foro, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 552, 598, 54));
 
-        javax.swing.GroupLayout jd_crearForoLayout = new javax.swing.GroupLayout(jd_crearForo.getContentPane());
-        jd_crearForo.getContentPane().setLayout(jd_crearForoLayout);
-        jd_crearForoLayout.setHorizontalGroup(
-            jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_crearForoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jb_crear_foro, javax.swing.GroupLayout.PREFERRED_SIZE, 598, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jd_crearForoLayout.createSequentialGroup()
-                        .addGroup(jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel85)
-                            .addComponent(jLabel84))
-                        .addGap(18, 18, 18)
-                        .addGroup(jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tf_crearForo_tit)
-                            .addComponent(jScrollPane18, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE))))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
-        jd_crearForoLayout.setVerticalGroup(
-            jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_crearForoLayout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addGroup(jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel84)
-                    .addComponent(tf_crearForo_tit, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jd_crearForoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_crearForoLayout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel85))
-                    .addGroup(jd_crearForoLayout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(59, 59, 59)
-                .addComponent(jb_crear_foro, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
+        jLabel100.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel100.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel100.setText("Crear Foro");
+        jd_crearForo.getContentPane().add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 36, -1, -1));
 
+        jLabel101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_crearForo.getContentPane().add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 670));
+
+        jd_verForos_Maestro.setTitle("Foro");
         jd_verForos_Maestro.setMinimumSize(new java.awt.Dimension(1261, 806));
         jd_verForos_Maestro.setSize(new java.awt.Dimension(1261, 806));
+        jd_verForos_Maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ta_alumno_foroDesc1.setEditable(false);
         ta_alumno_foroDesc1.setColumns(20);
         ta_alumno_foroDesc1.setRows(5);
         jScrollPane20.setViewportView(ta_alumno_foroDesc1);
 
+        jd_verForos_Maestro.getContentPane().add(jScrollPane20, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 65, 1235, -1));
+
         ta_alumnos_aportes1.setEditable(false);
         ta_alumnos_aportes1.setColumns(20);
         ta_alumnos_aportes1.setRows(5);
         jScrollPane21.setViewportView(ta_alumnos_aportes1);
 
+        jd_verForos_Maestro.getContentPane().add(jScrollPane21, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 216, 1235, 584));
+
         jLabel86.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        jLabel86.setForeground(new java.awt.Color(0, 0, 0));
         jLabel86.setText("Aportes");
+        jd_verForos_Maestro.getContentPane().add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(579, 166, -1, -1));
 
         tf_alumno_foroTitulo1.setEditable(false);
         tf_alumno_foroTitulo1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        jd_verForos_Maestro.getContentPane().add(tf_alumno_foroTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1235, 41));
 
-        javax.swing.GroupLayout jd_verForos_MaestroLayout = new javax.swing.GroupLayout(jd_verForos_Maestro.getContentPane());
-        jd_verForos_Maestro.getContentPane().setLayout(jd_verForos_MaestroLayout);
-        jd_verForos_MaestroLayout.setHorizontalGroup(
-            jd_verForos_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verForos_MaestroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jd_verForos_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, 1235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane20)
-                    .addComponent(tf_alumno_foroTitulo1)
-                    .addComponent(jLabel86))
-                .addGap(20, 20, 20))
-        );
-        jd_verForos_MaestroLayout.setVerticalGroup(
-            jd_verForos_MaestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verForos_MaestroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(tf_alumno_foroTitulo1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel86)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane21, javax.swing.GroupLayout.DEFAULT_SIZE, 584, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verForos_Maestro.getContentPane().add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 810));
 
+        jd_verForosDeClase.setTitle("Foros de la clase");
         jd_verForosDeClase.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verForosDeClase.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verForosDeClase.setSize(new java.awt.Dimension(1053, 703));
+        jd_verForosDeClase.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_foros.setModel(new DefaultListModel());
         jScrollPane19.setViewportView(jl_foros);
+
+        jd_verForosDeClase.getContentPane().add(jScrollPane19, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 74, 915, 504));
 
         jb_abiriForo.setText("Abrir Foro");
         jb_abiriForo.addActionListener(new java.awt.event.ActionListener() {
@@ -1813,33 +1701,26 @@ public class Main extends javax.swing.JFrame {
                 jb_abiriForoActionPerformed(evt);
             }
         });
+        jd_verForosDeClase.getContentPane().add(jb_abiriForo, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 612, 915, -1));
 
-        javax.swing.GroupLayout jd_verForosDeClaseLayout = new javax.swing.GroupLayout(jd_verForosDeClase.getContentPane());
-        jd_verForosDeClase.getContentPane().setLayout(jd_verForosDeClaseLayout);
-        jd_verForosDeClaseLayout.setHorizontalGroup(
-            jd_verForosDeClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verForosDeClaseLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verForosDeClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane19, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_abiriForo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_verForosDeClaseLayout.setVerticalGroup(
-            jd_verForosDeClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verForosDeClaseLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_abiriForo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel110.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel110.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel110.setText("Foros de la Clase");
+        jd_verForosDeClase.getContentPane().add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 6, -1, -1));
 
+        jLabel111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verForosDeClase.getContentPane().add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+
+        jd_verClases_revisarTareas.setTitle("Listar Clases");
         jd_verClases_revisarTareas.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verClases_revisarTareas.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verClases_revisarTareas.setSize(new java.awt.Dimension(1053, 703));
+        jd_verClases_revisarTareas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_clases_revisar.setModel(new DefaultListModel());
         jScrollPane22.setViewportView(jl_clases_revisar);
+
+        jd_verClases_revisarTareas.getContentPane().add(jScrollPane22, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 74, 915, 504));
 
         jb_abrir_clases.setText("Abrir Clase");
         jb_abrir_clases.addActionListener(new java.awt.event.ActionListener() {
@@ -1847,33 +1728,26 @@ public class Main extends javax.swing.JFrame {
                 jb_abrir_clasesActionPerformed(evt);
             }
         });
+        jd_verClases_revisarTareas.getContentPane().add(jb_abrir_clases, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 612, 915, -1));
 
-        javax.swing.GroupLayout jd_verClases_revisarTareasLayout = new javax.swing.GroupLayout(jd_verClases_revisarTareas.getContentPane());
-        jd_verClases_revisarTareas.getContentPane().setLayout(jd_verClases_revisarTareasLayout);
-        jd_verClases_revisarTareasLayout.setHorizontalGroup(
-            jd_verClases_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verClases_revisarTareasLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verClases_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_abrir_clases, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_verClases_revisarTareasLayout.setVerticalGroup(
-            jd_verClases_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verClases_revisarTareasLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_abrir_clases)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel112.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel112.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel112.setText("Mis Clases");
+        jd_verClases_revisarTareas.getContentPane().add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 6, -1, -1));
 
+        jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verClases_revisarTareas.getContentPane().add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+
+        jd_verTareas_revisarTareas.setTitle("Listar Tareas");
         jd_verTareas_revisarTareas.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verTareas_revisarTareas.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareas_revisarTareas.setSize(new java.awt.Dimension(1053, 703));
+        jd_verTareas_revisarTareas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_tareas_revisar.setModel(new DefaultListModel());
         jScrollPane23.setViewportView(jl_tareas_revisar);
+
+        jd_verTareas_revisarTareas.getContentPane().add(jScrollPane23, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 74, 915, 504));
 
         jb_abrir_tareas.setText("Ver intentos de Alumnos");
         jb_abrir_tareas.addActionListener(new java.awt.event.ActionListener() {
@@ -1881,33 +1755,26 @@ public class Main extends javax.swing.JFrame {
                 jb_abrir_tareasActionPerformed(evt);
             }
         });
+        jd_verTareas_revisarTareas.getContentPane().add(jb_abrir_tareas, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 612, 915, -1));
 
-        javax.swing.GroupLayout jd_verTareas_revisarTareasLayout = new javax.swing.GroupLayout(jd_verTareas_revisarTareas.getContentPane());
-        jd_verTareas_revisarTareas.getContentPane().setLayout(jd_verTareas_revisarTareasLayout);
-        jd_verTareas_revisarTareasLayout.setHorizontalGroup(
-            jd_verTareas_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verTareas_revisarTareasLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verTareas_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane23, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_abrir_tareas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_verTareas_revisarTareasLayout.setVerticalGroup(
-            jd_verTareas_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verTareas_revisarTareasLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_abrir_tareas)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel114.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel114.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel114.setText("Tareas de la Clase");
+        jd_verTareas_revisarTareas.getContentPane().add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 6, -1, -1));
 
+        jLabel115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verTareas_revisarTareas.getContentPane().add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+
+        jd_verTareasdeAlumnos_revisarTareas.setTitle("Intentos de los Alumnos");
         jd_verTareasdeAlumnos_revisarTareas.setMinimumSize(new java.awt.Dimension(1053, 703));
+        jd_verTareasdeAlumnos_revisarTareas.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verTareasdeAlumnos_revisarTareas.setSize(new java.awt.Dimension(1053, 703));
+        jd_verTareasdeAlumnos_revisarTareas.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_intentosA_revisar.setModel(new DefaultListModel());
         jScrollPane24.setViewportView(jl_intentosA_revisar);
+
+        jd_verTareasdeAlumnos_revisarTareas.getContentPane().add(jScrollPane24, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 69, 915, 504));
 
         jb_abrir_tareasdeAlumnos.setText("Abrir");
         jb_abrir_tareasdeAlumnos.addActionListener(new java.awt.event.ActionListener() {
@@ -1915,32 +1782,26 @@ public class Main extends javax.swing.JFrame {
                 jb_abrir_tareasdeAlumnosActionPerformed(evt);
             }
         });
+        jd_verTareasdeAlumnos_revisarTareas.getContentPane().add(jb_abrir_tareasdeAlumnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 607, 915, -1));
 
-        javax.swing.GroupLayout jd_verTareasdeAlumnos_revisarTareasLayout = new javax.swing.GroupLayout(jd_verTareasdeAlumnos_revisarTareas.getContentPane());
-        jd_verTareasdeAlumnos_revisarTareas.getContentPane().setLayout(jd_verTareasdeAlumnos_revisarTareasLayout);
-        jd_verTareasdeAlumnos_revisarTareasLayout.setHorizontalGroup(
-            jd_verTareasdeAlumnos_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verTareasdeAlumnos_revisarTareasLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(jd_verTareasdeAlumnos_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane24, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
-                    .addComponent(jb_abrir_tareasdeAlumnos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_verTareasdeAlumnos_revisarTareasLayout.setVerticalGroup(
-            jd_verTareasdeAlumnos_revisarTareasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_verTareasdeAlumnos_revisarTareasLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jb_abrir_tareasdeAlumnos)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel116.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel116.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel116.setText("Intentos de los Alumnos");
+        jd_verTareasdeAlumnos_revisarTareas.getContentPane().add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, -1, -1));
+
+        jLabel117.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_verTareasdeAlumnos_revisarTareas.getContentPane().add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1060, 710));
+
+        jd_abrir_tarea.setTitle("Ver Intento");
+        jd_abrir_tarea.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel91.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel91.setForeground(new java.awt.Color(0, 0, 0));
         jLabel91.setText("Alumno:");
+        jd_abrir_tarea.getContentPane().add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 23, 97, 28));
 
         tf_alum_revision.setEditable(false);
+        jd_abrir_tarea.getContentPane().add(tf_alum_revision, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 18, 534, 42));
 
         jb_abrir_archivo_est.setText("Abrir Intento");
         jb_abrir_archivo_est.addActionListener(new java.awt.event.ActionListener() {
@@ -1948,11 +1809,15 @@ public class Main extends javax.swing.JFrame {
                 jb_abrir_archivo_estActionPerformed(evt);
             }
         });
+        jd_abrir_tarea.getContentPane().add(jb_abrir_archivo_est, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 134, 241, 79));
 
         jLabel92.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel92.setForeground(new java.awt.Color(0, 0, 0));
         jLabel92.setText("Nota:");
+        jd_abrir_tarea.getContentPane().add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 276, 97, 28));
 
         ftf_nota.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###"))));
+        jd_abrir_tarea.getContentPane().add(ftf_nota, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 270, 534, 45));
 
         jButton2.setText("Guardar Nota");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -1960,52 +1825,15 @@ public class Main extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jd_abrir_tarea.getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 333, 637, 42));
 
-        javax.swing.GroupLayout jd_abrir_tareaLayout = new javax.swing.GroupLayout(jd_abrir_tarea.getContentPane());
-        jd_abrir_tarea.getContentPane().setLayout(jd_abrir_tareaLayout);
-        jd_abrir_tareaLayout.setHorizontalGroup(
-            jd_abrir_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_abrir_tareaLayout.createSequentialGroup()
-                .addGroup(jd_abrir_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jd_abrir_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_abrir_tareaLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_abrir_tareaLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(tf_alum_revision, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_abrir_tareaLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(ftf_nota)))
-                    .addGroup(jd_abrir_tareaLayout.createSequentialGroup()
-                        .addGap(202, 202, 202)
-                        .addComponent(jb_abrir_archivo_est, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_abrir_tareaLayout.setVerticalGroup(
-            jd_abrir_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_abrir_tareaLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jd_abrir_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_alum_revision, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(74, 74, 74)
-                .addComponent(jb_abrir_archivo_est, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addGroup(jd_abrir_tareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ftf_nota, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
+        jLabel105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_abrir_tarea.getContentPane().add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 400));
 
+        notas_maestro.setTitle("Cuador de Notas");
         notas_maestro.setMinimumSize(new java.awt.Dimension(1143, 714));
         notas_maestro.setSize(new java.awt.Dimension(1143, 714));
+        notas_maestro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jt_maestros.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2014,28 +1842,34 @@ public class Main extends javax.swing.JFrame {
             new String [] {
                 "Clase", "Numero de Cuenta", "Nombre", "Asignacion", "Tipo", "Nota"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane25.setViewportView(jt_maestros);
+        if (jt_maestros.getColumnModel().getColumnCount() > 0) {
+            jt_maestros.getColumnModel().getColumn(0).setResizable(false);
+            jt_maestros.getColumnModel().getColumn(1).setResizable(false);
+            jt_maestros.getColumnModel().getColumn(2).setResizable(false);
+            jt_maestros.getColumnModel().getColumn(3).setResizable(false);
+            jt_maestros.getColumnModel().getColumn(4).setResizable(false);
+            jt_maestros.getColumnModel().getColumn(5).setResizable(false);
+        }
 
-        javax.swing.GroupLayout notas_maestroLayout = new javax.swing.GroupLayout(notas_maestro.getContentPane());
-        notas_maestro.getContentPane().setLayout(notas_maestroLayout);
-        notas_maestroLayout.setHorizontalGroup(
-            notas_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(notas_maestroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 1131, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        notas_maestroLayout.setVerticalGroup(
-            notas_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(notas_maestroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane25, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        notas_maestro.getContentPane().add(jScrollPane25, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1131, 702));
 
+        jLabel106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        notas_maestro.getContentPane().add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 720));
+
+        notas_estudiante.setTitle("Cuadro de Notas");
         notas_estudiante.setMinimumSize(new java.awt.Dimension(1143, 714));
         notas_estudiante.setSize(new java.awt.Dimension(1143, 714));
+        notas_estudiante.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jt_alumnos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2044,25 +1878,29 @@ public class Main extends javax.swing.JFrame {
             new String [] {
                 "Clase", "Numero de Cuenta", "Nombre", "Asignacion", "Tipo", "Nota"
             }
-        ));
-        jScrollPane26.setViewportView(jt_alumnos);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
 
-        javax.swing.GroupLayout notas_estudianteLayout = new javax.swing.GroupLayout(notas_estudiante.getContentPane());
-        notas_estudiante.getContentPane().setLayout(notas_estudianteLayout);
-        notas_estudianteLayout.setHorizontalGroup(
-            notas_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(notas_estudianteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane26, javax.swing.GroupLayout.DEFAULT_SIZE, 1131, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        notas_estudianteLayout.setVerticalGroup(
-            notas_estudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(notas_estudianteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane26, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane26.setViewportView(jt_alumnos);
+        if (jt_alumnos.getColumnModel().getColumnCount() > 0) {
+            jt_alumnos.getColumnModel().getColumn(0).setResizable(false);
+            jt_alumnos.getColumnModel().getColumn(1).setResizable(false);
+            jt_alumnos.getColumnModel().getColumn(2).setResizable(false);
+            jt_alumnos.getColumnModel().getColumn(3).setResizable(false);
+            jt_alumnos.getColumnModel().getColumn(4).setResizable(false);
+            jt_alumnos.getColumnModel().getColumn(5).setResizable(false);
+        }
+
+        notas_estudiante.getContentPane().add(jScrollPane26, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 1131, 702));
+
+        jLabel107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        notas_estudiante.getContentPane().add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 720));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LogIn");
@@ -2882,8 +2720,10 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel modelo = (DefaultListModel) jl_asignar_clases.getModel();
         modelo.removeAllElements();
         for (int i = 0; i < ap.getListaClases().size(); i++) {
-            if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
-                modelo.addElement(ap.getListaClases().get(i));
+            if (ap.getListaClases().get(i).getMaestro() != null) {
+                if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                    modelo.addElement(ap.getListaClases().get(i));
+                }
             }
         }
         jl_asignar_clases.setModel(modelo);
@@ -3042,11 +2882,12 @@ public class Main extends javax.swing.JFrame {
                     esta = true;
                 }
             }
-            if (esta) {
-                esta = false;
+            if (esta) {              
                 for (int j = 0; j < ap.getListaClases().get(i).getForos().size(); j++) {
+                    //System.out.println(ap.getListaClases().get(i).getForos().get(j));
                     modelo.addElement(ap.getListaClases().get(i).getForos().get(j));
                 }
+                esta = false;
             }
         }
         jl_verMisForos.setModel(modelo);
@@ -3126,8 +2967,10 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel modelo = (DefaultListModel) jl_asignarforos_clases.getModel();
         modelo.removeAllElements();
         for (int i = 0; i < ap.getListaClases().size(); i++) {
-            if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
-                modelo.addElement(ap.getListaClases().get(i));
+            if (ap.getListaClases().get(i).getMaestro() != null) {
+                if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                    modelo.addElement(ap.getListaClases().get(i));
+                }
             }
         }
         jl_asignarforos_clases.setModel(modelo);
@@ -3165,7 +3008,7 @@ public class Main extends javax.swing.JFrame {
                 Clase x = (Clase) modelo.getElementAt(po);
                 String nombre = x.getNombre();
                 for (int i = 0; i < ap.getListaClases().size(); i++) {
-                    if (ap.getListaClases().get(i).equals(nombre)) {
+                    if (ap.getListaClases().get(i).getNombre().equals(nombre)) {
                         poClaseFM = i;
                     }
                 }
@@ -3241,8 +3084,10 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel modelo = (DefaultListModel) jl_clases_revisar.getModel();
         modelo.removeAllElements();
         for (int i = 0; i < ap.getListaClases().size(); i++) {
-            if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
-                modelo.addElement(ap.getListaClases().get(i));
+            if (ap.getListaClases().get(i).getMaestro() != null) {
+                if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                    modelo.addElement(ap.getListaClases().get(i));
+                }
             }
         }
         jl_clases_revisar.setModel(modelo);
@@ -3267,7 +3112,7 @@ public class Main extends javax.swing.JFrame {
                         poClaseT2 = i;
                     }
                 }
-                System.out.println(ap.getListaClases().get(poClaseT2).getTareas());
+                //System.out.println(ap.getListaClases().get(poClaseT2).getTareas());
                 DefaultListModel modelo1 = (DefaultListModel) jl_tareas_revisar.getModel();
                 modelo1.removeAllElements();
                 for (int i = 0; i < ap.getListaClases().get(poClaseT2).getTareas().size(); i++) {
@@ -3360,22 +3205,24 @@ public class Main extends javax.swing.JFrame {
             modelo.setRowCount(0);
             for (int i = 0; i < ap.getListaClases().size(); i++) {
                 String clase = ap.getListaClases().get(i).getNombre();
-                if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
-                    for (int j = 0; j < ap.getListaClases().get(i).getTareas().size(); j++) {
-                        for (int k = 0; k < ap.getListaClases().get(i).getAlumnos().size(); k++) {
-                            Alumno x = ap.getListaClases().get(i).getAlumnos().get(k);
-                            boolean found = false;
-                            for (int l = 0; l < ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().size(); l++) {
-                                if (ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(l).getEstudiante().getUsername().equals(x.getUsername())) {
-                                    Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getTareas().get(j), "Tarea",
-                                        ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(l).getNota()};
-                                    modelo.addRow(nuevo);
-                                    found = true;
+                if (ap.getListaClases().get(i).getMaestro() != null) {
+                    if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                        for (int j = 0; j < ap.getListaClases().get(i).getTareas().size(); j++) {
+                            for (int k = 0; k < ap.getListaClases().get(i).getAlumnos().size(); k++) {
+                                Alumno x = ap.getListaClases().get(i).getAlumnos().get(k);
+                                boolean found = false;
+                                for (int l = 0; l < ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().size(); l++) {
+                                    if (ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(l).getEstudiante().getUsername().equals(x.getUsername())) {
+                                        Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getTareas().get(j), "Tarea",
+                                            ap.getListaClases().get(i).getTareas().get(j).getTareasAlumnos().get(l).getNota()};
+                                        modelo.addRow(nuevo);
+                                        found = true;
+                                    }
                                 }
-                            }
-                            if (found == false) {
-                                Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getTareas().get(j), "Tarea", "No Entregada"};
-                                modelo.addRow(nuevo);
+                                if (found == false) {
+                                    Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getTareas().get(j), "Tarea", "No Entregada"};
+                                    modelo.addRow(nuevo);
+                                }
                             }
                         }
                     }
@@ -3488,7 +3335,25 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel100;
+    private javax.swing.JLabel jLabel101;
+    private javax.swing.JLabel jLabel102;
+    private javax.swing.JLabel jLabel103;
+    private javax.swing.JLabel jLabel104;
+    private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
+    private javax.swing.JLabel jLabel107;
+    private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
+    private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -3578,6 +3443,13 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
     private javax.swing.JLabel jLabel92;
+    private javax.swing.JLabel jLabel93;
+    private javax.swing.JLabel jLabel94;
+    private javax.swing.JLabel jLabel95;
+    private javax.swing.JLabel jLabel96;
+    private javax.swing.JLabel jLabel97;
+    private javax.swing.JLabel jLabel98;
+    private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu5;
