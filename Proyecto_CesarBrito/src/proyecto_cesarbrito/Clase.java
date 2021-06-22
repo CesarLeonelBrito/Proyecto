@@ -16,6 +16,7 @@ public class Clase implements Serializable {
     private ArrayList<Alumno> alumnos = new ArrayList();
     private ArrayList<Tarea> tareas = new ArrayList();
     private ArrayList<Foro> foros = new ArrayList();
+    private ArrayList<Examen> examenes = new ArrayList();
 
     private static final long SerialVersionUID = 666L;
 
@@ -117,6 +118,16 @@ public class Clase implements Serializable {
     public void setForos(ArrayList<Foro> foros) {
         this.foros = foros;
     }
+
+    public ArrayList<Examen> getExamenes() {
+        return examenes;
+    }
+
+    public void setExamenes(ArrayList<Examen> examenes) {
+        this.examenes = examenes;
+    }
+    
+    
 
     @Override
     public String toString() {

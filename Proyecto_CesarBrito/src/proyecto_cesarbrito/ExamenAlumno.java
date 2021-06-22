@@ -37,7 +37,5 @@ public class ExamenAlumno implements Serializable {
     public String toString() {
         return estudiante + " - " + nota;
     }
-    
-    
 
 }

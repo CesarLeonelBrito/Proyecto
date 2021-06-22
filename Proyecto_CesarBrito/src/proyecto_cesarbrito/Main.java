@@ -3,6 +3,7 @@ package proyecto_cesarbrito;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -358,8 +359,69 @@ public class Main extends javax.swing.JFrame {
         jLabel118 = new javax.swing.JLabel();
         jScrollPane27 = new javax.swing.JScrollPane();
         jl_examenes_clases = new javax.swing.JList<>();
-        jButton3 = new javax.swing.JButton();
+        jb_abrir_examenes = new javax.swing.JButton();
         examenes_maestro_examenes = new javax.swing.JDialog();
+        jb_crear_examen = new javax.swing.JButton();
+        jLabel119 = new javax.swing.JLabel();
+        jScrollPane28 = new javax.swing.JScrollPane();
+        jl_examenes_examenes = new javax.swing.JList<>();
+        popup_examenes = new javax.swing.JPopupMenu();
+        eliminar_examen = new javax.swing.JMenuItem();
+        jd_crear_examen = new javax.swing.JDialog();
+        jb_add_examen = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel120 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
+        jLabel122 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
+        examen_titulo = new javax.swing.JTextField();
+        examen_fecha = new com.toedter.calendar.JDateChooser();
+        examen_hora = new javax.swing.JFormattedTextField();
+        examen_duracion = new javax.swing.JFormattedTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel124 = new javax.swing.JLabel();
+        pregunta_verdadero = new javax.swing.JTextField();
+        rb_verdadero = new javax.swing.JRadioButton();
+        rb_falso = new javax.swing.JRadioButton();
+        jButton3 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel125 = new javax.swing.JLabel();
+        pregunta_seleccion = new javax.swing.JTextField();
+        rb_a = new javax.swing.JRadioButton();
+        rb_b = new javax.swing.JRadioButton();
+        rb_c = new javax.swing.JRadioButton();
+        rb_d = new javax.swing.JRadioButton();
+        tf_op1 = new javax.swing.JTextField();
+        tf_op2 = new javax.swing.JTextField();
+        tf_op3 = new javax.swing.JTextField();
+        tf_op4 = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        verdadero_falso = new javax.swing.ButtonGroup();
+        seleccion_multiple = new javax.swing.ButtonGroup();
+        examenes_alumno_examenes = new javax.swing.JDialog();
+        jScrollPane29 = new javax.swing.JScrollPane();
+        jl_mis_examenes = new javax.swing.JList<>();
+        jb_realizar_examenes = new javax.swing.JButton();
+        jLabel126 = new javax.swing.JLabel();
+        responder_verdadero = new javax.swing.JDialog();
+        label_pregunta = new javax.swing.JLabel();
+        answer_verd = new javax.swing.JRadioButton();
+        answer_falso = new javax.swing.JRadioButton();
+        responder_seleccion = new javax.swing.JDialog();
+        label_pregunta1 = new javax.swing.JLabel();
+        answer_a = new javax.swing.JRadioButton();
+        answer_b = new javax.swing.JRadioButton();
+        answer_c = new javax.swing.JRadioButton();
+        answer_d = new javax.swing.JRadioButton();
+        opcion_a = new javax.swing.JLabel();
+        opcion_b = new javax.swing.JLabel();
+        opcion_c = new javax.swing.JLabel();
+        opcion_d = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         jb_login = new javax.swing.JButton();
         tf_user_login = new javax.swing.JTextField();
@@ -1232,6 +1294,11 @@ public class Main extends javax.swing.JFrame {
         jb_alumnos_examenes.setForeground(new java.awt.Color(0, 0, 0));
         jb_alumnos_examenes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/examenes.png"))); // NOI18N
         jb_alumnos_examenes.setText("Examenes");
+        jb_alumnos_examenes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_alumnos_examenesActionPerformed(evt);
+            }
+        });
         jf_alumno.getContentPane().add(jb_alumnos_examenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, -1, -1));
 
         jb_alumnos_notas.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
@@ -1567,7 +1634,6 @@ public class Main extends javax.swing.JFrame {
 
         jd_verClases_maestros.setTitle("Listar Clases");
         jd_verClases_maestros.setMinimumSize(new java.awt.Dimension(1053, 703));
-        jd_verClases_maestros.setPreferredSize(new java.awt.Dimension(1053, 703));
         jd_verClases_maestros.setSize(new java.awt.Dimension(1053, 703));
         jd_verClases_maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1917,7 +1983,12 @@ public class Main extends javax.swing.JFrame {
         jl_examenes_clases.setModel(new DefaultListModel());
         jScrollPane27.setViewportView(jl_examenes_clases);
 
-        jButton3.setText("Abrir Clase");
+        jb_abrir_examenes.setText("Abrir Clase");
+        jb_abrir_examenes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_abrir_examenesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout examenes_maestro_clasesLayout = new javax.swing.GroupLayout(examenes_maestro_clases.getContentPane());
         examenes_maestro_clases.getContentPane().setLayout(examenes_maestro_clasesLayout);
@@ -1932,8 +2003,8 @@ public class Main extends javax.swing.JFrame {
                         .addGap(99, 99, 99)
                         .addGroup(examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(99, Short.MAX_VALUE))
+                            .addComponent(jb_abrir_examenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         examenes_maestro_clasesLayout.setVerticalGroup(
             examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1943,8 +2014,462 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addComponent(jb_abrir_examenes)
+                .addContainerGap(107, Short.MAX_VALUE))
+        );
+
+        examenes_maestro_examenes.setMinimumSize(new java.awt.Dimension(978, 735));
+        examenes_maestro_examenes.setSize(new java.awt.Dimension(978, 735));
+
+        jb_crear_examen.setText("Crear Examen");
+        jb_crear_examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_crear_examenActionPerformed(evt);
+            }
+        });
+
+        jLabel119.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel119.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel119.setText("Examenes de la Clase");
+
+        jl_examenes_examenes.setModel(new DefaultListModel());
+        jl_examenes_examenes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_examenes_examenesMouseClicked(evt);
+            }
+        });
+        jScrollPane28.setViewportView(jl_examenes_examenes);
+
+        javax.swing.GroupLayout examenes_maestro_examenesLayout = new javax.swing.GroupLayout(examenes_maestro_examenes.getContentPane());
+        examenes_maestro_examenes.getContentPane().setLayout(examenes_maestro_examenesLayout);
+        examenes_maestro_examenesLayout.setHorizontalGroup(
+            examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
+                .addGroup(examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addGroup(examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane28, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                            .addComponent(jb_crear_examen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
+                        .addGap(232, 232, 232)
+                        .addComponent(jLabel119)))
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        examenes_maestro_examenesLayout.setVerticalGroup(
+            examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel119)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jb_crear_examen)
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
+
+        eliminar_examen.setText("Eliminar");
+        eliminar_examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminar_examenActionPerformed(evt);
+            }
+        });
+        popup_examenes.add(eliminar_examen);
+
+        jb_add_examen.setText("Crear Examen");
+        jb_add_examen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_add_examenActionPerformed(evt);
+            }
+        });
+
+        jLabel120.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel120.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel120.setText("Titulo:");
+
+        jLabel121.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel121.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel121.setText("Fecha Final:");
+
+        jLabel122.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel122.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel122.setText("Hora:");
+
+        jLabel123.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel123.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel123.setText("Duracion:");
+
+        examen_hora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##################"))));
+
+        examen_duracion.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("##################"))));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel123)
+                    .addComponent(jLabel122)
+                    .addComponent(jLabel121)
+                    .addComponent(jLabel120))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(examen_titulo)
+                    .addComponent(examen_fecha, javax.swing.GroupLayout.DEFAULT_SIZE, 752, Short.MAX_VALUE)
+                    .addComponent(examen_duracion)
+                    .addComponent(examen_hora))
+                .addContainerGap(200, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel120)
+                    .addComponent(examen_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(examen_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jLabel121)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel122))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(examen_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel123)
+                    .addComponent(examen_duracion, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(182, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Datos Basicos", jPanel1);
+
+        jLabel124.setText("Pregunta:");
+
+        verdadero_falso.add(rb_verdadero);
+        rb_verdadero.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        rb_verdadero.setText("Verdadero");
+
+        verdadero_falso.add(rb_falso);
+        rb_falso.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        rb_falso.setText("Falso");
+
+        jButton3.setText("Agregar Pregunta");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel124)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(pregunta_verdadero))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(rb_verdadero, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(350, 350, 350)
+                        .addComponent(rb_falso, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 295, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel124)
+                    .addComponent(pregunta_verdadero, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_verdadero)
+                    .addComponent(rb_falso))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 218, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab("Verdadero y Falso", jPanel4);
+
+        jLabel125.setText("Pregunta:");
+
+        seleccion_multiple.add(rb_a);
+        rb_a.setText("a)");
+
+        seleccion_multiple.add(rb_b);
+        rb_b.setText("b)");
+
+        seleccion_multiple.add(rb_c);
+        rb_c.setText("c)");
+
+        seleccion_multiple.add(rb_d);
+        rb_d.setText("d)");
+
+        jButton4.setText("Agregar Pregunta");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(rb_d)
+                            .addComponent(rb_c)
+                            .addComponent(rb_b)
+                            .addComponent(rb_a)
+                            .addComponent(jLabel125))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pregunta_seleccion, javax.swing.GroupLayout.DEFAULT_SIZE, 1060, Short.MAX_VALUE)
+                            .addComponent(tf_op1)
+                            .addComponent(tf_op2)
+                            .addComponent(tf_op3)
+                            .addComponent(tf_op4)))
+                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel125)
+                    .addComponent(pregunta_seleccion, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_a)
+                    .addComponent(tf_op1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_b)
+                    .addComponent(tf_op2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_c)
+                    .addComponent(tf_op3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(rb_d)
+                    .addComponent(tf_op4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jTabbedPane2.addTab("Seleccion Multiple", jPanel5);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 460, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Preguntas", jPanel3);
+
+        javax.swing.GroupLayout jd_crear_examenLayout = new javax.swing.GroupLayout(jd_crear_examen.getContentPane());
+        jd_crear_examen.getContentPane().setLayout(jd_crear_examenLayout);
+        jd_crear_examenLayout.setHorizontalGroup(
+            jd_crear_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_crear_examenLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jd_crear_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTabbedPane1)
+                    .addComponent(jb_add_examen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jd_crear_examenLayout.setVerticalGroup(
+            jd_crear_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_crear_examenLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jTabbedPane1)
+                .addGap(18, 18, 18)
+                .addComponent(jb_add_examen, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
+        );
+
+        jl_mis_examenes.setModel(new DefaultListModel());
+        jScrollPane29.setViewportView(jl_mis_examenes);
+
+        jb_realizar_examenes.setText("Realizar Examen");
+        jb_realizar_examenes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_realizar_examenesActionPerformed(evt);
+            }
+        });
+
+        jLabel126.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
+        jLabel126.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel126.setText("Examenes para Realizar");
+
+        javax.swing.GroupLayout examenes_alumno_examenesLayout = new javax.swing.GroupLayout(examenes_alumno_examenes.getContentPane());
+        examenes_alumno_examenes.getContentPane().setLayout(examenes_alumno_examenesLayout);
+        examenes_alumno_examenesLayout.setHorizontalGroup(
+            examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
+                .addGroup(examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addGroup(examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane29, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                            .addComponent(jb_realizar_examenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(jLabel126)))
+                .addContainerGap(99, Short.MAX_VALUE))
+        );
+        examenes_alumno_examenesLayout.setVerticalGroup(
+            examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel126)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jb_realizar_examenes)
+                .addContainerGap(71, Short.MAX_VALUE))
+        );
+
+        label_pregunta.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
+        label_pregunta.setText("verd_pregunta");
+
+        buttonGroup1.add(answer_verd);
+        answer_verd.setText("Verdadero");
+
+        buttonGroup1.add(answer_falso);
+        answer_falso.setText("Falso");
+
+        javax.swing.GroupLayout responder_verdaderoLayout = new javax.swing.GroupLayout(responder_verdadero.getContentPane());
+        responder_verdadero.getContentPane().setLayout(responder_verdaderoLayout);
+        responder_verdaderoLayout.setHorizontalGroup(
+            responder_verdaderoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(responder_verdaderoLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(responder_verdaderoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(answer_falso)
+                    .addComponent(answer_verd)
+                    .addComponent(label_pregunta))
+                .addContainerGap(873, Short.MAX_VALUE))
+        );
+        responder_verdaderoLayout.setVerticalGroup(
+            responder_verdaderoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(responder_verdaderoLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(label_pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(answer_verd)
+                .addGap(78, 78, 78)
+                .addComponent(answer_falso)
+                .addContainerGap(151, Short.MAX_VALUE))
+        );
+
+        label_pregunta1.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
+        label_pregunta1.setText("verd_pregunta");
+
+        buttonGroup2.add(answer_a);
+        answer_a.setText("a)");
+
+        buttonGroup2.add(answer_b);
+        answer_b.setText("b)");
+
+        buttonGroup2.add(answer_c);
+        answer_c.setText("c)");
+
+        buttonGroup2.add(answer_d);
+        answer_d.setText("d)");
+
+        opcion_a.setText("opcion a");
+
+        opcion_b.setText("opcion b");
+
+        opcion_c.setText("opcion c");
+
+        opcion_d.setText("opcion d");
+
+        javax.swing.GroupLayout responder_seleccionLayout = new javax.swing.GroupLayout(responder_seleccion.getContentPane());
+        responder_seleccion.getContentPane().setLayout(responder_seleccionLayout);
+        responder_seleccionLayout.setHorizontalGroup(
+            responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(responder_seleccionLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(responder_seleccionLayout.createSequentialGroup()
+                        .addComponent(answer_d)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(opcion_d, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(responder_seleccionLayout.createSequentialGroup()
+                        .addComponent(answer_c)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(opcion_c, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(responder_seleccionLayout.createSequentialGroup()
+                        .addComponent(answer_b)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(opcion_b, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(responder_seleccionLayout.createSequentialGroup()
+                        .addComponent(answer_a)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(opcion_a, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label_pregunta1))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+        responder_seleccionLayout.setVerticalGroup(
+            responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(responder_seleccionLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(label_pregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(answer_a)
+                    .addComponent(opcion_a))
+                .addGap(18, 18, 18)
+                .addGroup(responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(answer_b)
+                    .addComponent(opcion_b))
+                .addGap(18, 18, 18)
+                .addGroup(responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(answer_c)
+                    .addComponent(opcion_c))
+                .addGap(18, 18, 18)
+                .addGroup(responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(answer_d)
+                    .addComponent(opcion_d))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2829,7 +3354,7 @@ public class Main extends javax.swing.JFrame {
         try {
             JFileChooser fc = new JFileChooser();
             File archivo = null;
-            FileFilter filtro = new FileNameExtensionFilter("Tarea", "pdf", "jpeg", "png", "docx");
+            FileFilter filtro = new FileNameExtensionFilter("Tarea", "pdf", "jpeg", "png", "docx", "txt");
             fc.setFileFilter(filtro);
             int op = fc.showOpenDialog(null);
             if (op == JFileChooser.APPROVE_OPTION) {
@@ -2927,7 +3452,7 @@ public class Main extends javax.swing.JFrame {
                     esta = true;
                 }
             }
-            if (esta) {              
+            if (esta) {
                 for (int j = 0; j < ap.getListaClases().get(i).getForos().size(); j++) {
                     //System.out.println(ap.getListaClases().get(i).getForos().get(j));
                     modelo.addElement(ap.getListaClases().get(i).getForos().get(j));
@@ -3273,6 +3798,31 @@ public class Main extends javax.swing.JFrame {
                     }
                 }
             }
+            for (int i = 0; i < ap.getListaClases().size(); i++) {
+                String clase = ap.getListaClases().get(i).getNombre();
+                if (ap.getListaClases().get(i).getMaestro() != null) {
+                    if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
+                        for (int j = 0; j < ap.getListaClases().get(i).getExamenes().size(); j++) {
+                            for (int k = 0; k < ap.getListaClases().get(i).getExamenes().size(); k++) {
+                                Alumno x = ap.getListaClases().get(i).getAlumnos().get(k);
+                                boolean found = false;
+                                for (int l = 0; l < ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().size(); l++) {
+                                    if (ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().get(l).getEstudiante().getUsername().equals(x.getUsername())) {
+                                        Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getExamenes().get(j), "Examen",
+                                            ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().get(l).getNota()};
+                                        modelo.addRow(nuevo);
+                                        found = true;
+                                    }
+                                }
+                                if (found == false) {
+                                    Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getExamenes().get(j), "Examen", "No Entregada"};
+                                    modelo.addRow(nuevo);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             jt_maestros.setModel(modelo);
             notas_maestro.setModal(true);
             notas_maestro.pack();
@@ -3311,6 +3861,28 @@ public class Main extends javax.swing.JFrame {
                     }
                 }
             }
+            for (int i = 0; i < ap.getListaClases().size(); i++) {
+                String clase = ap.getListaClases().get(i).getNombre();
+                for (int j = 0; j < ap.getListaClases().get(i).getAlumnos().size(); j++) {
+                    if (ap.getListaClases().get(i).getAlumnos().get(j).getUsername().equals(estudianteAsig.getUsername())) {
+                        for (int k = 0; k < ap.getListaClases().get(i).getExamenes().size(); k++) {
+                            boolean found = false;
+                            for (int l = 0; l < ap.getListaClases().get(i).getExamenes().get(k).getExamenesAlumnos().size(); l++) {
+                                if (ap.getListaClases().get(i).getExamenes().get(k).getExamenesAlumnos().get(l).getEstudiante().getUsername().equals(estudianteAsig.getUsername())) {
+                                    Object[] nuevo = {clase, estudianteAsig.getCuenta(), estudianteAsig.getNombre(), ap.getListaClases().get(i).getExamenes().get(k), "Examen",
+                                        ap.getListaClases().get(i).getExamenes().get(k).getExamenesAlumnos().get(l).getNota()};
+                                    modelo.addRow(nuevo);
+                                    found = true;
+                                }
+                            }
+                            if (found == false) {
+                                Object[] nuevo = {clase, estudianteAsig.getCuenta(), estudianteAsig.getNombre(), ap.getListaClases().get(i).getExamenes().get(k), "Examen", "No entregada"};
+                                modelo.addRow(nuevo);
+                            }
+                        }
+                    }
+                }
+            }
             jt_alumnos.setModel(modelo);
             notas_estudiante.setModal(true);
             notas_estudiante.pack();
@@ -3339,6 +3911,248 @@ public class Main extends javax.swing.JFrame {
         examenes_maestro_clases.setLocationRelativeTo(this);
         examenes_maestro_clases.setVisible(true);
     }//GEN-LAST:event_jb_maestros_examenes1ActionPerformed
+
+    private void jb_abrir_examenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_abrir_examenesActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            if (jl_examenes_clases.getSelectedIndex() >= 0) {
+                int po = jl_examenes_clases.getSelectedIndex();
+                DefaultListModel modelo = (DefaultListModel) jl_examenes_clases.getModel();
+                Clase x = (Clase) modelo.getElementAt(po);
+                String nombre = x.getNombre();
+                for (int i = 0; i < ap.getListaClases().size(); i++) {
+                    if (ap.getListaClases().get(i).getNombre().equals(nombre)) {
+                        poExamClase = i;
+                    }
+                }
+                DefaultListModel modelo1 = (DefaultListModel) jl_examenes_examenes.getModel();
+                modelo1.removeAllElements();
+                for (int i = 0; i < ap.getListaClases().get(poExamClase).getExamenes().size(); i++) {
+                    modelo1.addElement(ap.getListaClases().get(poExamClase).getExamenes().get(i));
+                }
+                jl_examenes_examenes.setModel(modelo1);
+                examenes_maestro_examenes.setModal(true);
+                examenes_maestro_examenes.pack();
+                examenes_maestro_examenes.setLocationRelativeTo(this);
+                examenes_maestro_examenes.setVisible(true);
+            }
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jb_abrir_examenesActionPerformed
+
+    private void eliminar_examenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminar_examenActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            ap.getListaClases().get(poExamClase).getExamenes().remove(poElimMod);
+            ap.escribirArchivo();
+            DefaultListModel modelo = (DefaultListModel) jl_examenes_examenes.getModel();
+            modelo.remove(poElimMod);
+            jl_examenes_examenes.setModel(modelo);
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_eliminar_examenActionPerformed
+
+    private void jl_examenes_examenesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_examenes_examenesMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            if (jl_examenes_examenes.getSelectedIndex() >= 0) {
+                poElimMod = jl_examenes_examenes.getSelectedIndex();
+                popup_examenes.show(evt.getComponent(), evt.getX(), evt.getY());
+            }
+        }
+    }//GEN-LAST:event_jl_examenes_examenesMouseClicked
+
+    private void jb_add_examenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_add_examenActionPerformed
+        // TODO add your handling code here:
+        try {
+            String titulo = examen_titulo.getText();
+            Date fechaFinal = examen_fecha.getDate();
+            int hora = Integer.parseInt(examen_hora.getText());
+            fechaFinal.setHours(hora);
+            int duracion = Integer.parseInt(examen_duracion.getText());
+            Examen nuevo = new Examen(fechaFinal, duracion, titulo);
+            for (int i = 0; i < preguntas.size(); i++) {
+                nuevo.getPreguntas().add(preguntas.get(i));
+            }
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            ap.getListaClases().get(poExamClase).getExamenes().add(nuevo);
+            ap.escribirArchivo();
+            preguntas.clear();
+
+            examen_titulo.setText("");
+            examen_fecha.setDate(new Date());
+            examen_hora.setText("");
+            examen_duracion.setText("");
+            DefaultListModel modelo1 = (DefaultListModel) jl_examenes_examenes.getModel();
+            modelo1.removeAllElements();
+            for (int i = 0; i < ap.getListaClases().get(poExamClase).getExamenes().size(); i++) {
+                modelo1.addElement(ap.getListaClases().get(poExamClase).getExamenes().get(i));
+            }
+            jl_examenes_examenes.setModel(modelo1);
+            //System.out.println(ap.getListaClases().get(0).getExamenes().get(0).getPreguntas());
+            jd_crear_examen.hide();
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_jb_add_examenActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String titulo = pregunta_verdadero.getText();
+            if (rb_verdadero.isSelected()) {
+                boolean answer = true;
+                VerdaderoFalso preg = new VerdaderoFalso(answer, titulo);
+                preguntas.add(preg);
+            } else if (rb_falso.isSelected()) {
+                boolean answer = false;
+                VerdaderoFalso preg = new VerdaderoFalso(answer, titulo);
+                preguntas.add(preg);
+            }
+            //System.out.println(preguntas);
+            pregunta_verdadero.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "OCURRIO UN ERROR");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String titulo = pregunta_seleccion.getText();
+            String op1 = tf_op1.getText();
+            String op2 = tf_op2.getText();
+            String op3 = tf_op3.getText();
+            String op4 = tf_op4.getText();
+            if (rb_a.isSelected()) {
+                int answer = 1;
+                SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
+                preguntas.add(nuevo);
+            } else if (rb_b.isSelected()) {
+                int answer = 2;
+                SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
+                preguntas.add(nuevo);
+            } else if (rb_c.isSelected()) {
+                int answer = 3;
+                SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
+                preguntas.add(nuevo);
+            } else if (rb_d.isSelected()) {
+                int answer = 4;
+                SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
+                preguntas.add(nuevo);
+            }
+            pregunta_seleccion.setText("");
+            tf_op1.setText("");
+            tf_op2.setText("");
+            tf_op3.setText("");
+            tf_op4.setText("");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "OCURRIO UN ERROR");
+        }
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jb_crear_examenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_crear_examenActionPerformed
+        // TODO add your handling code here:
+        jd_crear_examen.setModal(true);
+        jd_crear_examen.pack();
+        jd_crear_examen.setLocationRelativeTo(this);
+        jd_crear_examen.setVisible(true);
+    }//GEN-LAST:event_jb_crear_examenActionPerformed
+
+    private void jb_realizar_examenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_realizar_examenesActionPerformed
+        // TODO add your handling code here:
+        try {
+            administrarClases ap = new administrarClases("./clases.cbm");
+            ap.cargarArchivo();
+            if (jl_mis_examenes.getSelectedIndex() >= 0) {
+                preguntas.clear();
+                contPreg = 0;
+                correctas = 0;
+                int po = jl_mis_examenes.getSelectedIndex();
+                DefaultListModel modelo = (DefaultListModel) jl_mis_examenes.getModel();
+                Examen x = (Examen) modelo.getElementAt(po);
+                String nombre = x.getTitulo();
+                int aux = 0;
+                for (int i = 0; i < ap.getListaClases().size(); i++) {
+                    for (int j = 0; j < ap.getListaClases().get(i).getExamenes().size(); j++) {
+                        if (ap.getListaClases().get(i).getExamenes().get(j).getTitulo().equals(nombre)) {
+                            claseExam = i;
+                            examExam = j;
+                            aux = 1;
+                            break;
+                        }
+                    }
+                    if (aux == 1) {
+                        break;
+                    }
+                }
+                preguntas.addAll(ap.getListaClases().get(claseExam).getExamenes().get(examExam).getPreguntas());
+                //System.out.println(preguntas);
+                if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                    label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                    opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                    opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                    opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                    opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                    responder_seleccion.setModal(true);
+                    responder_seleccion.pack();
+                    responder_seleccion.setLocationRelativeTo(this);
+                    responder_seleccion.setVisible(true);
+                } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                    label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                    responder_verdadero.setModal(true);
+                    responder_verdadero.pack();
+                    responder_verdadero.setLocationRelativeTo(this);
+                    responder_verdadero.setVisible(true);
+                }
+
+            }
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jb_realizar_examenesActionPerformed
+
+    private void jb_alumnos_examenesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_alumnos_examenesActionPerformed
+        // TODO add your handling code here:
+        administrarClases ap = new administrarClases("./clases.cbm");
+        ap.cargarArchivo();
+        boolean found = false;
+        DefaultListModel modelo = (DefaultListModel) jl_mis_examenes.getModel();
+        modelo.removeAllElements();
+        for (int i = 0; i < ap.getListaClases().size(); i++) {
+            boolean esta = false;
+            for (int j = 0; j < ap.getListaClases().get(i).getAlumnos().size(); j++) {
+                if (ap.getListaClases().get(i).getAlumnos().get(j).getUsername().equals(estudianteAsig.getUsername())) {
+                    esta = true;
+                }
+            }
+            if (esta) {
+                esta = false;
+                for (int j = 0; j < ap.getListaClases().get(i).getExamenes().size(); j++) {
+                    for (int k = 0; k < ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().size(); k++) {
+                        if (ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().get(k).getEstudiante().getUsername().equals(estudianteAsig.getUsername())) {
+                            found = true;
+                        }
+                    }
+                    Date fecha = new Date();
+                    if (found == false && fecha.before(ap.getListaClases().get(i).getExamenes().get(j).getFechaFinal())) {
+                        modelo.addElement(ap.getListaClases().get(i).getExamenes().get(j));
+                    }
+                    found = false;
+                }
+            }
+        }
+        jl_mis_examenes.setModel(modelo);
+
+        examenes_alumno_examenes.setModal(true);
+        examenes_alumno_examenes.pack();
+        examenes_alumno_examenes.setLocationRelativeTo(this);
+        examenes_alumno_examenes.setVisible(true);
+    }//GEN-LAST:event_jb_alumnos_examenesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3379,8 +4193,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel Descripcion;
     private javax.swing.JButton alumnos_agregar;
     private javax.swing.JButton alumnos_modificar;
+    private javax.swing.JRadioButton answer_a;
+    private javax.swing.JRadioButton answer_b;
+    private javax.swing.JRadioButton answer_c;
+    private javax.swing.JRadioButton answer_d;
+    private javax.swing.JRadioButton answer_falso;
+    private javax.swing.JRadioButton answer_verd;
     private javax.swing.JButton asignar_alumno;
     private javax.swing.JButton asignar_maestro;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JMenuItem cerrar_sesion_alum;
     private javax.swing.JMenuItem cerrar_sesion_maestro;
     private javax.swing.JMenuItem cerrar_sesion_registro;
@@ -3391,8 +4213,14 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton clases_modificar;
     private javax.swing.JMenuItem eliminar_alumno;
     private javax.swing.JMenuItem eliminar_clase;
+    private javax.swing.JMenuItem eliminar_examen;
     private javax.swing.JMenuItem eliminar_maestro;
     private javax.swing.JMenuItem eliminar_registro;
+    private javax.swing.JFormattedTextField examen_duracion;
+    private com.toedter.calendar.JDateChooser examen_fecha;
+    private javax.swing.JFormattedTextField examen_hora;
+    private javax.swing.JTextField examen_titulo;
+    private javax.swing.JDialog examenes_alumno_examenes;
     private javax.swing.JDialog examenes_maestro_clases;
     private javax.swing.JDialog examenes_maestro_examenes;
     private javax.swing.JButton examinar_equipo;
@@ -3400,6 +4228,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3423,7 +4252,15 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel117;
     private javax.swing.JLabel jLabel118;
+    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel120;
+    private javax.swing.JLabel jLabel121;
+    private javax.swing.JLabel jLabel122;
+    private javax.swing.JLabel jLabel123;
+    private javax.swing.JLabel jLabel124;
+    private javax.swing.JLabel jLabel125;
+    private javax.swing.JLabel jLabel126;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -3528,7 +4365,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuBar jMenuBar4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -3549,6 +4390,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane25;
     private javax.swing.JScrollPane jScrollPane26;
     private javax.swing.JScrollPane jScrollPane27;
+    private javax.swing.JScrollPane jScrollPane28;
+    private javax.swing.JScrollPane jScrollPane29;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -3556,12 +4399,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JButton jb_abiriForo;
     private javax.swing.JButton jb_abrirForo;
     private javax.swing.JButton jb_abrir_archivo_est;
     private javax.swing.JButton jb_abrir_clases;
+    private javax.swing.JButton jb_abrir_examenes;
     private javax.swing.JButton jb_abrir_tareas;
     private javax.swing.JButton jb_abrir_tareasdeAlumnos;
+    private javax.swing.JButton jb_add_examen;
     private javax.swing.JButton jb_alumno_ingresarAporte;
     private javax.swing.JButton jb_alumnos_examenes;
     private javax.swing.JButton jb_alumnos_foros;
@@ -3575,6 +4422,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jb_asignar_tarea;
     private javax.swing.JButton jb_crear_alumno;
     private javax.swing.JButton jb_crear_clases;
+    private javax.swing.JButton jb_crear_examen;
     private javax.swing.JButton jb_crear_foro;
     private javax.swing.JButton jb_crear_maestro;
     private javax.swing.JButton jb_crear_registro;
@@ -3588,6 +4436,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jb_modificar_clases;
     private javax.swing.JButton jb_modificar_maestro;
     private javax.swing.JButton jb_modificar_registro;
+    private javax.swing.JButton jb_realizar_examenes;
     private javax.swing.JDialog jd_abrir_tarea;
     private javax.swing.JDialog jd_alumno_foro;
     private javax.swing.JDialog jd_asignar_alumno;
@@ -3596,6 +4445,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JDialog jd_crearForo;
     private javax.swing.JDialog jd_crear_alumno;
     private javax.swing.JDialog jd_crear_clase;
+    private javax.swing.JDialog jd_crear_examen;
     private javax.swing.JDialog jd_crear_maestro;
     private javax.swing.JDialog jd_crear_registro;
     private javax.swing.JDialog jd_entregar_tarea;
@@ -3625,9 +4475,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_clases;
     private javax.swing.JList<String> jl_clases_revisar;
     private javax.swing.JList<String> jl_examenes_clases;
+    private javax.swing.JList<String> jl_examenes_examenes;
     private javax.swing.JList<String> jl_foros;
     private javax.swing.JList<String> jl_intentosA_revisar;
     private javax.swing.JList<String> jl_maestros;
+    private javax.swing.JList<String> jl_mis_examenes;
     private javax.swing.JList<String> jl_registros;
     private javax.swing.JList<String> jl_tareas_revisar;
     private javax.swing.JList<String> jl_verAlumnos;
@@ -3638,6 +4490,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JList<String> jl_verMisTareas;
     private javax.swing.JTable jt_alumnos;
     private javax.swing.JTable jt_maestros;
+    private javax.swing.JLabel label_pregunta;
+    private javax.swing.JLabel label_pregunta1;
     private javax.swing.JLabel label_tarea;
     private javax.swing.JButton maestro_agregar;
     private javax.swing.JButton maestro_modificar;
@@ -3647,12 +4501,28 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem modificar_registro;
     private javax.swing.JDialog notas_estudiante;
     private javax.swing.JDialog notas_maestro;
+    private javax.swing.JLabel opcion_a;
+    private javax.swing.JLabel opcion_b;
+    private javax.swing.JLabel opcion_c;
+    private javax.swing.JLabel opcion_d;
     private javax.swing.JPopupMenu popup_alumno;
     private javax.swing.JPopupMenu popup_clase;
+    private javax.swing.JPopupMenu popup_examenes;
     private javax.swing.JPopupMenu popup_maestro;
     private javax.swing.JPopupMenu popup_registro;
+    private javax.swing.JTextField pregunta_seleccion;
+    private javax.swing.JTextField pregunta_verdadero;
+    private javax.swing.JRadioButton rb_a;
+    private javax.swing.JRadioButton rb_b;
+    private javax.swing.JRadioButton rb_c;
+    private javax.swing.JRadioButton rb_d;
+    private javax.swing.JRadioButton rb_falso;
+    private javax.swing.JRadioButton rb_verdadero;
     private javax.swing.JButton registro_agregar;
     private javax.swing.JButton registro_modificar;
+    private javax.swing.JDialog responder_seleccion;
+    private javax.swing.JDialog responder_verdadero;
+    private javax.swing.ButtonGroup seleccion_multiple;
     private javax.swing.JTextArea ta_alumno_foroDesc;
     private javax.swing.JTextArea ta_alumno_foroDesc1;
     private javax.swing.JTextArea ta_alumnos_aportes;
@@ -3711,12 +4581,17 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField tf_maestro_sueldo_m;
     private javax.swing.JTextField tf_maestro_user;
     private javax.swing.JTextField tf_maestro_user_m;
+    private javax.swing.JTextField tf_op1;
+    private javax.swing.JTextField tf_op2;
+    private javax.swing.JTextField tf_op3;
+    private javax.swing.JTextField tf_op4;
     private javax.swing.JPasswordField tf_pass_login;
     private javax.swing.JTextField tf_registro_pass;
     private javax.swing.JTextField tf_registro_pass_m;
     private javax.swing.JTextField tf_registro_user;
     private javax.swing.JTextField tf_registro_user_m;
     private javax.swing.JTextField tf_user_login;
+    private javax.swing.ButtonGroup verdadero_falso;
     // End of variables declaration//GEN-END:variables
     Alumno estudianteAsig;
     int indexEstudiante;
@@ -3737,4 +4612,11 @@ public class Main extends javax.swing.JFrame {
     int poClaseFM;
     int poForoFM;
     // para examenes
+    int poExamClase;
+    int poElimMod;
+    int claseExam;
+    int examExam;
+    ArrayList<Pregunta> preguntas = new ArrayList();
+    int contPreg;
+    int correctas;
 }
