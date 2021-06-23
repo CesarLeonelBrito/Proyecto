@@ -360,11 +360,13 @@ public class Main extends javax.swing.JFrame {
         jScrollPane27 = new javax.swing.JScrollPane();
         jl_examenes_clases = new javax.swing.JList<>();
         jb_abrir_examenes = new javax.swing.JButton();
+        jLabel127 = new javax.swing.JLabel();
         examenes_maestro_examenes = new javax.swing.JDialog();
         jb_crear_examen = new javax.swing.JButton();
         jLabel119 = new javax.swing.JLabel();
         jScrollPane28 = new javax.swing.JScrollPane();
         jl_examenes_examenes = new javax.swing.JList<>();
+        jLabel128 = new javax.swing.JLabel();
         popup_examenes = new javax.swing.JPopupMenu();
         eliminar_examen = new javax.swing.JMenuItem();
         jd_crear_examen = new javax.swing.JDialog();
@@ -399,6 +401,7 @@ public class Main extends javax.swing.JFrame {
         tf_op3 = new javax.swing.JTextField();
         tf_op4 = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jLabel129 = new javax.swing.JLabel();
         verdadero_falso = new javax.swing.ButtonGroup();
         seleccion_multiple = new javax.swing.ButtonGroup();
         examenes_alumno_examenes = new javax.swing.JDialog();
@@ -406,10 +409,12 @@ public class Main extends javax.swing.JFrame {
         jl_mis_examenes = new javax.swing.JList<>();
         jb_realizar_examenes = new javax.swing.JButton();
         jLabel126 = new javax.swing.JLabel();
+        jLabel130 = new javax.swing.JLabel();
         responder_verdadero = new javax.swing.JDialog();
         label_pregunta = new javax.swing.JLabel();
         answer_verd = new javax.swing.JRadioButton();
         answer_falso = new javax.swing.JRadioButton();
+        jb_next_verd = new javax.swing.JButton();
         responder_seleccion = new javax.swing.JDialog();
         label_pregunta1 = new javax.swing.JLabel();
         answer_a = new javax.swing.JRadioButton();
@@ -420,6 +425,7 @@ public class Main extends javax.swing.JFrame {
         opcion_b = new javax.swing.JLabel();
         opcion_c = new javax.swing.JLabel();
         opcion_d = new javax.swing.JLabel();
+        jb_next_selecc = new javax.swing.JButton();
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
@@ -1973,15 +1979,21 @@ public class Main extends javax.swing.JFrame {
         jLabel107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
         notas_estudiante.getContentPane().add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1150, 720));
 
+        examenes_maestro_clases.setTitle("Mis Clases");
         examenes_maestro_clases.setMinimumSize(new java.awt.Dimension(978, 686));
+        examenes_maestro_clases.setPreferredSize(new java.awt.Dimension(978, 686));
         examenes_maestro_clases.setSize(new java.awt.Dimension(978, 686));
+        examenes_maestro_clases.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel118.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel118.setForeground(new java.awt.Color(0, 0, 0));
         jLabel118.setText("Mis Clases");
+        examenes_maestro_clases.getContentPane().add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(361, 6, -1, -1));
 
         jl_examenes_clases.setModel(new DefaultListModel());
         jScrollPane27.setViewportView(jl_examenes_clases);
+
+        examenes_maestro_clases.getContentPane().add(jScrollPane27, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 80, 780, 491));
 
         jb_abrir_examenes.setText("Abrir Clase");
         jb_abrir_examenes.addActionListener(new java.awt.event.ActionListener() {
@@ -1989,37 +2001,15 @@ public class Main extends javax.swing.JFrame {
                 jb_abrir_examenesActionPerformed(evt);
             }
         });
+        examenes_maestro_clases.getContentPane().add(jb_abrir_examenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 589, 780, -1));
 
-        javax.swing.GroupLayout examenes_maestro_clasesLayout = new javax.swing.GroupLayout(examenes_maestro_clases.getContentPane());
-        examenes_maestro_clases.getContentPane().setLayout(examenes_maestro_clasesLayout);
-        examenes_maestro_clasesLayout.setHorizontalGroup(
-            examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
-                .addGroup(examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
-                        .addGap(361, 361, 361)
-                        .addComponent(jLabel118))
-                    .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addGroup(examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane27, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                            .addComponent(jb_abrir_examenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        examenes_maestro_clasesLayout.setVerticalGroup(
-            examenes_maestro_clasesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(examenes_maestro_clasesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel118)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane27, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_abrir_examenes)
-                .addContainerGap(107, Short.MAX_VALUE))
-        );
+        jLabel127.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        examenes_maestro_clases.getContentPane().add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 690));
 
+        examenes_maestro_examenes.setTitle("Examenes de la Clase");
         examenes_maestro_examenes.setMinimumSize(new java.awt.Dimension(978, 735));
         examenes_maestro_examenes.setSize(new java.awt.Dimension(978, 735));
+        examenes_maestro_examenes.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jb_crear_examen.setText("Crear Examen");
         jb_crear_examen.addActionListener(new java.awt.event.ActionListener() {
@@ -2027,10 +2017,12 @@ public class Main extends javax.swing.JFrame {
                 jb_crear_examenActionPerformed(evt);
             }
         });
+        examenes_maestro_examenes.getContentPane().add(jb_crear_examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 589, 780, -1));
 
         jLabel119.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel119.setForeground(new java.awt.Color(0, 0, 0));
         jLabel119.setText("Examenes de la Clase");
+        examenes_maestro_examenes.getContentPane().add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(232, 6, -1, -1));
 
         jl_examenes_examenes.setModel(new DefaultListModel());
         jl_examenes_examenes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2040,33 +2032,10 @@ public class Main extends javax.swing.JFrame {
         });
         jScrollPane28.setViewportView(jl_examenes_examenes);
 
-        javax.swing.GroupLayout examenes_maestro_examenesLayout = new javax.swing.GroupLayout(examenes_maestro_examenes.getContentPane());
-        examenes_maestro_examenes.getContentPane().setLayout(examenes_maestro_examenesLayout);
-        examenes_maestro_examenesLayout.setHorizontalGroup(
-            examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
-                .addGroup(examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addGroup(examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane28, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                            .addComponent(jb_crear_examen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
-                        .addGap(232, 232, 232)
-                        .addComponent(jLabel119)))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
-        examenes_maestro_examenesLayout.setVerticalGroup(
-            examenes_maestro_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(examenes_maestro_examenesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel119)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane28, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_crear_examen)
-                .addContainerGap(114, Short.MAX_VALUE))
-        );
+        examenes_maestro_examenes.getContentPane().add(jScrollPane28, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 80, 780, 491));
+
+        jLabel128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        examenes_maestro_examenes.getContentPane().add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 740));
 
         eliminar_examen.setText("Eliminar");
         eliminar_examen.addActionListener(new java.awt.event.ActionListener() {
@@ -2076,12 +2045,16 @@ public class Main extends javax.swing.JFrame {
         });
         popup_examenes.add(eliminar_examen);
 
+        jd_crear_examen.setTitle("Crear Examen");
+        jd_crear_examen.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jb_add_examen.setText("Crear Examen");
         jb_add_examen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jb_add_examenActionPerformed(evt);
             }
         });
+        jd_crear_examen.getContentPane().add(jb_add_examen, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 584, 1184, 50));
 
         jLabel120.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel120.setForeground(new java.awt.Color(0, 0, 0));
@@ -2303,29 +2276,18 @@ public class Main extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Preguntas", jPanel3);
 
-        javax.swing.GroupLayout jd_crear_examenLayout = new javax.swing.GroupLayout(jd_crear_examen.getContentPane());
-        jd_crear_examen.getContentPane().setLayout(jd_crear_examenLayout);
-        jd_crear_examenLayout.setHorizontalGroup(
-            jd_crear_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_crear_examenLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jd_crear_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTabbedPane1)
-                    .addComponent(jb_add_examen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jd_crear_examenLayout.setVerticalGroup(
-            jd_crear_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_crear_examenLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jTabbedPane1)
-                .addGap(18, 18, 18)
-                .addComponent(jb_add_examen, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
-        );
+        jd_crear_examen.getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 26, -1, -1));
+
+        jLabel129.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        jd_crear_examen.getContentPane().add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, 670));
+
+        examenes_alumno_examenes.setTitle("Examenes para Realizar");
+        examenes_alumno_examenes.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_mis_examenes.setModel(new DefaultListModel());
         jScrollPane29.setViewportView(jl_mis_examenes);
+
+        examenes_alumno_examenes.getContentPane().add(jScrollPane29, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 80, 780, 491));
 
         jb_realizar_examenes.setText("Realizar Examen");
         jb_realizar_examenes.addActionListener(new java.awt.event.ActionListener() {
@@ -2333,38 +2295,17 @@ public class Main extends javax.swing.JFrame {
                 jb_realizar_examenesActionPerformed(evt);
             }
         });
+        examenes_alumno_examenes.getContentPane().add(jb_realizar_examenes, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 589, 780, -1));
 
         jLabel126.setFont(new java.awt.Font("Dialog", 1, 48)); // NOI18N
         jLabel126.setForeground(new java.awt.Color(0, 0, 0));
         jLabel126.setText("Examenes para Realizar");
+        examenes_alumno_examenes.getContentPane().add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 6, -1, -1));
 
-        javax.swing.GroupLayout examenes_alumno_examenesLayout = new javax.swing.GroupLayout(examenes_alumno_examenes.getContentPane());
-        examenes_alumno_examenes.getContentPane().setLayout(examenes_alumno_examenesLayout);
-        examenes_alumno_examenesLayout.setHorizontalGroup(
-            examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
-                .addGroup(examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
-                        .addGap(99, 99, 99)
-                        .addGroup(examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane29, javax.swing.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                            .addComponent(jb_realizar_examenes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
-                        .addGap(211, 211, 211)
-                        .addComponent(jLabel126)))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
-        examenes_alumno_examenesLayout.setVerticalGroup(
-            examenes_alumno_examenesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(examenes_alumno_examenesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel126)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane29, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jb_realizar_examenes)
-                .addContainerGap(71, Short.MAX_VALUE))
-        );
+        jLabel130.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_cesarbrito/other_jd_background.jpg"))); // NOI18N
+        examenes_alumno_examenes.getContentPane().add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 700));
+
+        responder_verdadero.setTitle("Pregunta Verdadero o Falso");
 
         label_pregunta.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
         label_pregunta.setText("verd_pregunta");
@@ -2374,6 +2315,13 @@ public class Main extends javax.swing.JFrame {
 
         buttonGroup1.add(answer_falso);
         answer_falso.setText("Falso");
+
+        jb_next_verd.setText(">");
+        jb_next_verd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_next_verdActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout responder_verdaderoLayout = new javax.swing.GroupLayout(responder_verdadero.getContentPane());
         responder_verdadero.getContentPane().setLayout(responder_verdaderoLayout);
@@ -2386,6 +2334,10 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(answer_verd)
                     .addComponent(label_pregunta))
                 .addContainerGap(873, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, responder_verdaderoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jb_next_verd, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         responder_verdaderoLayout.setVerticalGroup(
             responder_verdaderoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2396,8 +2348,12 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(answer_verd)
                 .addGap(78, 78, 78)
                 .addComponent(answer_falso)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addComponent(jb_next_verd, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        responder_seleccion.setTitle("Pregunta de Seleccion");
 
         label_pregunta1.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
         label_pregunta1.setText("verd_pregunta");
@@ -2421,6 +2377,13 @@ public class Main extends javax.swing.JFrame {
         opcion_c.setText("opcion c");
 
         opcion_d.setText("opcion d");
+
+        jb_next_selecc.setText(">");
+        jb_next_selecc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_next_seleccActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout responder_seleccionLayout = new javax.swing.GroupLayout(responder_seleccion.getContentPane());
         responder_seleccion.getContentPane().setLayout(responder_seleccionLayout);
@@ -2447,6 +2410,10 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(opcion_a, javax.swing.GroupLayout.PREFERRED_SIZE, 788, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(label_pregunta1))
                 .addContainerGap(42, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, responder_seleccionLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jb_next_selecc, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         responder_seleccionLayout.setVerticalGroup(
             responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2469,7 +2436,9 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(responder_seleccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(answer_d)
                     .addComponent(opcion_d))
-                .addContainerGap(159, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addComponent(jb_next_selecc, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -3803,7 +3772,7 @@ public class Main extends javax.swing.JFrame {
                 if (ap.getListaClases().get(i).getMaestro() != null) {
                     if (ap.getListaClases().get(i).getMaestro().getUsername().equals(maestroAsig.getUsername())) {
                         for (int j = 0; j < ap.getListaClases().get(i).getExamenes().size(); j++) {
-                            for (int k = 0; k < ap.getListaClases().get(i).getExamenes().size(); k++) {
+                            for (int k = 0; k < ap.getListaClases().get(i).getAlumnos().size(); k++) {
                                 Alumno x = ap.getListaClases().get(i).getAlumnos().get(k);
                                 boolean found = false;
                                 for (int l = 0; l < ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().size(); l++) {
@@ -3815,7 +3784,7 @@ public class Main extends javax.swing.JFrame {
                                     }
                                 }
                                 if (found == false) {
-                                    Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getExamenes().get(j), "Examen", "No Entregada"};
+                                    Object[] nuevo = {clase, x.getCuenta(), x.getNombre(), ap.getListaClases().get(i).getExamenes().get(j), "Examen", "No Realizado"};
                                     modelo.addRow(nuevo);
                                 }
                             }
@@ -3876,7 +3845,7 @@ public class Main extends javax.swing.JFrame {
                                 }
                             }
                             if (found == false) {
-                                Object[] nuevo = {clase, estudianteAsig.getCuenta(), estudianteAsig.getNombre(), ap.getListaClases().get(i).getExamenes().get(k), "Examen", "No entregada"};
+                                Object[] nuevo = {clase, estudianteAsig.getCuenta(), estudianteAsig.getNombre(), ap.getListaClases().get(i).getExamenes().get(k), "Examen", "No Realizado"};
                                 modelo.addRow(nuevo);
                             }
                         }
@@ -4030,18 +3999,22 @@ public class Main extends javax.swing.JFrame {
             String op4 = tf_op4.getText();
             if (rb_a.isSelected()) {
                 int answer = 1;
+                rb_a.setSelected(false);
                 SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
                 preguntas.add(nuevo);
             } else if (rb_b.isSelected()) {
                 int answer = 2;
+                rb_b.setSelected(false);
                 SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
                 preguntas.add(nuevo);
             } else if (rb_c.isSelected()) {
                 int answer = 3;
+                rb_c.setSelected(false);
                 SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
                 preguntas.add(nuevo);
             } else if (rb_d.isSelected()) {
                 int answer = 4;
+                rb_d.setSelected(false);
                 SeleccionMultiple nuevo = new SeleccionMultiple(op1, op2, op3, op4, answer, titulo);
                 preguntas.add(nuevo);
             }
@@ -4154,6 +4127,440 @@ public class Main extends javax.swing.JFrame {
         examenes_alumno_examenes.setVisible(true);
     }//GEN-LAST:event_jb_alumnos_examenesActionPerformed
 
+    private void jb_next_verdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_next_verdActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (contPreg == preguntas.size() - 1) {
+                if (answer_verd.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == true) {
+                    correctas += 1;
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    //System.out.println(ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos());
+                    reiniciarExamenes();
+                    answer_verd.setSelected(false);
+                    answer_falso.setSelected(false);
+                    responder_verdadero.hide();
+
+                } else if (answer_falso.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == false) {
+                    correctas += 1;
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    //System.out.println(ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos());
+                    reiniciarExamenes();
+                    answer_verd.setSelected(false);
+                    answer_falso.setSelected(false);
+                    responder_verdadero.hide();
+                } else if ((answer_falso.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == true)
+                        || (answer_verd.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == false)) {
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    //System.out.println(ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos());
+                    reiniciarExamenes();
+                    answer_verd.setSelected(false);
+                    answer_falso.setSelected(false);
+                    responder_verdadero.hide();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Seleccione una opcion");
+                }
+            } else {
+                if (answer_verd.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == true) {
+                    correctas += 1;
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_verdadero.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_verdadero.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else if (answer_falso.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == false) {
+                    correctas += 1;
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_verdadero.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        // label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_verdadero.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else if ((answer_falso.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == true)
+                        || (answer_verd.isSelected() && ((VerdaderoFalso) preguntas.get(contPreg)).isOpcion() == false)) {
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_verdadero.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        //label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_verdadero.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Seleccione una opcion");
+                }
+            }
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jb_next_verdActionPerformed
+
+    private void jb_next_seleccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_next_seleccActionPerformed
+        // TODO add your handling code here:
+        try {
+            if (contPreg == preguntas.size() - 1) {
+                if (answer_a.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 1) {
+                    correctas += 1;
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    reiniciarExamenes();
+                    answer_a.setSelected(false);
+                    answer_b.setSelected(false);
+                    answer_c.setSelected(false);
+                    answer_d.setSelected(false);
+                    responder_seleccion.hide();
+                } else if (answer_b.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 2) {
+                    correctas += 1;
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    reiniciarExamenes();
+                    answer_a.setSelected(false);
+                    answer_b.setSelected(false);
+                    answer_c.setSelected(false);
+                    answer_d.setSelected(false);
+                    responder_seleccion.hide();
+                } else if (answer_c.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 3) {
+                    correctas += 1;
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    reiniciarExamenes();
+                    answer_a.setSelected(false);
+                    answer_b.setSelected(false);
+                    answer_c.setSelected(false);
+                    answer_d.setSelected(false);
+                    responder_seleccion.hide();
+                } else if (answer_d.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 4) {
+                    correctas += 1;
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    reiniciarExamenes();
+                    answer_a.setSelected(false);
+                    answer_b.setSelected(false);
+                    answer_c.setSelected(false);
+                    answer_d.setSelected(false);
+                    responder_seleccion.hide();
+                } else if (answer_a.isSelected() == false && answer_b.isSelected() == false && answer_c.isSelected() == false && answer_d.isSelected() == false) {
+                    int nota = (correctas * 100) / preguntas.size();
+                    ExamenAlumno x = new ExamenAlumno(estudianteAsig, nota);
+                    administrarClases ap = new administrarClases("./clases.cbm");
+                    ap.cargarArchivo();
+                    ap.getListaClases().get(claseExam).getExamenes().get(examExam).getExamenesAlumnos().add(x);
+                    ap.escribirArchivo();
+                    reiniciarExamenes();
+                    answer_a.setSelected(false);
+                    answer_b.setSelected(false);
+                    answer_c.setSelected(false);
+                    answer_d.setSelected(false);
+                    responder_seleccion.hide();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Seleccione una opcion");
+                }
+            } else {
+                if (answer_a.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 1) {
+                    correctas += 1;
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_seleccion.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_seleccion.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else if (answer_b.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 2) {
+                    correctas += 1;
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_seleccion.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_seleccion.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else if (answer_c.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 3) {
+                    correctas += 1;
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_seleccion.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_seleccion.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else if (answer_d.isSelected() && ((SeleccionMultiple) preguntas.get(contPreg)).getCorrecta() == 4) {
+                    correctas += 1;
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_seleccion.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_seleccion.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else if (answer_a.isSelected() == false && answer_b.isSelected() == false && answer_c.isSelected() == false && answer_d.isSelected() == false) {
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_seleccion.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_seleccion.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Seleccione una opcion");
+                }
+            }
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jb_next_seleccActionPerformed
+
+    public void reiniciarExamenes() {
+        administrarClases ap = new administrarClases("./clases.cbm");
+        ap.cargarArchivo();
+        boolean found = false;
+        DefaultListModel modelo = (DefaultListModel) jl_mis_examenes.getModel();
+        modelo.removeAllElements();
+        for (int i = 0; i < ap.getListaClases().size(); i++) {
+            boolean esta = false;
+            for (int j = 0; j < ap.getListaClases().get(i).getAlumnos().size(); j++) {
+                if (ap.getListaClases().get(i).getAlumnos().get(j).getUsername().equals(estudianteAsig.getUsername())) {
+                    esta = true;
+                }
+            }
+            if (esta) {
+                esta = false;
+                for (int j = 0; j < ap.getListaClases().get(i).getExamenes().size(); j++) {
+                    for (int k = 0; k < ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().size(); k++) {
+                        if (ap.getListaClases().get(i).getExamenes().get(j).getExamenesAlumnos().get(k).getEstudiante().getUsername().equals(estudianteAsig.getUsername())) {
+                            found = true;
+                        }
+                    }
+                    Date fecha = new Date();
+                    if (found == false && fecha.before(ap.getListaClases().get(i).getExamenes().get(j).getFechaFinal())) {
+                        modelo.addElement(ap.getListaClases().get(i).getExamenes().get(j));
+                    }
+                    found = false;
+                }
+            }
+        }
+        jl_mis_examenes.setModel(modelo);
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -4261,7 +4668,11 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel124;
     private javax.swing.JLabel jLabel125;
     private javax.swing.JLabel jLabel126;
+    private javax.swing.JLabel jLabel127;
+    private javax.swing.JLabel jLabel128;
+    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -4436,6 +4847,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jb_modificar_clases;
     private javax.swing.JButton jb_modificar_maestro;
     private javax.swing.JButton jb_modificar_registro;
+    private javax.swing.JButton jb_next_selecc;
+    private javax.swing.JButton jb_next_verd;
     private javax.swing.JButton jb_realizar_examenes;
     private javax.swing.JDialog jd_abrir_tarea;
     private javax.swing.JDialog jd_alumno_foro;
