@@ -4521,7 +4521,36 @@ public class Main extends javax.swing.JFrame {
                         responder_verdadero.setVisible(true);
                     }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Seleccione una opcion");
+                    contPreg += 1;
+                    if (preguntas.get(contPreg) instanceof SeleccionMultiple) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta1.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta1.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        opcion_a.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion1());
+                        opcion_b.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion2());
+                        opcion_c.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion3());
+                        opcion_d.setText(((SeleccionMultiple) preguntas.get(contPreg)).getOpcion4());
+                        responder_seleccion.hide();
+                        responder_seleccion.setModal(true);
+                        responder_seleccion.pack();
+                        responder_seleccion.setLocationRelativeTo(this);
+                        responder_seleccion.setVisible(true);
+                    } else if (preguntas.get(contPreg) instanceof VerdaderoFalso) {
+                        if (contPreg == preguntas.size() - 1) {
+                            label_pregunta.setText("ULTIMA PREGUNTA:" + preguntas.get(contPreg).getPregunta());
+                        } else {
+                            label_pregunta.setText(preguntas.get(contPreg).getPregunta());
+                        }
+                        answer_verd.setSelected(false);
+                        answer_falso.setSelected(false);
+                        responder_seleccion.hide();
+                        responder_verdadero.setModal(true);
+                        responder_verdadero.pack();
+                        responder_verdadero.setLocationRelativeTo(this);
+                        responder_verdadero.setVisible(true);
+                    }
                 }
             }
         } catch (Exception e) {
